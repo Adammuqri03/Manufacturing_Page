@@ -17,6 +17,7 @@ const routes = [
         component: () => import("pages/About_us.vue"),
       },
       { path: "/fms_page", component: () => import("pages/Fms_page.vue") },
+      { path: "/try_new", component: () => import("pages/try_new.vue") },
     ],
   },
 

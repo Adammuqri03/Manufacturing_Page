@@ -3,9 +3,7 @@
     <q-header class="q-pa-md" style="background: transparent">
       <div>
         <q-toolbar class="rounded-borders bg-hijau" style="border-radius: 30px">
-          <p class="q-pt-md q-px-md text-bold" style="font-size: 20px">
-            MyCES MANUFACTURING
-          </p>
+          <q-img src="img/myces_logo.png" style="height: 80px; width:100px" fit="contain"/>
           <q-space />
 
           <q-btn-group flat v-model="tab" class="q-px-md q-gutter-sm">
