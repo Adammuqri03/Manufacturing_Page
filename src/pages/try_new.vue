@@ -2,13 +2,11 @@
   <div>
     <div class="q-gutter-md">
       <!-- Navigation Bar -->
-      <q-header
-        style="background-color: rgba(135, 135, 135, 0.217); margin: 0px"
-      >
+      <q-header style="background-color: rgba(255, 255, 255, 1); margin: 0px">
         <div class="row justify-between">
           <q-toolbar style="padding-left: 100px; padding-right: 100px">
             <q-img
-              src="img/myces_logo.png"
+              src="public/img/myces_logo.png"
               style="height: 100px; width: 100px"
               fit="contain"
             />
@@ -28,7 +26,12 @@
       </q-header>
 
       <!-- Parallax Image -->
-      <q-parallax ref="parallax" src="img/bg/bg.png" :height="1000" :speed="5">
+      <q-parallax
+        ref="parallax"
+        src="/public/img/bg/bg.png"
+        :height="1000"
+        :speed="5"
+      >
         <img
           ref="parallaxImage"
           src="img/bg/bg.png"
