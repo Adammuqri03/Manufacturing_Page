@@ -40,15 +40,52 @@
       <router-view />
     </q-page-container>
 
-    <q-footer elevated class="bg-green-6 text-white">
-      <q-toolbar>
-        <q-toolbar-title>
-          <q-avatar style="height: 200%; width: 100px">
-            <img src="public/img/myces_logo.png" />
-          </q-avatar>
-        </q-toolbar-title>
-      </q-toolbar>
-    </q-footer>
+    <!-- footer -->
+    <div class="bg-green-7 text-white">
+      <p class="text-bold font20 q-px-md q-my-none q-pt-md">
+        MyCES MANUFACTURING SDN. BHD.
+      </p>
+      <p class="text-bold font20 q-px-md q-my-none q-pt-sm">FIND US</p>
+      <div class="row q-pa-md font20">
+        <!-- place -->
+        <div class="col-2">
+          <p>
+            <strong>HQ Address</strong> <br />
+            RK 27-B Jalan Villa 3 <br />
+            Taman Anggerik Villa <br />
+            43500 Semenyih <br />
+            Selangor Darul Ehsan
+          </p>
+        </div>
+        <div class="col-3">
+          <p>
+            <strong>Branch Address</strong> <br />
+            Bangunan Center of Excellent<br />
+            Kolej Kemahiran Tinggi Mara Ledang <br />
+            Seram 4 & 5, Jalan Sg. Mati, BUkit Gambir <br />
+            84410, Ledang, Johor
+          </p>
+        </div>
+
+        <!-- info -->
+        <div class="col-2">
+          <strong> Telephone : </strong>
+          <p>603-8725 5811</p>
+
+          <strong> Email : </strong>
+          <p>Info@mycesgroup.com</p>
+        </div>
+
+        <!-- connect with us -->
+        <div class="col-1.5">
+          <strong>Connect with us</strong>
+          <div class="row q-gutter-lg justify-center q-pa-sm">
+            <!-- <q-icon size="40px" name="mdi-facebook" class="icon-1" @click="openFacebook"/>
+          <q-icon size="40px" name="mdi-instagram" class="icon-2" @click="openFacebook"/> -->
+          </div>
+        </div>
+      </div>
+    </div>
   </q-layout>
 </template>
 
