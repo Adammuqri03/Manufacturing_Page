@@ -2,14 +2,12 @@
   <div>
     <div class="q-gutter-md">
       <!-- Navigation Bar -->
-      <q-header style="background-color: rgba(255, 255, 255, 1); margin: 0px">
+      <q-header
+        style="background-color: rgba(144, 238, 144, 0.217); margin: 0px"
+      >
         <div class="row justify-between">
           <q-toolbar style="padding-left: 100px; padding-right: 100px">
-            <q-img
-              src="public/img/myces_logo.png"
-              style="height: 100px; width: 100px"
-              fit="contain"
-            />
+            <q-img src="public/img/myces_logo.png" 9 />
 
             <q-space />
             <!-- Add your navigation items here -->
@@ -40,6 +38,59 @@
       </q-parallax>
     </div>
   </div>
+  <!-- footer -->
+  <div class="bg-black text-white" />
+  <p class="text-bold font20 q-px-md q-my-none q-pt-md">
+    MyCES MANUFACTURING SDN. BHD.
+  </p>
+  <p class="text-bold font20 q-px-md q-my-none q-pt-sm">FIND US</p>
+  <div class="row q-pa-md font20" />
+  <!-- place -->
+  <div class="col-2">
+    <p>
+      <strong>HQ Address</strong> <br />
+      RK 27-B Jalan Villa 3 <br />
+      Taman Anggerik Villa <br />
+      43500 Semenyih <br />
+      Selangor Darul Ehsan
+    </p>
+  </div>
+  <div class="col-3">
+    <p>
+      <strong>Branch Address</strong> <br />
+      Bangunan Center of Excellent<br />
+      Kolej Kemahiran Tinggi Mara Ledang <br />
+      Seram 4 & 5, Jalan Sg. Mati, Bukit Gambir <br />
+      84410, Ledang, Johor
+    </p>
+  </div>
+  <!-- info -->
+  <div class="col-2">
+    <strong> Telephone : </strong>
+    <p>603-8725 5811</p>
+
+    <strong> Email : </strong>
+    <p>Info@mycesgroup.com</p>
+  </div>
+
+  <!-- connect with us -->
+  <div class="col-1.5">
+    <strong>Connect with us</strong>
+    <div class="row q-gutter-lg justify-center q-pa-sm">
+      <q-icon size="40px" name="mdi-facebook" class="icon-1" />
+      <q-icon size="40px" name="mdi-instagram" class="icon-2" />
+    </div>
+  </div>
+  <q-footer elevated class="bg-green-6 text-white">
+    <q-toolbar>
+      <q-toolbar-title>
+        <q-avatar>
+          <img src="https://cdn.quasar.dev/logo-v2/svg/logo-mono-white.svg" />
+        </q-avatar>
+        <div>Title</div>
+      </q-toolbar-title>
+    </q-toolbar>
+  </q-footer>
 </template>
 
 <script>
