@@ -24,24 +24,47 @@
     </q-header>
 
     <q-page-container>
-      <!-- Parallax Image -->
-      <q-parallax
-        ref="parallax"
-        src="/public/img/bg/bg.png"
-        :height="1000"
-        :speed="5"
-      >
-        <img
-          ref="parallaxImage"
-          src="img/bg/bg.png"
-          style="width: 100%; height: 100%"
-        />
-      </q-parallax>
+      <!-- First Parallax Image -->
+      <div>
+        <q-parallax
+          ref="parallax"
+          src="/public/img/bg/bg.png"
+          :height="900"
+          :speed="5"
+        >
+          <img
+            ref="parallaxImage"
+            src="/public/img/bg/bg.png"
+            style="width: 100%; height: 100%"
+          />
+          <div
+            class="absolute-full text-subtitle2 flex flex-center"
+            style="font-size: 5rem; color: aliceblue; padding-bottom: 200px"
+          >
+            MyCES SDN BHD
+          </div>
+        </q-parallax>
+      </div>
+      <!-- Second Parallax Image -->
+      <div>
+        <q-parallax
+          ref="parallax"
+          src="/public/img/myces_logo.png"
+          :height="900"
+          :speed="5"
+        >
+          <img
+            ref="parallaxImage"
+            src="/public/img/myces_logo.png"
+            style="width: 300px; height: 300px"
+          />
+        </q-parallax>
+      </div>
       <router-view />
     </q-page-container>
 
     <!-- footer -->
-    <div class="bg-green-7 text-white">
+    <div class="bg-green-8 text-white">
       <p class="text-bold font20 q-px-md q-my-none q-pt-md">
         MyCES MANUFACTURING SDN. BHD.
       </p>
