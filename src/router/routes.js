@@ -19,6 +19,7 @@ const routes = [
       { path: "/fms_page", component: () => import("pages/Fms_page.vue") },
       { path: "/try_new", component: () => import("pages/try_new.vue") },
       { path: "/try_napi", component: () => import("pages/try_napi.vue") },
+      { path: "/try_ajik", component: () => import("pages/try_ajik.vue") },
     ],
   },
 
