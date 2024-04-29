@@ -106,13 +106,13 @@
       <div>
         <q-parallax
           ref="parallax"
-          src="/public/img/myces_logo.png"
+          src="/public/img/monitoringsystem.png"
           :height="900"
           :speed="5"
         >
           <img
             ref="parallaxImage"
-            src="/public/img/myces_logo.png"
+            src="/public/img/monitoringsystem.png"
             style="width: 300px; height: 300px"
           />
         </q-parallax>
@@ -193,8 +193,6 @@ export default {
         // console.log("Subitem does not have a link:", subitem.name);
       }
     },
-
-    goTo,
   },
   data() {
     return {

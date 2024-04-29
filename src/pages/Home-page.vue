@@ -465,8 +465,18 @@
       <div class="col-1.5">
         <strong>Connect with us</strong>
         <div class="row q-gutter-lg justify-center q-pa-sm">
-          <q-icon size="40px" name="mdi-facebook" class="icon-1" @click="openFacebook"/>
-          <q-icon size="40px" name="mdi-instagram" class="icon-2" @click="openFacebook"/>
+          <q-icon
+            size="40px"
+            name="mdi-facebook"
+            class="icon-1"
+            @click="openFacebook"
+          />
+          <q-icon
+            size="40px"
+            name="mdi-instagram"
+            class="icon-2"
+            @click="openFacebook"
+          />
         </div>
       </div>
     </div>
