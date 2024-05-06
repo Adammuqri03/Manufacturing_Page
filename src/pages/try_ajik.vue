@@ -2,156 +2,182 @@
   <div>
     <!-- Header Section -->
     <header class="header" data-header>
-        <div class="container">
+      <div class="container">
+        <a href="#" class="logo">
+          <img
+            src="/img/myces_logo.png"
+            width="74"
+            height="24"
+            alt="Adex home"
+            class="logo-light"
+          />
 
-          <a href="#" class="logo">
-            <img src="/img/myces_logo.png" width="74" height="24" alt="Adex home" class="logo-light">
+          <img
+            src="/img/myces_logo.png"
+            width="74"
+            height="24"
+            alt="Adex home"
+            class="logo-dark"
+          />
+        </a>
 
-            <img src="/img/myces_logo.png" width="74" height="24" alt="Adex home" class="logo-dark">
-          </a>
+        <nav class="navbar" data-navbar>
+          <div class="navbar-top">
+            <a href="#" class="logo">
+              <img src="" width="74" height="24" alt="Adex home" />
+            </a>
 
-          <nav class="navbar" data-navbar>
+            <button
+              class="nav-close-btn"
+              aria-label="close menu"
+              data-nav-toggler
+            >
+              <ion-icon name="close-outline" aria-hidden="true"></ion-icon>
+            </button>
+          </div>
 
-            <div class="navbar-top">
-              <a href="#" class="logo">
-                <img src="" width="74" height="24" alt="Adex home">
+          <!--navbar/menu section-->
+          <ul class="navbar-list">
+            <li>
+              <a href="#" class="navbar-link">Home</a>
+            </li>
+
+            <li>
+              <a href="#" class="navbar-link">About</a>
+            </li>
+
+            <li>
+              <a href="#" class="navbar-link">Projects</a>
+            </li>
+
+            <li>
+              <a href="#" class="navbar-link">Blog</a>
+            </li>
+          </ul>
+
+          <div class="wrapper">
+            <a href="mailto:info@email.com" class="contact-link"
+              >info@email.com</a
+            >
+
+            <a href="tel:001234567890" class="contact-link"
+              >00 (123) 456 78 90</a
+            >
+          </div>
+
+          <ul class="social-list">
+            <li>
+              <a href="#" class="social-link">
+                <ion-icon name="logo-twitter"></ion-icon>
               </a>
+            </li>
 
-              <button class="nav-close-btn" aria-label="close menu" data-nav-toggler>
-                <ion-icon name="close-outline" aria-hidden="true"></ion-icon>
-              </button>
-            </div>
+            <li>
+              <a href="#" class="social-link">
+                <ion-icon name="logo-facebook"></ion-icon>
+              </a>
+            </li>
 
-            <!--navbar/menu section-->
-            <ul class="navbar-list">
+            <li>
+              <a href="#" class="social-link">
+                <ion-icon name="logo-dribbble"></ion-icon>
+              </a>
+            </li>
 
-              <li>
-                <a href="#" class="navbar-link">Home</a>
-              </li>
+            <li>
+              <a href="#" class="social-link">
+                <ion-icon name="logo-instagram"></ion-icon>
+              </a>
+            </li>
 
-              <li>
-                <a href="#" class="navbar-link">About</a>
-              </li>
+            <li>
+              <a href="#" class="social-link">
+                <ion-icon name="logo-youtube"></ion-icon>
+              </a>
+            </li>
+          </ul>
+        </nav>
 
-              <li>
-                <a href="#" class="navbar-link">Projects</a>
-              </li>
+        <a href="#" class="btn btn-primary">Contact us</a>
 
-              <li>
-                <a href="#" class="navbar-link">Blog</a>
-              </li>
+        <button class="nav-open-btn" aria-label="open menu" data-nav-toggler>
+          <ion-icon name="menu-outline" aria-hidden="true"></ion-icon>
+        </button>
 
-            </ul>
-
-            <div class="wrapper">
-              <a href="mailto:info@email.com" class="contact-link">info@email.com</a>
-
-              <a href="tel:001234567890" class="contact-link">00 (123) 456 78 90</a>
-            </div>
-
-            <ul class="social-list">
-
-              <li>
-                <a href="#" class="social-link">
-                  <ion-icon name="logo-twitter"></ion-icon>
-                </a>
-              </li>
-
-              <li>
-                <a href="#" class="social-link">
-                  <ion-icon name="logo-facebook"></ion-icon>
-                </a>
-              </li>
-
-              <li>
-                <a href="#" class="social-link">
-                  <ion-icon name="logo-dribbble"></ion-icon>
-                </a>
-              </li>
-
-              <li>
-                <a href="#" class="social-link">
-                  <ion-icon name="logo-instagram"></ion-icon>
-                </a>
-              </li>
-
-              <li>
-                <a href="#" class="social-link">
-                  <ion-icon name="logo-youtube"></ion-icon>
-                </a>
-              </li>
-
-            </ul>
-
-          </nav>
-
-          <a href="#" class="btn btn-primary">Contact us</a>
-
-          <button class="nav-open-btn" aria-label="open menu" data-nav-toggler>
-            <ion-icon name="menu-outline" aria-hidden="true"></ion-icon>
-          </button>
-
-          <div class="overlay" data-nav-toggler data-overlay></div>
-
-        </div>
+        <div class="overlay" data-nav-toggler data-overlay></div>
+      </div>
     </header>
 
     <main>
-      <article>-
+      <article>
+        -
 
         <!-- Introduction Section -->
-        <section class="section hero has-bg-image" aria-label="home"
-        style="background-image: url('')">
-        <div class="container">
+        <section
+          class="section hero has-bg-image"
+          aria-label="home"
+          style="background-image: url('')"
+        >
+          <div class="container">
+            <div class="hero-content">
+              <h1 class="h1 hero-title">Myces Sdn Bhd</h1>
 
-          <div class="hero-content">
+              <p class="hero-text">
+                MyCES Manufacturing unveils EMARS, a patented Energy Monitoring,
+                Analysis & Reporting System crafted over five years. It
+                seamlessly blends local products with global energy monitoring
+                standards, ensuring rapid after-sales service and ongoing
+                customization. Our local engineers also offer Facilities
+                Management System (FMS) for digitizing organizational reports
+                and facilitating data-driven decisions.
+              </p>
 
-            <h1 class="h1 hero-title">Myces Sdn Bhd</h1>
-
-            <p class="hero-text">
-              MyCES Manufacturing unveils EMARS, a patented Energy Monitoring, Analysis & Reporting System crafted over five years. It seamlessly blends local products with global energy monitoring standards, ensuring rapid after-sales service and ongoing customization. Our local engineers also offer Facilities Management System (FMS) for digitizing organizational reports and facilitating data-driven decisions.
-            </p>
-
-            <div class="btn-wrapper">
-
-              <a href="#" class="btn btn-primary">Contact us</a>
-
-
-
+              <div class="btn-wrapper">
+                <a href="#" class="btn btn-primary">Contact us</a>
+              </div>
             </div>
 
-          </div>
+            <div class="hero-slider" data-slider>
+              <div class="slider-inner">
+                <ul class="slider-container" data-slider-container>
+                  <li class="slider-item">
+                    <img
+                      src="/img/myces_logo.png"
+                      width="575"
+                      height="550"
+                      alt=""
+                      class="img-cover"
+                    />
+                  </li>
+                </ul>
+              </div>
 
-          <div class="hero-slider" data-slider>
+              <button
+                class="slider-btn prev"
+                aria-label="slide to previous"
+                data-slider-prev
+              >
+                <ion-icon name="arrow-back"></ion-icon>
+              </button>
 
-            <div class="slider-inner">
-              <ul class="slider-container" data-slider-container>
-
-                <li class="slider-item">
-                    <img src="/img/myces_logo.png" width="575" height="550" alt="" class="img-cover">
-                </li>
-              </ul>
+              <button
+                class="slider-btn next"
+                aria-label="slide to next"
+                data-slider-next
+              >
+                <ion-icon name="arrow-forward"></ion-icon>
+              </button>
             </div>
-
-            <button class="slider-btn prev" aria-label="slide to previous" data-slider-prev>
-              <ion-icon name="arrow-back"></ion-icon>
-            </button>
-
-            <button class="slider-btn next" aria-label="slide to next" data-slider-next>
-              <ion-icon name="arrow-forward"></ion-icon>
-            </button>
-
           </div>
-
-        </div>
-      </section>
+        </section>
 
         <!-- Service Section -->
         <section class="stats" aria-label="our stats">
           <div class="container">
-
-            <ul class="stats-card has-bg-image" style="background-image: url('./assets/images/stats-bg.jpg')">
-
+            <ul
+              class="stats-card has-bg-image"
+              style="background-image: url('./assets/images/stats-bg.jpg')"
+            >
               <li>
                 <p class="card-text">
                   <span class="h1">8</span>
@@ -183,16 +209,13 @@
                   <spna class="span">Awards</spna>
                 </p>
               </li>
-
             </ul>
-
           </div>
         </section>
 
         <!-- Project Section -->
         <section class="section project" aria-labelledby="project-label">
           <div class="container">
-
             <p class="section-subtitle" id="project-label">Service</p>
 
             <h2 class="h2 section-title">
@@ -200,24 +223,33 @@
             </h2>
 
             <ul class="grid-list">
-
               <li>
                 <div class="project-card">
-
-                  <figure class="card-banner img-holder" style="--width: 560; --height: 350;">
-                    <img src="/img/FMS.png" width="560" height="350" loading="lazy"
-                      alt="Ligula tristique quis risus" class="img-cover">
+                  <figure
+                    class="card-banner img-holder"
+                    style="--width: 560; --height: 350"
+                  >
+                    <img
+                      src="/img/FMS.png"
+                      width="560"
+                      height="350"
+                      loading="lazy"
+                      alt="Ligula tristique quis risus"
+                      class="img-cover"
+                    />
                   </figure>
 
                   <div class="card-content">
-
                     <h3 class="h3">
-                      <a href="#" class="card-title">Facility Management System</a>
+                      <a href="#" class="card-title"
+                        >Facility Management System</a
+                      >
                     </h3>
 
                     <p class="card-text">
-                      Mauris convallis non ligula non interdum. Gravida vulputate convallis tempus vestibulum cras
-                      imperdiet nun eu dolor.
+                      Mauris convallis non ligula non interdum. Gravida
+                      vulputate convallis tempus vestibulum cras imperdiet nun
+                      eu dolor.
                     </p>
 
                     <ul class="card-meta-list">
@@ -226,35 +258,47 @@
                       </li>
 
                       <li class="card-meta-item">
-                        <ion-icon name="calendar-outline" aria-hidden="true"></ion-icon>
+                        <ion-icon
+                          name="calendar-outline"
+                          aria-hidden="true"
+                        ></ion-icon>
 
-                        <time class="meta-text" datetime="2022-04-14">learn more</time>
+                        <time class="meta-text" datetime="2022-04-14"
+                          >learn more</time
+                        >
                       </li>
-
                     </ul>
-
                   </div>
-
                 </div>
               </li>
 
               <li>
                 <div class="project-card">
-
-                  <figure class="card-banner img-holder" style="--width: 560; --height: 350;">
-                    <img src="/img/logoemars.png" width="560" height="350" loading="lazy"
-                      alt="Nullam id dolor elit id nibh" class="img-cover">
+                  <figure
+                    class="card-banner img-holder"
+                    style="--width: 560; --height: 350"
+                  >
+                    <img
+                      src="/img/logoemars.png"
+                      width="560"
+                      height="350"
+                      loading="lazy"
+                      alt="Nullam id dolor elit id nibh"
+                      class="img-cover"
+                    />
                   </figure>
 
                   <div class="card-content">
-
                     <h3 class="h3">
-                      <a href="#" class="card-title">Energy Monitoring And Reporting System</a>
+                      <a href="#" class="card-title"
+                        >Energy Monitoring And Reporting System</a
+                      >
                     </h3>
 
                     <p class="card-text">
-                      Mauris convallis non ligula non interdum. Gravida vulputate convallis tempus vestibulum cras
-                      imperdiet nun eu dolor.
+                      Mauris convallis non ligula non interdum. Gravida
+                      vulputate convallis tempus vestibulum cras imperdiet nun
+                      eu dolor.
                     </p>
 
                     <ul class="card-meta-list">
@@ -263,92 +307,95 @@
                       </li>
 
                       <li class="card-meta-item">
-                        <ion-icon name="calendar-outline" aria-hidden="true"></ion-icon>
+                        <ion-icon
+                          name="calendar-outline"
+                          aria-hidden="true"
+                        ></ion-icon>
 
-                        <time class="meta-text" datetime="2022-04-14">learn more</time>
+                        <time class="meta-text" datetime="2022-04-14"
+                          >learn more</time
+                        >
                       </li>
-
                     </ul>
-
                   </div>
-
                 </div>
               </li>
 
               <li>
                 <div class="project-card">
-
-                  <figure class="card-banner img-holder" style="--width: 560; --height: 350;">
-                    <img src="MyHijau.png" width="560" height="350" loading="lazy"
-                      alt="Ultricies fusce porta elit" class="img-cover">
+                  <figure
+                    class="card-banner img-holder"
+                    style="--width: 560; --height: 350"
+                  >
+                    <img
+                      src="MyHijau.png"
+                      width="560"
+                      height="350"
+                      loading="lazy"
+                      alt="Ultricies fusce porta elit"
+                      class="img-cover"
+                    />
                   </figure>
 
                   <div class="card-content">
-
                     <h3 class="h3">
                       <a href="#" class="card-title">Agrofarm</a>
                     </h3>
 
                     <p class="card-text">
-                      Mauris convallis non ligula non interdum. Gravida vulputate convallis tempus vestibulum cras
-                      imperdiet nun eu dolor.
+                      Mauris convallis non ligula non interdum. Gravida
+                      vulputate convallis tempus vestibulum cras imperdiet nun
+                      eu dolor.
                     </p>
 
-                      <ul class="card-meta-list">
-                        <li class="card-meta-list">
-                          <a href="#" class="btn btn-primary">Contact us</a>
-                        </li>
+                    <ul class="card-meta-list">
+                      <li class="card-meta-list">
+                        <a href="#" class="btn btn-primary">Contact us</a>
+                      </li>
 
-                        <li class="card-meta-item">
-                          <ion-icon name="calendar-outline" aria-hidden="true"></ion-icon>
+                      <li class="card-meta-item">
+                        <ion-icon
+                          name="calendar-outline"
+                          aria-hidden="true"
+                        ></ion-icon>
 
-                          <time class="meta-text" datetime="2022-04-14">learn more</time>
-                        </li>
-                      </ul>
-
+                        <time class="meta-text" datetime="2022-04-14"
+                          >learn more</time
+                        >
+                      </li>
+                    </ul>
                   </div>
-
                 </div>
               </li>
-
             </ul>
-
           </div>
         </section>
 
         <!-- CTA Section -->
         <section class="cta" aria-label="call to action">
           <div class="container">
-
-            <h2 class="h2 section-title">
-              Join our community by using our services and grow your business.
-            </h2>
+            <h2 class="h2 section-title">MyCes SDN BHD.</h2>
 
             <a href="#" class="btn btn-primary">Try it For Free</a>
-
           </div>
         </section>
-
       </article>
     </main>
-
 
     <!-- Footer Section -->
     <footer class="footer">
       <div class="container grid-list">
-
         <div class="footer-brand">
-
           <a href="#" class="logo">
-            <img src="" width="74" height="24" alt="Adex home">
+            <img src="" width="74" height="24" alt="Adex home" />
           </a>
 
           <p class="footer-text">
-            &copy; 2022 codewithsadee. <br> All rights reserved.
+            &copy; 2022 codewithsadee. <br />
+            All rights reserved.
           </p>
 
           <ul class="social-list">
-
             <li>
               <a href="#" class="social-link">
                 <ion-icon name="logo-facebook"></ion-icon>
@@ -378,35 +425,33 @@
                 <ion-icon name="logo-youtube"></ion-icon>
               </a>
             </li>
-
           </ul>
-
         </div>
 
         <ul class="footer-list">
-
           <li>
-            <p class="h4 footer-list-title">Get in Touch</p>
+            <p class="h4 footer-list-title">Contact Us</p>
           </li>
 
           <li>
             <address class="footer-text">
-              Moonshine St. 14/05 Light City, London, United Kingdom
+              HQ Address RK 27-B Jalan Villa 3 Taman Anggerik Villa 43500
+              Semenyih Selangor Darul Ehsan
             </address>
           </li>
 
           <li>
-            <a href="mailto:info@email.com" class="footer-link">info@email.com</a>
+            <a href="mailto:info@email.com" class="footer-link"
+              >Info@mycesgroup.com</a
+            >
           </li>
 
           <li>
-            <a href="tel:001234567890" class="footer-link">00 (123) 456 78 90</a>
+            <a href="tel:001234567890" class="footer-link">603-8725 5811</a>
           </li>
-
         </ul>
 
         <ul class="footer-list">
-
           <li>
             <p class="h4 footer-list-title">Learn More</p>
           </li>
@@ -430,35 +475,34 @@
           <li>
             <a href="#" class="footer-link">Privacy Policy</a>
           </li>
-
         </ul>
 
         <div class="footer-list">
-
-          <p class="h4 footer-list-title">Our Newsletter</p>
+          <p class="h4 footer-list-title">Reach out to us</p>
 
           <p class="footer-text">
-            Subscribe to our newsletter to get our news & deals delivered to you.
+            Enter email to receive the most recent updates.
           </p>
 
           <form action="" class="input-wrapper">
-            <input type="email" name="email_address" placeholder="Email Address" required class="input-field">
+            <input
+              type="email"
+              name="email_address"
+              placeholder="Email Address"
+              required
+              class="input-field"
+            />
 
-            <button type="submit" class="submit-btn">Join</button>
+            <button type="submit" class="submit-btn">Submit</button>
           </form>
-
         </div>
-
       </div>
     </footer>
-
   </div>
 </template>
 
 <script>
-'use strict';
-
-
+"use strict";
 
 /**
  * add event listener on multiple elements
@@ -468,9 +512,7 @@ const addEventOnElements = function (elements, eventType, callback) {
   for (let i = 0, len = elements.length; i < len; i++) {
     elements[i].addEventListener(eventType, callback);
   }
-}
-
-
+};
 
 /**
  * NAVBAR TOGGLE FOR MOBILE
@@ -484,11 +526,9 @@ const toggleNavbar = function () {
   navbar.classList.toggle("active");
   overlay.classList.toggle("active");
   document.body.classList.toggle("nav-active");
-}
+};
 
 addEventOnElements(navTogglers, "click", toggleNavbar);
-
-
 
 /**
  * HEADER
@@ -505,17 +545,16 @@ window.addEventListener("scroll", function () {
   }
 });
 
-
-
 /**
  * SLIDER
  */
 
 const sliders = document.querySelectorAll("[data-slider]");
 
-const initSlider = function(currentSlider) {
-
-  const sldierContainer = currentSlider.querySelector("[data-slider-container]");
+const initSlider = function (currentSlider) {
+  const sldierContainer = currentSlider.querySelector(
+    "[data-slider-container]"
+  );
   const sliderPrevBtn = currentSlider.querySelector("[data-slider-prev]");
   const sliderNextBtn = currentSlider.querySelector("[data-slider-next]");
 
@@ -523,7 +562,7 @@ const initSlider = function(currentSlider) {
 
   const moveSliderItem = function () {
     sldierContainer.style.transform = `translateX(-${sldierContainer.children[currentSlidePos].offsetLeft}px)`;
-  }
+  };
 
   /**
    * NEXT SLIDE
@@ -539,7 +578,7 @@ const initSlider = function(currentSlider) {
     }
 
     moveSliderItem();
-  }
+  };
 
   sliderNextBtn.addEventListener("click", slideNext);
 
@@ -547,8 +586,7 @@ const initSlider = function(currentSlider) {
    * PREVIOUS SLIDE
    */
 
-   const slidePrev = function () {
-
+  const slidePrev = function () {
     if (currentSlidePos <= 0) {
       currentSlidePos = sldierContainer.childElementCount - 1;
     } else {
@@ -556,7 +594,7 @@ const initSlider = function(currentSlider) {
     }
 
     moveSliderItem();
-  }
+  };
 
   sliderPrevBtn.addEventListener("click", slidePrev);
 
@@ -565,12 +603,11 @@ const initSlider = function(currentSlider) {
     sliderNextBtn.style.display = "none";
     sliderPrevBtn.style.display = "none";
   }
+};
 
+for (let i = 0, len = sliders.length; i < len; i++) {
+  initSlider(sliders[i]);
 }
-
-for (let i = 0, len = sliders.length; i < len; i++) { initSlider(sliders[i]); }
-
-
 
 /**
  * ACCORDION
@@ -581,7 +618,6 @@ const accordions = document.querySelectorAll("[data-accordion]");
 let lastActiveAccordion = accordions[0];
 
 const initAccordion = function (currentAccordion) {
-
   const accordionBtn = currentAccordion.querySelector("[data-accordion-btn]");
 
   const expandAccordion = function () {
@@ -592,17 +628,17 @@ const initAccordion = function (currentAccordion) {
     currentAccordion.classList.toggle("expanded");
 
     lastActiveAccordion = currentAccordion;
-  }
+  };
 
   accordionBtn.addEventListener("click", expandAccordion);
+};
 
+for (let i = 0, len = accordions.length; i < len; i++) {
+  initAccordion(accordions[i]);
 }
-
-for (let i = 0, len = accordions.length; i < len; i++) { initAccordion(accordions[i]); }
 </script>
 
 <style>
-
 /*-----------------------------------*\
   #main.css
 \*-----------------------------------*/
@@ -611,16 +647,11 @@ for (let i = 0, len = accordions.length; i < len; i++) { initAccordion(accordion
  * copyright 2022 codewithsadee
  */
 
-
-
-
-
 /*-----------------------------------*\
   #CUSTOM PROPERTY
 \*-----------------------------------*/
 
 :root {
-
   /**
    * colors
    */
@@ -646,10 +677,10 @@ for (let i = 0, len = accordions.length; i < len; i++) { initAccordion(accordion
    * typography
    */
 
-  --ff-manrope: 'Manrope', sans-serif;
+  --ff-manrope: "Manrope", sans-serif;
 
   --fs-1: calc(2.7rem + 1.38vw);
-  --fs-2: calc(2.6rem + .66vw);
+  --fs-2: calc(2.6rem + 0.66vw);
   --fs-3: 2.2rem;
   --fs-4: 1.9rem;
   --fs-5: 1.8rem;
@@ -670,7 +701,8 @@ for (let i = 0, len = accordions.length; i < len; i++) { initAccordion(accordion
    */
 
   --shadow-1: 0 0 20px hsla(216, 14%, 14%, 0.05);
-  --shadow-2: 0 0 0 0.05rem hsla(214, 88%, 27%, 0.08), 0 0 1.25rem hsla(216, 14%, 14%, 0.06);
+  --shadow-2: 0 0 0 0.05rem hsla(214, 88%, 27%, 0.08),
+    0 0 1.25rem hsla(216, 14%, 14%, 0.06);
   --shadow-3: 0 0 1.25rem hsla(216, 14%, 14%, 0.04);
 
   /**
@@ -690,12 +722,7 @@ for (let i = 0, len = accordions.length; i < len; i++) { initAccordion(accordion
   --transition-1: 0.25s ease;
   --transition-2: 0.5s ease;
   --transition-3: 0.3s ease-in-out;
-
 }
-
-
-
-
 
 /*-----------------------------------*\
   #RESET
@@ -709,21 +736,27 @@ for (let i = 0, len = accordions.length; i < len; i++) { initAccordion(accordion
   box-sizing: border-box;
 }
 
-li { list-style: none; }
+li {
+  list-style: none;
+}
 
 a,
 img,
 span,
 input,
 button,
-ion-icon { display: block; }
+ion-icon {
+  display: block;
+}
 
 a {
   color: inherit;
   text-decoration: none;
 }
 
-img { height: auto; }
+img {
+  height: auto;
+}
 
 input,
 button {
@@ -732,13 +765,21 @@ button {
   font: inherit;
 }
 
-input { width: 100%; }
+input {
+  width: 100%;
+}
 
-button { cursor: pointer; }
+button {
+  cursor: pointer;
+}
 
-ion-icon { pointer-events: none; }
+ion-icon {
+  pointer-events: none;
+}
 
-address { font-style: normal; }
+address {
+  font-style: normal;
+}
 
 html {
   font-family: var(--ff-manrope);
@@ -753,25 +794,33 @@ body {
   line-height: 1.7;
 }
 
-body.nav-active { overflow: hidden; }
+body.nav-active {
+  overflow: hidden;
+}
 
-::-webkit-scrollbar { width: 10px; }
+::-webkit-scrollbar {
+  width: 10px;
+}
 
-::-webkit-scrollbar-track { background-color: hsl(0, 0%, 98%); }
+::-webkit-scrollbar-track {
+  background-color: hsl(0, 0%, 98%);
+}
 
-::-webkit-scrollbar-thumb { background-color: hsl(0, 0%, 80%); }
+::-webkit-scrollbar-thumb {
+  background-color: hsl(0, 0%, 80%);
+}
 
-::-webkit-scrollbar-thumb:hover { background-color: hsl(0, 0%, 70%); }
-
-
-
-
+::-webkit-scrollbar-thumb:hover {
+  background-color: hsl(0, 0%, 70%);
+}
 
 /*-----------------------------------*\
   #REUSED STYLE
 \*-----------------------------------*/
 
-.container { padding-inline: 16px; }
+.container {
+  padding-inline: 16px;
+}
 
 .social-list {
   display: flex;
@@ -784,9 +833,13 @@ body.nav-active { overflow: hidden; }
   transition: var(--transition-1);
 }
 
-.social-link:is(:hover, :focus-visible) { transform: translateY(-3px); }
+.social-link:is(:hover, :focus-visible) {
+  transform: translateY(-3px);
+}
 
-.section { padding-block: var(--section-padding); }
+.section {
+  padding-block: var(--section-padding);
+}
 
 .has-bg-image {
   background-repeat: no-repeat;
@@ -804,15 +857,25 @@ body.nav-active { overflow: hidden; }
   line-height: 1.3;
 }
 
-.h1 { font-size: var(--fs-1); }
+.h1 {
+  font-size: var(--fs-1);
+}
 
-.h2 { font-size: var(--fs-2); }
+.h2 {
+  font-size: var(--fs-2);
+}
 
-.h3 { font-size: var(--fs-3); }
+.h3 {
+  font-size: var(--fs-3);
+}
 
-.h4 { font-size: var(--fs-4); }
+.h4 {
+  font-size: var(--fs-4);
+}
 
-.h5 { font-size: var(--fs-6); }
+.h5 {
+  font-size: var(--fs-6);
+}
 
 .btn {
   color: var(--white);
@@ -826,12 +889,14 @@ body.nav-active { overflow: hidden; }
   will-change: transform;
 }
 
-.btn:is(:hover, :focus-visible) { transform: translateY(-4px); }
+.btn:is(:hover, :focus-visible) {
+  transform: translateY(-4px);
+}
 
 .btn-primary,
 .btn-outline:is(:hover, :focus-visible) {
   background-color: green;
-  border-radius:40px;
+  border-radius: 40px;
   color: var(black);
 }
 
@@ -860,17 +925,17 @@ body.nav-active { overflow: hidden; }
   gap: 25px;
 }
 
-.w-100 { width: 100%; }
-
-
-
-
+.w-100 {
+  width: 100%;
+}
 
 /*-----------------------------------*\
   #HEADER
 \*-----------------------------------*/
 
-.header .btn { display: none; }
+.header .btn {
+  display: none;
+}
 
 .header {
   position: absolute;
@@ -889,8 +954,12 @@ body.nav-active { overflow: hidden; }
 }
 
 @keyframes slideIn {
-  0% { transform: translateY(-100%); }
-  100% { transform: translateY(0); }
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(0);
+  }
 }
 
 .header .container {
@@ -901,17 +970,23 @@ body.nav-active { overflow: hidden; }
 }
 
 .header.active .logo-light,
-.header .logo-dark { display: none; }
+.header .logo-dark {
+  display: none;
+}
 
 .header .logo-light,
-.header.active .logo-dark { display: block; }
+.header.active .logo-dark {
+  display: block;
+}
 
 .nav-open-btn {
   font-size: 3.5rem;
   color: var(--white);
 }
 
-.header.active .nav-open-btn { color: var(--charcoal); }
+.header.active .nav-open-btn {
+  color: var(--charcoal);
+}
 
 .navbar {
   position: fixed;
@@ -952,9 +1027,13 @@ body.nav-active { overflow: hidden; }
   transition: var(--transition-1);
 }
 
-.nav-close-btn ion-icon { --ionicon-stroke-width: 50px; }
+.nav-close-btn ion-icon {
+  --ionicon-stroke-width: 50px;
+}
 
-.nav-close-btn:is(:hover, :focus-visible) { background-color: var(--white_a12); }
+.nav-close-btn:is(:hover, :focus-visible) {
+  background-color: var(--white_a12);
+}
 
 .navbar-list {
   margin-block-end: auto;
@@ -966,9 +1045,13 @@ body.nav-active { overflow: hidden; }
   padding-block: 6px;
 }
 
-.contact-link { transition: var(--transition-1); }
+.contact-link {
+  transition: var(--transition-1);
+}
 
-.contact-link:is(:hover, :focus-visible) { color: var(--violet-blue-crayola); }
+.contact-link:is(:hover, :focus-visible) {
+  color: var(--violet-blue-crayola);
+}
 
 .overlay {
   position: fixed;
@@ -987,10 +1070,6 @@ body.nav-active { overflow: hidden; }
   opacity: 0.8;
 }
 
-
-
-
-
 /*-----------------------------------*\
   #HERO
 \*-----------------------------------*/
@@ -1005,7 +1084,9 @@ body.nav-active { overflow: hidden; }
   gap: 70px;
 }
 
-.hero-title { color: var(black); }
+.hero-title {
+  color: var(black);
+}
 
 .hero-text {
   font-size: var(--fs-5);
@@ -1022,7 +1103,9 @@ body.nav-active { overflow: hidden; }
 }
 
 .hero-slider,
-.hero-card { position: relative; }
+.hero-card {
+  position: relative;
+}
 
 .hero-card .play-btn {
   position: absolute;
@@ -1038,11 +1121,17 @@ body.nav-active { overflow: hidden; }
   animation: pulse 2s ease infinite;
 }
 
-.hero-card .play-btn:is(:hover, :focus-visible) { color: var(--violet-blue-crayola); }
+.hero-card .play-btn:is(:hover, :focus-visible) {
+  color: var(--violet-blue-crayola);
+}
 
 @keyframes pulse {
-  0% { box-shadow: 0 0 0 0 var(--white_a70); }
-  75% { box-shadow: 0 0 0 20px transparent; }
+  0% {
+    box-shadow: 0 0 0 0 var(--white_a70);
+  }
+  75% {
+    box-shadow: 0 0 0 20px transparent;
+  }
 }
 
 .hero .slider-inner {
@@ -1077,23 +1166,29 @@ body.nav-active { overflow: hidden; }
   transition: var(--transition-1);
 }
 
-.hero .slider-btn:is(:hover, :focus-visible) { background-color: var(--white); }
+.hero .slider-btn:is(:hover, :focus-visible) {
+  background-color: var(--white);
+}
 
-.hero .slider-btn.prev { left: 20px; }
+.hero .slider-btn.prev {
+  left: 20px;
+}
 
-.hero .slider-btn.next { right: 20px; }
-
-
-
-
+.hero .slider-btn.next {
+  right: 20px;
+}
 
 /*-----------------------------------*\
   #SERVICE
 \*-----------------------------------*/
 
-.service { text-align: center; }
+.service {
+  text-align: center;
+}
 
-.service .section-title { margin-block-end: 50px; }
+.service .section-title {
+  margin-block-end: 50px;
+}
 
 .service-card {
   padding: 40px;
@@ -1113,9 +1208,13 @@ body.nav-active { overflow: hidden; }
   margin-inline: auto;
 }
 
-.service-card .card-icon ion-icon { --ionicon-stroke-width: 50px; }
+.service-card .card-icon ion-icon {
+  --ionicon-stroke-width: 50px;
+}
 
-.service-card .card-title { margin-block: 16px 10px; }
+.service-card .card-title {
+  margin-block: 16px 10px;
+}
 
 .service-card .btn-text {
   display: flex;
@@ -1128,11 +1227,9 @@ body.nav-active { overflow: hidden; }
   transition: var(--transition-1);
 }
 
-.service-card .btn-text:is(:hover, :focus-visible) { opacity: 0.9; }
-
-
-
-
+.service-card .btn-text:is(:hover, :focus-visible) {
+  opacity: 0.9;
+}
 
 /*-----------------------------------*\
   #ABOUT
@@ -1143,9 +1240,13 @@ body.nav-active { overflow: hidden; }
   gap: 50px;
 }
 
-.about .section-title { margin-block-end: 35px; }
+.about .section-title {
+  margin-block-end: 35px;
+}
 
-.accordion-card .card-title { padding-block-end: 20px; }
+.accordion-card .card-title {
+  padding-block-end: 20px;
+}
 
 .accordion-btn {
   display: flex;
@@ -1163,10 +1264,14 @@ body.nav-active { overflow: hidden; }
   transform: rotate(0.5turn);
 }
 
-.accordion-btn .span { transition: var(--transition-1); }
+.accordion-btn .span {
+  transition: var(--transition-1);
+}
 
 .accordion-btn:is(:hover, :focus-visible) .span,
-.accordion-card.expanded .accordion-btn .span { color: var(--violet-blue-crayola); }
+.accordion-card.expanded .accordion-btn .span {
+  color: var(--violet-blue-crayola);
+}
 
 .accordion-content {
   padding-inline-start: 24px;
@@ -1179,10 +1284,6 @@ body.nav-active { overflow: hidden; }
   padding-block-end: 20px;
 }
 
-
-
-
-
 /*-----------------------------------*\
   #FEATURES
 \*-----------------------------------*/
@@ -1192,7 +1293,9 @@ body.nav-active { overflow: hidden; }
   gap: 50px;
 }
 
-.feature .section-text { margin-block: 25px 30px; }
+.feature .section-text {
+  margin-block: 25px 30px;
+}
 
 .feature-list {
   display: grid;
@@ -1212,17 +1315,21 @@ body.nav-active { overflow: hidden; }
   border-radius: var(--radius-circle);
 }
 
-.feature-card .card-icon ion-icon { --ionicon-stroke-width: 40px; }
-
-
-
-
+.feature-card .card-icon ion-icon {
+  --ionicon-stroke-width: 40px;
+}
 
 /*-----------------------------------*\
   #STATS
 \*-----------------------------------*/
 
-.stats { background-image: linear-gradient(to bottom, var(--white) 50%, var(--cultured) 50%); }
+.stats {
+  background-image: linear-gradient(
+    to bottom,
+    var(--white) 50%,
+    var(--cultured) 50%
+  );
+}
 
 .stats-card {
   display: grid;
@@ -1233,21 +1340,25 @@ body.nav-active { overflow: hidden; }
   border-radius: var(--radius-8);
 }
 
-.stats-card .card-text > * { color: var(black); }
-
-
-
-
+.stats-card .card-text > * {
+  color: var(black);
+}
 
 /*-----------------------------------*\
   #PROJECT
 \*-----------------------------------*/
 
-.project { background-color: var(--cultured); }
+.project {
+  background-color: var(--cultured);
+}
 
-.project :is(.section-subtitle, .section-title) { text-align: center; }
+.project :is(.section-subtitle, .section-title) {
+  text-align: center;
+}
 
-.project .section-title { margin-block-end: 50px; }
+.project .section-title {
+  margin-block-end: 50px;
+}
 
 .project-card {
   background-color: var(--white);
@@ -1257,13 +1368,21 @@ body.nav-active { overflow: hidden; }
   height: 100%;
 }
 
-.project-card .card-content { padding: 30px; }
+.project-card .card-content {
+  padding: 30px;
+}
 
-.project-card .card-title { transition: var(--transition-1); }
+.project-card .card-title {
+  transition: var(--transition-1);
+}
 
-.project-card .card-title:is(:hover, :focus-visible) { color: var(--violet-blue-crayola); }
+.project-card .card-title:is(:hover, :focus-visible) {
+  color: var(--violet-blue-crayola);
+}
 
-.project-card .card-text { margin-block: 16px 20px; }
+.project-card .card-text {
+  margin-block: 16px 20px;
+}
 
 .project-card .card-meta-list {
   display: flex;
@@ -1279,15 +1398,13 @@ body.nav-active { overflow: hidden; }
   font-size: var(--fs-8);
 }
 
-
-
-
-
 /*-----------------------------------*\
   #CTA
 \*-----------------------------------*/
 
-.cta { background-color: var(--charcoal); }
+.cta {
+  background-color: var(--charcoal);
+}
 
 .cta .container {
   padding-block: 100px 60px;
@@ -1305,10 +1422,6 @@ body.nav-active { overflow: hidden; }
   border: none;
 }
 
-
-
-
-
 /*-----------------------------------*\
   #FOOTER
 \*-----------------------------------*/
@@ -1319,9 +1432,13 @@ body.nav-active { overflow: hidden; }
   color: var(--light-gray);
 }
 
-.footer-brand .footer-text { margin-block: 20px; }
+.footer-brand .footer-text {
+  margin-block: 20px;
+}
 
-.footer .social-list { color: var(--white); }
+.footer .social-list {
+  color: var(--white);
+}
 
 .footer-list-title {
   color: var(--white);
@@ -1333,7 +1450,9 @@ body.nav-active { overflow: hidden; }
   transition: var(--transition-1);
 }
 
-.footer-link:is(:hover, :focus-visible) { color: var(--violet-blue-crayola); }
+.footer-link:is(:hover, :focus-visible) {
+  color: var(--violet-blue-crayola);
+}
 
 .input-wrapper {
   position: relative;
@@ -1351,7 +1470,9 @@ body.nav-active { overflow: hidden; }
   outline: none;
 }
 
-.input-field::placeholder { color: inherit; }
+.input-field::placeholder {
+  color: inherit;
+}
 
 .submit-btn {
   position: absolute;
@@ -1365,10 +1486,6 @@ body.nav-active { overflow: hidden; }
   font-weight: var(--fw-700);
 }
 
-
-
-
-
 /*-----------------------------------*\
   #MEDIA QUERIES
 \*-----------------------------------*/
@@ -1378,7 +1495,6 @@ body.nav-active { overflow: hidden; }
  */
 
 @media (min-width: 575px) {
-
   /**
    * REUSED STYLE
    */
@@ -1389,51 +1505,43 @@ body.nav-active { overflow: hidden; }
     margin-inline: auto;
   }
 
-
-
   /**
    * PROJECTS
    */
 
-  .project-card .card-content { padding: 40px; }
-
+  .project-card .card-content {
+    padding: 40px;
+  }
 }
-
-
-
-
 
 /**
  * responsive for large than 768px screen
  */
 
 @media (min-width: 768px) {
-
   /**
    * CUSTOM PROPERTY
    */
 
   :root {
-
     /**
      * spacing
      */
 
     --section-padding: 120px;
-
   }
-
-
 
   /**
    * REUSED STYLE
    */
 
-  .container { max-width: 720px; }
+  .container {
+    max-width: 720px;
+  }
 
-  .grid-list { grid-template-columns: 1fr 1fr; }
-
-
+  .grid-list {
+    grid-template-columns: 1fr 1fr;
+  }
 
   /**
    * HEADER
@@ -1451,8 +1559,6 @@ body.nav-active { overflow: hidden; }
     color: var(--white);
   }
 
-
-
   /**
    * HERO
    */
@@ -1462,9 +1568,9 @@ body.nav-active { overflow: hidden; }
     margin-inline: auto;
   }
 
-  .hero-text { --fs-5: 2rem; }
-
-
+  .hero-text {
+    --fs-5: 2rem;
+  }
 
   /**
    * SERVICE
@@ -1475,8 +1581,6 @@ body.nav-active { overflow: hidden; }
     margin-inline: auto;
   }
 
-
-
   /**
    * ABOUT
    */
@@ -1485,8 +1589,6 @@ body.nav-active { overflow: hidden; }
     grid-template-columns: 1fr 0.7fr;
     align-items: center;
   }
-
-
 
   /**
    * FEATURE
@@ -1497,27 +1599,23 @@ body.nav-active { overflow: hidden; }
     align-items: center;
   }
 
-  .feature-banner { order: 1; }
-
+  .feature-banner {
+    order: 1;
+  }
 }
-
-
-
-
 
 /**
  * responsive for large than 992px screen
  */
 
 @media (min-width: 992px) {
-
   /**
    * REUSED STYLE
    */
 
-  .container { max-width: 960px; }
-
-
+  .container {
+    max-width: 960px;
+  }
 
   /**
    * HEADER
@@ -1525,14 +1623,16 @@ body.nav-active { overflow: hidden; }
 
   .nav-open-btn,
   .navbar > *:not(.navbar-list),
-  .overlay { display: none; }
+  .overlay {
+    display: none;
+  }
 
   .navbar,
   .navbar.active {
     all: unset;
     display: block;
     margin-inline: auto 24px;
-    font:  black;
+    font: black;
   }
 
   .navbar-list {
@@ -1545,18 +1645,22 @@ body.nav-active { overflow: hidden; }
     transition: var(--transition-1);
   }
 
-  .navbar-link:is(:hover, :focus-visible) { opacity: 0.7; }
+  .navbar-link:is(:hover, :focus-visible) {
+    opacity: 0.7;
+  }
 
-  .header.active .navbar-link { color: var(--charcoal); }
+  .header.active .navbar-link {
+    color: var(--charcoal);
+  }
 
   .header.active .navbar-link:is(:hover, :focus-visible) {
     opacity: 1;
     color: var(--violet-blue-crayola);
   }
 
-  .header .btn { margin-inline-start: 0; }
-
-
+  .header .btn {
+    margin-inline-start: 0;
+  }
 
   /**
    * HERO
@@ -1577,17 +1681,17 @@ body.nav-active { overflow: hidden; }
     margin-inline: 0;
   }
 
-  .btn-wrapper { justify-content: flex-start; }
-
-
+  .btn-wrapper {
+    justify-content: flex-start;
+  }
 
   /**
    * STATS
    */
 
-  .stats-card { grid-template-columns: repeat(4, 1fr); }
-
-
+  .stats-card {
+    grid-template-columns: repeat(4, 1fr);
+  }
 
   /**
    * PROJECT
@@ -1597,8 +1701,6 @@ body.nav-active { overflow: hidden; }
     max-width: 32ch;
     margin-inline: auto;
   }
-
-
 
   /**
    * CTA
@@ -1610,74 +1712,72 @@ body.nav-active { overflow: hidden; }
     align-items: center;
   }
 
-  .cta .btn { min-width: max-content; }
+  .cta .btn {
+    min-width: max-content;
+  }
 
   .cta .section-title {
     max-width: 30ch;
     margin-block-end: 0;
   }
 
-
-
   /**
    * FOOTER
    */
 
-  .footer .grid-list { grid-template-columns: repeat(4, 1fr); }
-
+  .footer .grid-list {
+    grid-template-columns: repeat(4, 1fr);
+  }
 }
-
-
-
-
 
 /**
  * responsive for large than 1200px screen
  */
 
 @media (min-width: 1200px) {
-
   /**
    * REUSED STYLE
    */
 
-  .container { max-width: 1140px; }
-
-
+  .container {
+    max-width: 1140px;
+  }
 
   /**
    * HERO
    */
 
-  .hero-text { padding-inline-end: 100px; }
-
-
+  .hero-text {
+    padding-inline-end: 100px;
+  }
 
   /**
    * SERVICE
    */
 
-  .service .grid-list { grid-template-columns: repeat(4, 1fr); }
-
-
+  .service .grid-list {
+    grid-template-columns: repeat(4, 1fr);
+  }
 
   /**
    * STATS
    */
 
-  .stats .container { max-width: 70%; }
+  .stats .container {
+    max-width: 70%;
+  }
 
-  .stats-card { padding: 60px; }
-
-
+  .stats-card {
+    padding: 60px;
+  }
 
   /**
    * PROJECT
    */
 
-  .project .grid-list { grid-template-columns: repeat(3, 1fr); }
-
-
+  .project .grid-list {
+    grid-template-columns: repeat(3, 1fr);
+  }
 
   /**
    * FOOTER
@@ -1687,32 +1787,27 @@ body.nav-active { overflow: hidden; }
     padding-inline-end: 100px;
     margin-block-end: 16px;
   }
-
 }
-
-
-
-
 
 /**
  * responsive for large than 1400px screen
  */
 
 @media (min-width: 1400px) {
-
   /**
    * REUSED STYLE
    */
 
-  .container { max-width: 1320px; }
-
-
+  .container {
+    max-width: 1320px;
+  }
 
   /**
    * FEATURE
    */
 
-  .feature-list { grid-template-columns: 1fr 1fr; }
-
+  .feature-list {
+    grid-template-columns: 1fr 1fr;
+  }
 }
 </style>
