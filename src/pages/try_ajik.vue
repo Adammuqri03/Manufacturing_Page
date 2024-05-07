@@ -1,7 +1,7 @@
 <template>
   <div>
     <!-- Header Section -->
-    <header class="header" data-header>
+    <header class="header" data-header style="background-color: green">
       <div class="container">
         <a href="#" class="logo">
           <img
@@ -39,19 +39,19 @@
           <!--navbar/menu section-->
           <ul class="navbar-list">
             <li>
-              <a href="#" class="navbar-link">Home</a>
+              <a href="#" class="navbar-link" style="color: white">Home</a>
             </li>
 
             <li>
-              <a href="#" class="navbar-link">About</a>
+              <a href="#" class="navbar-link" style="color: white">About</a>
             </li>
 
             <li>
-              <a href="#" class="navbar-link">Projects</a>
+              <a href="#" class="navbar-link" style="color: white">Projects</a>
             </li>
 
             <li>
-              <a href="#" class="navbar-link">Blog</a>
+              <a href="#" class="navbar-link" style="color: white">Blog</a>
             </li>
           </ul>
 
@@ -230,7 +230,7 @@
                     style="--width: 560; --height: 350"
                   >
                     <img
-                      src="/img/FMS.png"
+                      src="/public/logo/FMS_2.png"
                       width="560"
                       height="350"
                       loading="lazy"
@@ -247,9 +247,11 @@
                     </h3>
 
                     <p class="card-text">
-                      Mauris convallis non ligula non interdum. Gravida
-                      vulputate convallis tempus vestibulum cras imperdiet nun
-                      eu dolor.
+                      FMS helps identify underutilized spaces, enabling better
+                      space planning and resource allocation. FMS enhances
+                      safety measures by facilitating compliance with
+                      regulations and providing better visibility into
+                      safety-related tasks.
                     </p>
 
                     <ul class="card-meta-list">
@@ -279,7 +281,7 @@
                     style="--width: 560; --height: 350"
                   >
                     <img
-                      src="/img/logoemars.png"
+                      src="/public/logo/Emars_1.png"
                       width="560"
                       height="350"
                       loading="lazy"
@@ -296,9 +298,12 @@
                     </h3>
 
                     <p class="card-text">
-                      Mauris convallis non ligula non interdum. Gravida
-                      vulputate convallis tempus vestibulum cras imperdiet nun
-                      eu dolor.
+                      Since the foundation of MyCES SDN BHD in 2015, the company
+                      has developed very fast, and has taken over a significant
+                      part in the energy saving industry. The company’s goal is
+                      to build long term relationships with our customers and
+                      clients and provide exceptional customer services by
+                      pursuing business through innovation and advanced.
                     </p>
 
                     <ul class="card-meta-list">
@@ -328,7 +333,7 @@
                     style="--width: 560; --height: 350"
                   >
                     <img
-                      src="MyHijau.png"
+                      src="/public/logo/AgroFarm_2.png"
                       width="560"
                       height="350"
                       loading="lazy"
@@ -339,13 +344,15 @@
 
                   <div class="card-content">
                     <h3 class="h3">
-                      <a href="#" class="card-title">Agrofarm</a>
+                      <a href="#" class="card-title">AgroFarm</a>
                     </h3>
 
                     <p class="card-text">
-                      Mauris convallis non ligula non interdum. Gravida
-                      vulputate convallis tempus vestibulum cras imperdiet nun
-                      eu dolor.
+                      AgroFarm empowers farmers by simplifying transactions and
+                      providing real-time market insights for fruits and
+                      vegetables. Take control of your farm, make informed
+                      decisions, and increase your profits with AgroFarm's
+                      user-friendly system.
                     </p>
 
                     <ul class="card-meta-list">
@@ -370,20 +377,66 @@
             </ul>
           </div>
         </section>
-
+        <!-- Project Section 2 -->
+        <!-- our client -->
+        <div class="q-pa-md q-mt-lg" id="Info">
+          <p
+            class="text-center text-bold text-hijau"
+            style="font-size: 60px; text-shadow: 2px 2px 4px hijau"
+          >
+            OUR CLIENT
+          </p>
+          <div class="q-px-md">
+            <q-carousel
+              animated
+              v-model="slide"
+              navigation
+              infinite
+              :autoplay="2000"
+              arrows
+              transition-prev="slide-right"
+              transition-next="slide-left"
+              @mouseenter="autoplay = false"
+              @mouseleave="autoplay = true"
+              style="background-color: transparent"
+            >
+              <q-carousel-slide
+                v-for="slideData in slides"
+                :key="slideData.name"
+                :name="slideData.name"
+              >
+                <div
+                  class="row fit justify-center items-center q-gutter-lg no-wrap"
+                >
+                  <q-img
+                    v-for="image in slideData.images"
+                    :key="image"
+                    class="rounded-borders col-2 img-size"
+                    fit="contain"
+                    :src="image"
+                  />
+                </div>
+              </q-carousel-slide>
+            </q-carousel>
+          </div>
+        </div>
         <!-- CTA Section -->
-        <section class="cta" aria-label="call to action">
+        <section
+          class="cta"
+          aria-label="call to action"
+          style="background-color: green"
+        >
           <div class="container">
-            <h2 class="h2 section-title">MyCes SDN BHD.</h2>
+            <h2 class="h2 section-title">MyCES SDN BHD.</h2>
 
-            <a href="#" class="btn btn-primary">Try it For Free</a>
+            <!-- <a href="#" class="btn btn-primary">Try it For Free</a> -->
           </div>
         </section>
       </article>
     </main>
 
     <!-- Footer Section -->
-    <footer class="footer">
+    <footer class="footer" style="background-color: green">
       <div class="container grid-list">
         <div class="footer-brand">
           <a href="#" class="logo">
@@ -391,7 +444,7 @@
           </a>
 
           <p class="footer-text">
-            &copy; 2022 codewithsadee. <br />
+            &copy; 2015 MyCES. <br />
             All rights reserved.
           </p>
 
