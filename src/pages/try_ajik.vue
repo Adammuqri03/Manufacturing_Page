@@ -379,47 +379,112 @@
         </section>
         <!-- Project Section 2 -->
         <!-- our client -->
-        <div class="q-pa-md q-mt-lg" id="Info">
-          <p
-            class="text-center text-bold text-hijau"
-            style="font-size: 60px; text-shadow: 2px 2px 4px hijau"
-          >
-            OUR CLIENT
-          </p>
-          <div class="q-px-md">
-            <q-carousel
-              animated
-              v-model="slide"
-              navigation
-              infinite
-              :autoplay="2000"
-              arrows
-              transition-prev="slide-right"
-              transition-next="slide-left"
-              @mouseenter="autoplay = false"
-              @mouseleave="autoplay = true"
-              style="background-color: transparent"
-            >
-              <q-carousel-slide
-                v-for="slideData in slides"
-                :key="slideData.name"
-                :name="slideData.name"
-              >
-                <div
-                  class="row fit justify-center items-center q-gutter-lg no-wrap"
-                >
-                  <q-img
-                    v-for="image in slideData.images"
-                    :key="image"
-                    class="rounded-borders col-2 img-size"
-                    fit="contain"
-                    :src="image"
-                  />
-                </div>
-              </q-carousel-slide>
-            </q-carousel>
+        <section class="section project" aria-labelledby="project-label">
+          <div class="container">
+            <p class="section-subtitle" id="project-label">Our Client</p>
+
+            <div class="row q-gutter-md">
+              <div class="col" style="height: 200px; width: 230px">
+                <q-img style="mix-blend-mode:multiply;"  src="/img/client/umsc logo.png" />
+              </div>
+              <div class="col" style="height: 200px; width: 230px">
+                <q-img style="mix-blend-mode:multiply;"  src="/img/client/NIH.png" />
+              </div>
+              <div class="col" style="height: 200px; width: 230px">
+                <q-img style="mix-blend-mode:multiply;"  src="/img/client/MDSB.jpg" />
+              </div>
+              <div class="col" style="height: 200px; width: 230px">
+                <q-img style="mix-blend-mode:multiply;"  src="/img/client/MDKS.jpg"/>
+              </div>
+              <div class="col" style="height: 200px; width: 230px">
+                <q-img style="mix-blend-mode:multiply;"  src="/img/client/MDKL.jpg" />
+              </div>
+              <div class="col" style="height: 200px; width: 230px">
+                <q-img style="mix-blend-mode:multiply;"  src="/img/client/MDHL.jpg" />
+              </div>
+            </div>
+            <div class="row q-gutter-md">
+              <div class="col" style="height: 200px; width: 230px">
+                <q-img style="mix-blend-mode:multiply;"  src="/img/client/PDT Gombak.jpg" />
+              </div>
+              <div class="col" style="height: 200px; width: 230px">
+                <q-img style="mix-blend-mode:multiply;" src="/img/client/MBPJ.jpg" />
+              </div>
+              <div class="col" style="height: 200px; width: 230px">
+                <q-img style="mix-blend-mode:multiply;"  src="/img/client/Demesne.jpg" />
+              </div>
+              <div class="col" style="height: 200px; width: 230px">
+                <q-img style="mix-blend-mode:multiply;"  src="/img/client/KPJ Kajang.jpg" />
+              </div>
+              <div class="col" style="height: 200px; width: 230px">
+                <q-img style="mix-blend-mode:multiply;"  src="/img/client/KPJ Penang.jpg" />
+              </div>
+              <div class="col" style="height: 200px; width: 230px">
+                <q-img style="mix-blend-mode:multiply;"  src="/img/client/KPJ Puteri.jpg" />
+              </div>
+            </div>
+            <div class="row q-gutter-md">
+              <div class="col" style="height: 200px; width: 230px;">
+                <q-img style="mix-blend-mode:multiply;"  src="/img/client/Pharmaniaga.jpg" />
+              </div>
+              <div class="col" style="height: 200px; width: 230px">
+                <q-img style="mix-blend-mode:multiply;"  src="/img/client/SimeDarby.jpg" />
+              </div>
+              <div class="col" style="height: 200px; width: 230px">
+                <q-img style="mix-blend-mode:multiply;"  src="/img/client/KTS.jpg" />
+              </div>
+              <div class="col" style="height: 200px; width: 230px">
+                <q-img style="mix-blend-mode:multiply;"  src="/img/client/KPJ Perdana.jpg" />
+              </div>
+              <div class="col" style="height: 200px; width: 230px">
+                <q-img style="mix-blend-mode:multiply;"  src="/img/client/Salam.jpg" />
+              </div>
+              <div class="col" style="height: 200px; width: 230px">
+                <q-img style="mix-blend-mode:multiply;" src="/img/client/Petronas.jpg" />
+              </div>
+            </div>
+            <div class="row q-gutter-md">
+              <div class="col" style="height: 200px; width: 230px;">
+                <q-img style="mix-blend-mode:multiply;"  src="img/client/Hospital Pusrawi.jpg" />
+              </div>
+              <div class="col" style="height: 200px; width: 230px">
+                <q-img style="mix-blend-mode:multiply;"  src="/img/client/KPJ Seremban.jpg" />
+              </div>
+              <div class="col" style="height: 200px; width: 230px">
+                <q-img style="mix-blend-mode:multiply;"  src="/img/client/ColumbiaAsia.jpg" />
+              </div>
+              <div class="col" style="height: 200px; width: 230px">
+                <q-img style="mix-blend-mode:multiply;"  src="/img/client/Kayaku.jpg" />
+              </div>
+              <div class="col" style="height: 200px; width: 230px">
+                <q-img style="mix-blend-mode:multiply;"  src="/img/client/Medivest.jpg" />
+              </div>
+              <div class="col" style="height: 200px; width: 230px">
+                <q-img style="mix-blend-mode:multiply;" src="/img/client/Terengganu.jpg" />
+              </div>
+            </div>
+            <div class="row q-gutter-md">
+              <div class="col" style="height: 200px; width: 230px;">
+                <q-img style="mix-blend-mode:multiply;"  src="/img/client/Gleneagles.jpg" />
+              </div>
+              <div class="col" style="height: 200px; width: 230px">
+                <q-img style="mix-blend-mode:multiply;"  src="/img/client/UITM.jpg" />
+              </div>
+              <div class="col" style="height: 200px; width: 230px">
+                <q-img style="mix-blend-mode:multiply;"  src="/img/client/Radicare.jpg" />
+              </div>
+              <div class="col" style="height: 200px; width: 230px">
+                <q-img style="mix-blend-mode:multiply;"  src="/img/client/KKM.jpg" />
+              </div>
+              <div class="col" style="height: 200px; width: 230px">
+                <q-img style="mix-blend-mode:multiply;"  src="/img/client/Sibu Water Board.jpg" />
+              </div>
+              <div class="col" style="height: 200px; width: 230px">
+                <q-img style="mix-blend-mode:multiply;" src="/img/client/Jabatan Peguam Negara.jpg" />
+              </div>
+            </div>
           </div>
-        </div>
+        </section>
         <!-- CTA Section -->
         <section
           class="cta"
