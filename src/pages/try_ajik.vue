@@ -47,53 +47,130 @@
             </li>
 
             <li>
-              <a href="#" class="navbar-link" style="color: white">Projects</a>
+              <a
+                href="#"
+                class="navbar-link"
+                style="color: white"
+                
+                @mouseover="showServiceMenu = true"
+                @mouseleave="showServiceMenu = false"
+                >Service
+                <q-menu
+                  style="
+                    width: 280px;
+                    background-color: rgba(0, 0, 0, 0.721);
+                    font-size: 18px;
+                  "
+                  class="text-white"
+                  v-model="showServiceMenu"
+                >
+                  <q-list
+                    @mouseover="showServiceMenu = true"
+                    @mouseleave="showServiceMenu = false"
+                  >
+                    <q-item class="item_Hover">
+                      <q-item-section>
+                        <a href="#">Energy Audit</a>
+                      </q-item-section>
+                    </q-item>
+                    <q-item class="item_Hover">
+                      <q-item-section
+                        ><a href="#">Monitoring System (MyCES EMARS)</a>
+                      </q-item-section>
+                    </q-item>
+                    <q-item class="item_Hover">
+                      <q-item-section>
+                        <a href="#">Measurement and Verification (M&V)</a>
+                      </q-item-section>
+                    </q-item>
+                    <q-item class="item_Hover">
+                      <q-item-section
+                        ><a href="#"
+                          >Sustainable Energy Management System(SEMS)</a
+                        >
+                      </q-item-section>
+                    </q-item>
+                    <q-item class="item_Hover">
+                      <q-item-section>
+                        <a hreg="#"> Awareness Training</a></q-item-section
+                      >
+                    </q-item>
+                    <q-item class="item_Hover">
+                      <q-item-section
+                        ><a href="#">Equipment Rental</a></q-item-section
+                      >
+                    </q-item>
+                    <q-item class="item_Hover">
+                      <q-item-section
+                        ><a href="#">Smart Home Automation</a></q-item-section
+                      >
+                    </q-item>
+                    <q-item class="item_Hover">
+                      <q-item-section><a href="#">AMARS</a></q-item-section>
+                    </q-item>
+                  </q-list>
+                </q-menu></a
+              >
             </li>
 
             <li>
-              <a href="#" class="navbar-link" style="color: white">Blog</a>
+              <a
+                href="#"
+                class="navbar-link"
+                style="color: white"
+                @mouseover="showSubMenu = true"
+                @mouseleave="showSubMenu = false"
+                >Subsidiaries<q-menu
+                  style="
+                    width: 200px;
+                    background-color: rgba(0, 0, 0, 0.721);
+                    font-size: 18px;
+                  "
+                  class="text-white"
+                  v-model="showSubMenu"
+                >
+                  <q-list
+                    @mouseover="showSubMenu = true"
+                    @mouseleave="showSubMenu = false"
+                  >
+                    <q-item class="item_Hover">
+                      <q-item-section
+                        ><a href="#"
+                          >MYCES Biomedical Engineering Sdn Bhd</a
+                        ></q-item-section
+                      >
+                    </q-item>
+                    <q-item class="item_Hover">
+                      <q-item-section
+                        ><a href="#">MYCES AgroFarm Sdn Bhd</a></q-item-section
+                      >
+                    </q-item>
+                    <q-item  class="item_Hover">
+                      <q-item-section
+                        ><a href="#"
+                          >MYCES Manufacturing Sdn Bhd</a
+                        ></q-item-section
+                      >
+                    </q-item>
+                    <q-item class="item_Hover">
+                      <q-item-section
+                        ><a href="#">MYCES Edutect Sdn Bhd</a></q-item-section
+                      >
+                    </q-item>
+                    <q-item class="item_Hover">
+                      <q-item-section
+                        ><a href="#"
+                          >MYCES Aircond & Electrical Services Sdn Bhd</a
+                        ></q-item-section
+                      >
+                    </q-item>
+                  </q-list>
+                </q-menu></a
+              >
             </li>
-          </ul>
-
-          <div class="wrapper">
-            <a href="mailto:info@email.com" class="contact-link"
-              >info@email.com</a
-            >
-
-            <a href="tel:001234567890" class="contact-link"
-              >00 (123) 456 78 90</a
-            >
-          </div>
-
-          <ul class="social-list">
-            <li>
-              <a href="#" class="social-link">
-                <ion-icon name="logo-twitter"></ion-icon>
-              </a>
-            </li>
 
             <li>
-              <a href="#" class="social-link">
-                <ion-icon name="logo-facebook"></ion-icon>
-              </a>
-            </li>
-
-            <li>
-              <a href="#" class="social-link">
-                <ion-icon name="logo-dribbble"></ion-icon>
-              </a>
-            </li>
-
-            <li>
-              <a href="#" class="social-link">
-                <ion-icon name="logo-instagram"></ion-icon>
-              </a>
-            </li>
-
-            <li>
-              <a href="#" class="social-link">
-                <ion-icon name="logo-youtube"></ion-icon>
-              </a>
+              <a href="#" class="navbar-link" style="color: white">Info</a>
             </li>
           </ul>
         </nav>
@@ -385,102 +462,192 @@
 
             <div class="row q-gutter-md">
               <div class="col" style="height: 200px; width: 230px">
-                <q-img style="mix-blend-mode:multiply;"  src="/img/client/umsc logo.png" />
+                <q-img
+                  style="mix-blend-mode: multiply"
+                  src="/img/client/umsc logo.png"
+                />
               </div>
               <div class="col" style="height: 200px; width: 230px">
-                <q-img style="mix-blend-mode:multiply;"  src="/img/client/NIH.png" />
+                <q-img
+                  style="mix-blend-mode: multiply"
+                  src="/img/client/NIH.png"
+                />
               </div>
               <div class="col" style="height: 200px; width: 230px">
-                <q-img style="mix-blend-mode:multiply;"  src="/img/client/MDSB.jpg" />
+                <q-img
+                  style="mix-blend-mode: multiply"
+                  src="/img/client/MDSB.jpg"
+                />
               </div>
               <div class="col" style="height: 200px; width: 230px">
-                <q-img style="mix-blend-mode:multiply;"  src="/img/client/MDKS.jpg"/>
+                <q-img
+                  style="mix-blend-mode: multiply"
+                  src="/img/client/MDKS.jpg"
+                />
               </div>
               <div class="col" style="height: 200px; width: 230px">
-                <q-img style="mix-blend-mode:multiply;"  src="/img/client/MDKL.jpg" />
+                <q-img
+                  style="mix-blend-mode: multiply"
+                  src="/img/client/MDKL.jpg"
+                />
               </div>
               <div class="col" style="height: 200px; width: 230px">
-                <q-img style="mix-blend-mode:multiply;"  src="/img/client/MDHL.jpg" />
+                <q-img
+                  style="mix-blend-mode: multiply"
+                  src="/img/client/MDHL.jpg"
+                />
               </div>
             </div>
             <div class="row q-gutter-md">
               <div class="col" style="height: 200px; width: 230px">
-                <q-img style="mix-blend-mode:multiply;"  src="/img/client/PDT Gombak.jpg" />
+                <q-img
+                  style="mix-blend-mode: multiply"
+                  src="/img/client/PDT Gombak.jpg"
+                />
               </div>
               <div class="col" style="height: 200px; width: 230px">
-                <q-img style="mix-blend-mode:multiply;" src="/img/client/MBPJ.jpg" />
+                <q-img
+                  style="mix-blend-mode: multiply"
+                  src="/img/client/MBPJ.jpg"
+                />
               </div>
               <div class="col" style="height: 200px; width: 230px">
-                <q-img style="mix-blend-mode:multiply;"  src="/img/client/Demesne.jpg" />
+                <q-img
+                  style="mix-blend-mode: multiply"
+                  src="/img/client/Demesne.jpg"
+                />
               </div>
               <div class="col" style="height: 200px; width: 230px">
-                <q-img style="mix-blend-mode:multiply;"  src="/img/client/KPJ Kajang.jpg" />
+                <q-img
+                  style="mix-blend-mode: multiply"
+                  src="/img/client/KPJ Kajang.jpg"
+                />
               </div>
               <div class="col" style="height: 200px; width: 230px">
-                <q-img style="mix-blend-mode:multiply;"  src="/img/client/KPJ Penang.jpg" />
+                <q-img
+                  style="mix-blend-mode: multiply"
+                  src="/img/client/KPJ Penang.jpg"
+                />
               </div>
               <div class="col" style="height: 200px; width: 230px">
-                <q-img style="mix-blend-mode:multiply;"  src="/img/client/KPJ Puteri.jpg" />
+                <q-img
+                  style="mix-blend-mode: multiply"
+                  src="/img/client/KPJ Puteri.jpg"
+                />
               </div>
             </div>
             <div class="row q-gutter-md">
-              <div class="col" style="height: 200px; width: 230px;">
-                <q-img style="mix-blend-mode:multiply;"  src="/img/client/Pharmaniaga.jpg" />
+              <div class="col" style="height: 200px; width: 230px">
+                <q-img
+                  style="mix-blend-mode: multiply"
+                  src="/img/client/Pharmaniaga.jpg"
+                />
               </div>
               <div class="col" style="height: 200px; width: 230px">
-                <q-img style="mix-blend-mode:multiply;"  src="/img/client/SimeDarby.jpg" />
+                <q-img
+                  style="mix-blend-mode: multiply"
+                  src="/img/client/SimeDarby.jpg"
+                />
               </div>
               <div class="col" style="height: 200px; width: 230px">
-                <q-img style="mix-blend-mode:multiply;"  src="/img/client/KTS.jpg" />
+                <q-img
+                  style="mix-blend-mode: multiply"
+                  src="/img/client/KTS.jpg"
+                />
               </div>
               <div class="col" style="height: 200px; width: 230px">
-                <q-img style="mix-blend-mode:multiply;"  src="/img/client/KPJ Perdana.jpg" />
+                <q-img
+                  style="mix-blend-mode: multiply"
+                  src="/img/client/KPJ Perdana.jpg"
+                />
               </div>
               <div class="col" style="height: 200px; width: 230px">
-                <q-img style="mix-blend-mode:multiply;"  src="/img/client/Salam.jpg" />
+                <q-img
+                  style="mix-blend-mode: multiply"
+                  src="/img/client/Salam.jpg"
+                />
               </div>
               <div class="col" style="height: 200px; width: 230px">
-                <q-img style="mix-blend-mode:multiply;" src="/img/client/Petronas.jpg" />
+                <q-img
+                  style="mix-blend-mode: multiply"
+                  src="/img/client/Petronas.jpg"
+                />
               </div>
             </div>
             <div class="row q-gutter-md">
-              <div class="col" style="height: 200px; width: 230px;">
-                <q-img style="mix-blend-mode:multiply;"  src="img/client/Hospital Pusrawi.jpg" />
+              <div class="col" style="height: 200px; width: 230px">
+                <q-img
+                  style="mix-blend-mode: multiply"
+                  src="img/client/Hospital Pusrawi.jpg"
+                />
               </div>
               <div class="col" style="height: 200px; width: 230px">
-                <q-img style="mix-blend-mode:multiply;"  src="/img/client/KPJ Seremban.jpg" />
+                <q-img
+                  style="mix-blend-mode: multiply"
+                  src="/img/client/KPJ Seremban.jpg"
+                />
               </div>
               <div class="col" style="height: 200px; width: 230px">
-                <q-img style="mix-blend-mode:multiply;"  src="/img/client/ColumbiaAsia.jpg" />
+                <q-img
+                  style="mix-blend-mode: multiply"
+                  src="/img/client/ColumbiaAsia.jpg"
+                />
               </div>
               <div class="col" style="height: 200px; width: 230px">
-                <q-img style="mix-blend-mode:multiply;"  src="/img/client/Kayaku.jpg" />
+                <q-img
+                  style="mix-blend-mode: multiply"
+                  src="/img/client/Kayaku.jpg"
+                />
               </div>
               <div class="col" style="height: 200px; width: 230px">
-                <q-img style="mix-blend-mode:multiply;"  src="/img/client/Medivest.jpg" />
+                <q-img
+                  style="mix-blend-mode: multiply"
+                  src="/img/client/Medivest.jpg"
+                />
               </div>
               <div class="col" style="height: 200px; width: 230px">
-                <q-img style="mix-blend-mode:multiply;" src="/img/client/Terengganu.jpg" />
+                <q-img
+                  style="mix-blend-mode: multiply"
+                  src="/img/client/Terengganu.jpg"
+                />
               </div>
             </div>
             <div class="row q-gutter-md">
-              <div class="col" style="height: 200px; width: 230px;">
-                <q-img style="mix-blend-mode:multiply;"  src="/img/client/Gleneagles.jpg" />
+              <div class="col" style="height: 200px; width: 230px">
+                <q-img
+                  style="mix-blend-mode: multiply"
+                  src="/img/client/Gleneagles.jpg"
+                />
               </div>
               <div class="col" style="height: 200px; width: 230px">
-                <q-img style="mix-blend-mode:multiply;"  src="/img/client/UITM.jpg" />
+                <q-img
+                  style="mix-blend-mode: multiply"
+                  src="/img/client/UITM.jpg"
+                />
               </div>
               <div class="col" style="height: 200px; width: 230px">
-                <q-img style="mix-blend-mode:multiply;"  src="/img/client/Radicare.jpg" />
+                <q-img
+                  style="mix-blend-mode: multiply"
+                  src="/img/client/Radicare.jpg"
+                />
               </div>
               <div class="col" style="height: 200px; width: 230px">
-                <q-img style="mix-blend-mode:multiply;"  src="/img/client/KKM.jpg" />
+                <q-img
+                  style="mix-blend-mode: multiply"
+                  src="/img/client/KKM.jpg"
+                />
               </div>
               <div class="col" style="height: 200px; width: 230px">
-                <q-img style="mix-blend-mode:multiply;"  src="/img/client/Sibu Water Board.jpg" />
+                <q-img
+                  style="mix-blend-mode: multiply"
+                  src="/img/client/Sibu Water Board.jpg"
+                />
               </div>
               <div class="col" style="height: 200px; width: 230px">
-                <q-img style="mix-blend-mode:multiply;" src="/img/client/Jabatan Peguam Negara.jpg" />
+                <q-img
+                  style="mix-blend-mode: multiply"
+                  src="/img/client/Jabatan Peguam Negara.jpg"
+                />
               </div>
             </div>
           </div>
@@ -621,6 +788,15 @@
 
 <script>
 "use strict";
+
+export default {
+  data() {
+    return {
+      showServiceMenu: false,
+      showSubMenu: false,
+    };
+  },
+};
 
 /**
  * add event listener on multiple elements
@@ -1928,4 +2104,14 @@ body.nav-active {
     grid-template-columns: 1fr 1fr;
   }
 }
+
+.item_Hover {
+  transition: all 0.4s linear;
+  border-bottom: 1px solid black;
+}
+
+.item_Hover:hover {
+  background-color: green;
+}
+
 </style>
