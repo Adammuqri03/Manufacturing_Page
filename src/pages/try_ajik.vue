@@ -51,7 +51,7 @@
                 href="#"
                 class="navbar-link"
                 style="color: white"
-                
+
                 @mouseover="showServiceMenu = true"
                 @mouseleave="showServiceMenu = false"
                 >Service
@@ -135,7 +135,7 @@
                   >
                     <q-item class="item_Hover">
                       <q-item-section
-                        ><a href="#"
+                        ><a href="https://biomed.mycesgroup.com/"
                           >MYCES Biomedical Engineering Sdn Bhd</a
                         ></q-item-section
                       >
