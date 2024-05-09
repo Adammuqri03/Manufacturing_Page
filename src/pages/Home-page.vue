@@ -45,12 +45,11 @@
             </q-menu>
           </q-btn>
           <q-btn
-            v-if="tab !== 'tab3'"
             v-ripple
-            @click="goToAboutUs"
+            @click="scrollToSection('Info')"
             style="font-size: 18px"
           >
-            About Us
+            Our Client
           </q-btn>
           <q-btn
             v-if="tab !== 'tab4'"
@@ -607,7 +606,7 @@ export default {
       this.currentImage = image;
     },
     goToAboutUs() {
-      this.$router.push("/about_us");
+      // this.$router.push("/about_us");
     },
     goToContactUs() {
       this.$router.push("/contact_us");

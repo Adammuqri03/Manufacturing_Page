@@ -3,7 +3,11 @@ const routes = [
     path: "/",
     component: () => import("layouts/MainLayout.vue"),
     children: [
-      { path: "", component: () => import("pages/IndexPage.vue") },
+      {
+        path: "/previousIndex",
+        component: () => import("pages/IndexPage.vue"),
+      },
+      { path: "", redirect: "/home_page" },
       { path: "/home_page", component: () => import("pages/Home-page.vue") },
       { path: "/try_item", component: () => import("pages/try_item.vue") },
       {
@@ -19,7 +23,7 @@ const routes = [
       { path: "/fms_page", component: () => import("pages/Fms_page.vue") },
       { path: "/try_new", component: () => import("pages/try_new.vue") },
       { path: "/try_napi", component: () => import("pages/try_napi.vue") },
-      { path: "/try_ajik", component: () => import("pages/try_ajik.vue") },
+      // { path: "", component: () => import("pages/try_ajik.vue") },
     ],
   },
 

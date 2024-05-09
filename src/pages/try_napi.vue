@@ -16,13 +16,17 @@
         <!-- DROPDOWN BUTTON -->
         <template v-for="(mainItem, index1) in linklist" :key="index1">
           <template v-if="mainItem.type == 'list'">
-            <q-btn-dropdown color="green-6" :label="mainItem.name">
+            <q-btn-dropdown
+              class="q-pa-md"
+              color="green-6"
+              :label="mainItem.name"
+            >
               <q-list>
                 <q-item
                   v-for="(subitem, index2) in mainItem.subitem"
                   :key="index2"
                   v-close-popup
-                  @click="onItemClick"
+                  @click="onItemClick(subitem)"
                 >
                   <q-item-section>
                     <q-item-label>{{ subitem.name }}</q-item-label>
@@ -85,13 +89,13 @@
       <div>
         <q-parallax
           ref="parallax"
-          src="/public/img/bg/bg.png"
+          src="/img/bg/bg.png"
           :height="900"
           :speed="5"
         >
           <img
             ref="parallaxImage"
-            src="/public/img/bg/bg.png"
+            src="/img/bg/bg.png"
             style="width: 100%; height: 100%"
           />
           <div
@@ -106,13 +110,13 @@
       <div>
         <q-parallax
           ref="parallax"
-          src="/public/img/monitoringsystem.png"
+          src="/img/monitoringsystem.png"
           :height="900"
           :speed="5"
         >
           <img
             ref="parallaxImage"
-            src="/public/img/monitoringsystem.png"
+            src="/img/monitoringsystem.png"
             style="width: 300px; height: 300px"
           />
         </q-parallax>

@@ -24,12 +24,7 @@
       </q-header>
 
       <!-- Parallax Image -->
-      <q-parallax
-        ref="parallax"
-        src="/public/img/bg/bg.png"
-        :height="1000"
-        :speed="5"
-      >
+      <q-parallax ref="parallax" src="/img/bg/bg.png" :height="1000" :speed="5">
         <img
           ref="parallaxImage"
           src="img/bg/bg.png"

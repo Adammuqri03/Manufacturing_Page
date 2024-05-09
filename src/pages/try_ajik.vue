@@ -13,7 +13,7 @@
           />
 
           <img
-            src="/img/myces_logo.png"
+            src="/logo/myces_logo.png"
             width="74"
             height="24"
             alt="Adex home"
@@ -24,7 +24,12 @@
         <nav class="navbar" data-navbar>
           <div class="navbar-top">
             <a href="#" class="logo">
-              <img src="" width="74" height="24" alt="Adex home" />
+              <img
+                src="/logo/myces_logo.png"
+                width="74"
+                height="24"
+                alt="Home"
+              />
             </a>
 
             <button
@@ -32,7 +37,7 @@
               aria-label="close menu"
               data-nav-toggler
             >
-              <ion-icon name="close-outline" aria-hidden="true"></ion-icon>
+              <q-icon name="close-outline" aria-hidden="true"></q-icon>
             </button>
           </div>
 
@@ -51,7 +56,10 @@
                 href="#"
                 class="navbar-link"
                 style="color: white"
+<<<<<<< Updated upstream
 
+=======
+>>>>>>> Stashed changes
                 @mouseover="showServiceMenu = true"
                 @mouseleave="showServiceMenu = false"
                 >Service
@@ -145,7 +153,7 @@
                         ><a href="#">MYCES AgroFarm Sdn Bhd</a></q-item-section
                       >
                     </q-item>
-                    <q-item  class="item_Hover">
+                    <q-item class="item_Hover">
                       <q-item-section
                         ><a href="#"
                           >MYCES Manufacturing Sdn Bhd</a
@@ -178,7 +186,7 @@
         <a href="#" class="btn btn-primary">Contact us</a>
 
         <button class="nav-open-btn" aria-label="open menu" data-nav-toggler>
-          <ion-icon name="menu-outline" aria-hidden="true"></ion-icon>
+          <q-icon name="menu-outline" aria-hidden="true"></q-icon>
         </button>
 
         <div class="overlay" data-nav-toggler data-overlay></div>
@@ -213,38 +221,13 @@
                 <a href="#" class="btn btn-primary">Contact us</a>
               </div>
             </div>
-
-            <div class="hero-slider" data-slider>
-              <div class="slider-inner">
-                <ul class="slider-container" data-slider-container>
-                  <li class="slider-item">
-                    <img
-                      src="/img/myces_logo.png"
-                      width="575"
-                      height="550"
-                      alt=""
-                      class="img-cover"
-                    />
-                  </li>
-                </ul>
-              </div>
-
-              <button
-                class="slider-btn prev"
-                aria-label="slide to previous"
-                data-slider-prev
-              >
-                <ion-icon name="arrow-back"></ion-icon>
-              </button>
-
-              <button
-                class="slider-btn next"
-                aria-label="slide to next"
-                data-slider-next
-              >
-                <ion-icon name="arrow-forward"></ion-icon>
-              </button>
-            </div>
+            <q-img
+              src="/img/myces_logo.png"
+              width="575"
+              height="550"
+              alt=""
+              class="img-cover"
+            />
           </div>
         </section>
 
@@ -259,7 +242,7 @@
                 <p class="card-text">
                   <span class="h1">8</span>
 
-                  <spna class="span">Service</spna>
+                  <span class="span">Service</span>
                 </p>
               </li>
 
@@ -267,7 +250,7 @@
                 <p class="card-text">
                   <span class="h1">107</span>
 
-                  <spna class="span">Collaborations</spna>
+                  <span class="span">Collaborations</span>
                 </p>
               </li>
 
@@ -275,7 +258,7 @@
                 <p class="card-text">
                   <span class="h1">220</span>
 
-                  <spna class="span">Active Clients</spna>
+                  <span class="span">Active Clients</span>
                 </p>
               </li>
 
@@ -283,7 +266,7 @@
                 <p class="card-text">
                   <span class="h1">52</span>
 
-                  <spna class="span">Awards</spna>
+                  <span class="span">Awards</span>
                 </p>
               </li>
             </ul>
@@ -307,7 +290,7 @@
                     style="--width: 560; --height: 350"
                   >
                     <img
-                      src="/public/logo/FMS_2.png"
+                      src="/logo/FMS_2.png"
                       width="560"
                       height="350"
                       loading="lazy"
@@ -337,10 +320,10 @@
                       </li>
 
                       <li class="card-meta-item">
-                        <ion-icon
+                        <q-icon
                           name="calendar-outline"
                           aria-hidden="true"
-                        ></ion-icon>
+                        ></q-icon>
 
                         <time class="meta-text" datetime="2022-04-14"
                           >learn more</time
@@ -358,7 +341,7 @@
                     style="--width: 560; --height: 350"
                   >
                     <img
-                      src="/public/logo/Emars_1.png"
+                      src="/logo/Emars_1.png"
                       width="560"
                       height="350"
                       loading="lazy"
@@ -389,10 +372,10 @@
                       </li>
 
                       <li class="card-meta-item">
-                        <ion-icon
+                        <q-icon
                           name="calendar-outline"
                           aria-hidden="true"
-                        ></ion-icon>
+                        ></q-icon>
 
                         <time class="meta-text" datetime="2022-04-14"
                           >learn more</time
@@ -410,7 +393,7 @@
                     style="--width: 560; --height: 350"
                   >
                     <img
-                      src="/public/logo/AgroFarm_2.png"
+                      src="/logo/AgroFarm_2.png"
                       width="560"
                       height="350"
                       loading="lazy"
@@ -438,10 +421,10 @@
                       </li>
 
                       <li class="card-meta-item">
-                        <ion-icon
+                        <q-icon
                           name="calendar-outline"
                           aria-hidden="true"
-                        ></ion-icon>
+                        ></q-icon>
 
                         <time class="meta-text" datetime="2022-04-14"
                           >learn more</time
@@ -672,7 +655,12 @@
       <div class="container grid-list">
         <div class="footer-brand">
           <a href="#" class="logo">
-            <img src="" width="74" height="24" alt="Adex home" />
+            <q-img
+              src="/logo/myces_logo.png"
+              width="60px"
+              height="60px"
+              alt="MyCES Home"
+            />
           </a>
 
           <p class="footer-text">
@@ -680,37 +668,37 @@
             All rights reserved.
           </p>
 
-          <ul class="social-list">
+          <!-- <ul class="social-list">
             <li>
               <a href="#" class="social-link">
-                <ion-icon name="logo-facebook"></ion-icon>
+                <q-icon name="logo-facebook"></q-icon>
               </a>
             </li>
 
             <li>
               <a href="#" class="social-link">
-                <ion-icon name="logo-twitter"></ion-icon>
+                <q-icon name="logo-twitter"></q-icon>
               </a>
             </li>
 
             <li>
               <a href="#" class="social-link">
-                <ion-icon name="logo-dribbble"></ion-icon>
+                <q-icon name="logo-dribbble"></q-icon>
               </a>
             </li>
 
             <li>
               <a href="#" class="social-link">
-                <ion-icon name="logo-instagram"></ion-icon>
+                <q-icon name="logo-instagram"></q-icon>
               </a>
             </li>
 
             <li>
               <a href="#" class="social-link">
-                <ion-icon name="logo-youtube"></ion-icon>
+                <q-icon name="logo-youtube"></q-icon>
               </a>
             </li>
-          </ul>
+          </ul> -->
         </div>
 
         <ul class="footer-list">
@@ -801,135 +789,136 @@ export default {
 /**
  * add event listener on multiple elements
  */
-
-const addEventOnElements = function (elements, eventType, callback) {
-  for (let i = 0, len = elements.length; i < len; i++) {
-    elements[i].addEventListener(eventType, callback);
-  }
-};
-
-/**
- * NAVBAR TOGGLE FOR MOBILE
- */
-
-const navbar = document.querySelector("[data-navbar]");
-const navTogglers = document.querySelectorAll("[data-nav-toggler]");
-const overlay = document.querySelector("[data-overlay]");
-
-const toggleNavbar = function () {
-  navbar.classList.toggle("active");
-  overlay.classList.toggle("active");
-  document.body.classList.toggle("nav-active");
-};
-
-addEventOnElements(navTogglers, "click", toggleNavbar);
-
-/**
- * HEADER
- * active header when window scroll down to 100px
- */
-
-const header = document.querySelector("[data-header]");
-
-window.addEventListener("scroll", function () {
-  if (window.scrollY > 100) {
-    header.classList.add("active");
-  } else {
-    header.classList.remove("active");
-  }
-});
-
-/**
- * SLIDER
- */
-
-const sliders = document.querySelectorAll("[data-slider]");
-
-const initSlider = function (currentSlider) {
-  const sldierContainer = currentSlider.querySelector(
-    "[data-slider-container]"
-  );
-  const sliderPrevBtn = currentSlider.querySelector("[data-slider-prev]");
-  const sliderNextBtn = currentSlider.querySelector("[data-slider-next]");
-
-  let currentSlidePos = 0;
-
-  const moveSliderItem = function () {
-    sldierContainer.style.transform = `translateX(-${sldierContainer.children[currentSlidePos].offsetLeft}px)`;
+try {
+  const addEventOnElements = function (elements, eventType, callback) {
+    for (let i = 0, len = elements.length; i < len; i++) {
+      elements[i].addEventListener(eventType, callback);
+    }
   };
 
   /**
-   * NEXT SLIDE
+   * NAVBAR TOGGLE FOR MOBILE
    */
 
-  const slideNext = function () {
-    const slideEnd = currentSlidePos >= sldierContainer.childElementCount - 1;
+  const navbar = document.querySelector("[data-navbar]");
+  const navTogglers = document.querySelectorAll("[data-nav-toggler]");
+  const overlay = document.querySelector("[data-overlay]");
 
-    if (slideEnd) {
-      currentSlidePos = 0;
-    } else {
-      currentSlidePos++;
-    }
-
-    moveSliderItem();
+  const toggleNavbar = function () {
+    navbar.classList.toggle("active");
+    overlay.classList.toggle("active");
+    document.body.classList.toggle("nav-active");
   };
 
-  sliderNextBtn.addEventListener("click", slideNext);
+  addEventOnElements(navTogglers, "click", toggleNavbar);
 
   /**
-   * PREVIOUS SLIDE
+   * HEADER
+   * active header when window scroll down to 100px
    */
 
-  const slidePrev = function () {
-    if (currentSlidePos <= 0) {
-      currentSlidePos = sldierContainer.childElementCount - 1;
+  const header = document.querySelector("[data-header]");
+
+  window.addEventListener("scroll", function () {
+    if (window.scrollY > 100) {
+      header.classList.add("active");
     } else {
-      currentSlidePos--;
+      header.classList.remove("active");
     }
+  });
 
-    moveSliderItem();
+  /**
+   * SLIDER
+   */
+
+  const sliders = document.querySelectorAll("[data-slider]");
+
+  const initSlider = function (currentSlider) {
+    const sldierContainer = currentSlider.querySelector(
+      "[data-slider-container]"
+    );
+    const sliderPrevBtn = currentSlider.querySelector("[data-slider-prev]");
+    const sliderNextBtn = currentSlider.querySelector("[data-slider-next]");
+
+    let currentSlidePos = 0;
+
+    const moveSliderItem = function () {
+      sldierContainer.style.transform = `translateX(-${sldierContainer.children[currentSlidePos].offsetLeft}px)`;
+    };
+
+    /**
+     * NEXT SLIDE
+     */
+
+    const slideNext = function () {
+      const slideEnd = currentSlidePos >= sldierContainer.childElementCount - 1;
+
+      if (slideEnd) {
+        currentSlidePos = 0;
+      } else {
+        currentSlidePos++;
+      }
+
+      moveSliderItem();
+    };
+
+    sliderNextBtn.addEventListener("click", slideNext);
+
+    /**
+     * PREVIOUS SLIDE
+     */
+
+    const slidePrev = function () {
+      if (currentSlidePos <= 0) {
+        currentSlidePos = sldierContainer.childElementCount - 1;
+      } else {
+        currentSlidePos--;
+      }
+
+      moveSliderItem();
+    };
+
+    sliderPrevBtn.addEventListener("click", slidePrev);
+
+    const dontHaveExtraItem = sldierContainer.childElementCount <= 1;
+    if (dontHaveExtraItem) {
+      sliderNextBtn.style.display = "none";
+      sliderPrevBtn.style.display = "none";
+    }
   };
 
-  sliderPrevBtn.addEventListener("click", slidePrev);
-
-  const dontHaveExtraItem = sldierContainer.childElementCount <= 1;
-  if (dontHaveExtraItem) {
-    sliderNextBtn.style.display = "none";
-    sliderPrevBtn.style.display = "none";
+  for (let i = 0, len = sliders.length; i < len; i++) {
+    initSlider(sliders[i]);
   }
-};
 
-for (let i = 0, len = sliders.length; i < len; i++) {
-  initSlider(sliders[i]);
-}
+  /**
+   * ACCORDION
+   */
 
-/**
- * ACCORDION
- */
+  const accordions = document.querySelectorAll("[data-accordion]");
 
-const accordions = document.querySelectorAll("[data-accordion]");
+  let lastActiveAccordion = accordions[0];
 
-let lastActiveAccordion = accordions[0];
+  const initAccordion = function (currentAccordion) {
+    const accordionBtn = currentAccordion.querySelector("[data-accordion-btn]");
 
-const initAccordion = function (currentAccordion) {
-  const accordionBtn = currentAccordion.querySelector("[data-accordion-btn]");
+    const expandAccordion = function () {
+      if (lastActiveAccordion && lastActiveAccordion !== currentAccordion) {
+        lastActiveAccordion.classList.remove("expanded");
+      }
 
-  const expandAccordion = function () {
-    if (lastActiveAccordion && lastActiveAccordion !== currentAccordion) {
-      lastActiveAccordion.classList.remove("expanded");
-    }
+      currentAccordion.classList.toggle("expanded");
 
-    currentAccordion.classList.toggle("expanded");
+      lastActiveAccordion = currentAccordion;
+    };
 
-    lastActiveAccordion = currentAccordion;
+    accordionBtn.addEventListener("click", expandAccordion);
   };
 
-  accordionBtn.addEventListener("click", expandAccordion);
-};
-
-for (let i = 0, len = accordions.length; i < len; i++) {
-  initAccordion(accordions[i]);
-}
+  for (let i = 0, len = accordions.length; i < len; i++) {
+    initAccordion(accordions[i]);
+  }
+} catch (error) {}
 </script>
 
 <style>
@@ -1039,7 +1028,7 @@ img,
 span,
 input,
 button,
-ion-icon {
+q-icon {
   display: block;
 }
 
@@ -1067,7 +1056,7 @@ button {
   cursor: pointer;
 }
 
-ion-icon {
+q-icon {
   pointer-events: none;
 }
 
@@ -1321,7 +1310,7 @@ body.nav-active {
   transition: var(--transition-1);
 }
 
-.nav-close-btn ion-icon {
+.nav-close-btn q-icon {
   --ionicon-stroke-width: 50px;
 }
 
@@ -1502,7 +1491,7 @@ body.nav-active {
   margin-inline: auto;
 }
 
-.service-card .card-icon ion-icon {
+.service-card .card-icon q-icon {
   --ionicon-stroke-width: 50px;
 }
 
@@ -1548,13 +1537,13 @@ body.nav-active {
   gap: 10px;
 }
 
-.accordion-btn ion-icon {
+.accordion-btn q-icon {
   font-size: 1.5rem;
   color: var(--blue-crayola);
   transition: var(--transition-1);
 }
 
-.accordion-card.expanded .accordion-btn ion-icon {
+.accordion-card.expanded .accordion-btn q-icon {
   transform: rotate(0.5turn);
 }
 
@@ -1609,7 +1598,7 @@ body.nav-active {
   border-radius: var(--radius-circle);
 }
 
-.feature-card .card-icon ion-icon {
+.feature-card .card-icon q-icon {
   --ionicon-stroke-width: 40px;
 }
 
@@ -1774,8 +1763,8 @@ body.nav-active {
   right: 0;
   bottom: 0;
   border-radius: 0 var(--radius-6) var(--radius-6) 0;
-  background-color: var(--violet-blue-crayola);
-  color: var(--white);
+  background-color: var(--white);
+  color: green;
   padding-inline: 24px;
   font-weight: var(--fw-700);
 }
@@ -1848,9 +1837,9 @@ body.nav-active {
   }
 
   .header.active .btn {
-    background-color: var(--violet-blue-crayola);
-    border-color: var(--violet-blue-crayola);
-    color: var(--white);
+    background-color: var(--white);
+    border-color: var(--white);
+    color: green;
   }
 
   /**
@@ -2113,5 +2102,4 @@ body.nav-active {
 .item_Hover:hover {
   background-color: green;
 }
-
 </style>
