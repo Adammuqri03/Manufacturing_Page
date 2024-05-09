@@ -56,10 +56,6 @@
                 href="#"
                 class="navbar-link"
                 style="color: white"
-<<<<<<< Updated upstream
-
-=======
->>>>>>> Stashed changes
                 @mouseover="showServiceMenu = true"
                 @mouseleave="showServiceMenu = false"
                 >Service
