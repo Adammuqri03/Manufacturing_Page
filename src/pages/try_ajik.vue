@@ -8,7 +8,7 @@
             src="/img/myces_logo.png"
             width="74"
             height="24"
-            alt="Adex home"
+            alt="home"
             class="logo-light"
           />
 
@@ -16,7 +16,7 @@
             src="/logo/myces_logo.png"
             width="74"
             height="24"
-            alt="Adex home"
+            alt=" home"
             class="logo-dark"
           />
         </a>

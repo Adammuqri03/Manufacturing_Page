@@ -23,7 +23,8 @@ const routes = [
       { path: "/fms_page", component: () => import("pages/Fms_page.vue") },
       { path: "/try_new", component: () => import("pages/try_new.vue") },
       { path: "/try_napi", component: () => import("pages/try_napi.vue") },
-      // { path: "", component: () => import("pages/try_ajik.vue") },
+      { path: "/try_ajik", component: () => import("pages/try_ajik.vue") },
+      { path: "/Main_About", component: () => import("pages/Main_About.vue") },
     ],
   },
 
