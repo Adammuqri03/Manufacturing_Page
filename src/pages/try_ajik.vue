@@ -16,7 +16,7 @@
             src="/logo/myces_logo.png"
             width="74"
             height="24"
-            alt=" home"
+            alt="home"
             class="logo-dark"
           />
         </a>
@@ -204,17 +204,17 @@
               <h1 class="h1 hero-title">Myces Sdn Bhd</h1>
 
               <p class="hero-text">
-                MyCES Manufacturing unveils EMARS, a patented Energy Monitoring,
-                Analysis & Reporting System crafted over five years. It
-                seamlessly blends local products with global energy monitoring
-                standards, ensuring rapid after-sales service and ongoing
-                customization. Our local engineers also offer Facilities
-                Management System (FMS) for digitizing organizational reports
-                and facilitating data-driven decisions.
+                An advance in energy efficiency within your organization can
+                potentially bring significant business benefits. With this mind,
+                MYCES (Malaysia Comprehensive Energy Solution) Sdn Bhd has
+                developed Energy Audit Services, Monitoring System, Awareness
+                Training, Equipment Rental & Sustainable Energy Management
+                System (SEMS) to help you find the best information for
+                improvement opportunities.
               </p>
 
               <div class="btn-wrapper">
-                <a href="#" class="btn btn-primary">Contact us</a>
+                <a href="Main_About.vue" class="btn btn-primary">Contact us</a>
               </div>
             </div>
             <q-img

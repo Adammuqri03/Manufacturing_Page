@@ -1,421 +1,311 @@
 <template>
   <q-layout view="hhh lpR fff">
-    <header class="header" data-header style="overlay: 1000">
-      <div class="container">
-        <a href="#" class="logo">
+    <q-header class="bg-green-6 text-white" height-hint="98">
+      <q-toolbar>
+        <q-toolbar-title>
           <img
             src="/img/myces_logo.png"
-            width="74"
-            height="24"
+            idth="74"
+            height="95"
             alt="home"
-            class="logo-light"
+            class="site-logo"
           />
-          <img
-            src="/logo/myces_logo.png"
-            width="74"
-            height="24"
-            alt="home"
-            class="logo-dark"
-          />
-        </a>
+        </q-toolbar-title>
+      </q-toolbar>
 
-        <nav class="navbar" data-navbar>
-          <div class="navbar-top">
-            <a href="#" class="logo">
-              <img
-                src="/logo/myces_logo.png"
-                width="74"
-                height="24"
-                alt="Home"
-              />
-            </a>
-
-            <button
-              class="nav-close-btn"
-              aria-label="close menu"
-              data-nav-toggler
-            >
-              <q-icon name="close-outline" aria-hidden="true"></q-icon>
-            </button>
-          </div>
-
-          <ul class="navbar-list">
-            <li>
-              <a href="#" class="navbar-link" style="color: white">Home</a>
-            </li>
-
-            <li>
-              <a href="#" class="navbar-link" style="color: white">About</a>
-            </li>
-
-            <li>
-              <a
-                href="#"
-                class="navbar-link"
-                style="color: white"
-                @mouseover="showServiceMenu = true"
-                @mouseleave="showServiceMenu = false"
-              >
-                Service
-                <q-menu
-                  style="
-                    width: 280px;
-                    background-color: rgba(0, 0, 0, 0.721);
-                    font-size: 18px;
-                  "
-                  class="text-white"
-                  v-model="showServiceMenu"
-                >
-                  <q-list
-                    @mouseover="showServiceMenu = true"
-                    @mouseleave="showServiceMenu = false"
-                  >
-                    <q-item class="item_Hover">
-                      <q-item-section>
-                        <a href="#">Energy Audit</a>
-                      </q-item-section>
-                    </q-item>
-                    <q-item class="item_Hover">
-                      <q-item-section>
-                        <a href="#">Monitoring System (MyCES EMARS)</a>
-                      </q-item-section>
-                    </q-item>
-                    <q-item class="item_Hover">
-                      <q-item-section>
-                        <a href="#">Measurement and Verification (M&V)</a>
-                      </q-item-section>
-                    </q-item>
-                  </q-list>
-                </q-menu>
-              </a>
-            </li>
-
-            <li>
-              <a
-                href="#"
-                class="navbar-link"
-                style="color: white"
-                @mouseover="showSubMenu = true"
-                @mouseleave="showSubMenu = false"
-              >
-                Subsidiaries
-                <q-menu
-                  style="
-                    width: 200px;
-                    background-color: rgba(0, 0, 0, 0.721);
-                    font-size: 18px;
-                  "
-                  class="text-black"
-                  v-model="showSubMenu"
-                >
-                  <q-list
-                    @mouseover="showSubMenu = true"
-                    @mouseleave="showSubMenu = false"
-                  >
-                    <q-item class="item_Hover">
-                      <q-item-section>
-                        <a href="https://biomed.mycesgroup.com/">
-                          MYCES Biomedical Engineering Sdn Bhd
-                        </a>
-                      </q-item-section>
-                    </q-item>
-                    <q-item class="item_Hover">
-                      <q-item-section>
-                        <a href="#">MYCES AgroFarm Sdn Bhd</a>
-                      </q-item-section>
-                    </q-item>
-                    <q-item class="item_Hover">
-                      <q-item-section>
-                        <a href="#">MYCES Manufacturing Sdn Bhd</a>
-                      </q-item-section>
-                    </q-item>
-                    <q-item class="item_Hover">
-                      <q-item-section>
-                        <a href="#">MYCES Edutect Sdn Bhd</a>
-                      </q-item-section>
-                    </q-item>
-                    <q-item class="item_Hover">
-                      <q-item-section>
-                        <a href="#"
-                          >MYCES Aircond & Electrical Services Sdn Bhd</a
-                        >
-                      </q-item-section>
-                    </q-item>
-                  </q-list>
-                </q-menu>
-              </a>
-            </li>
-
-            <li>
-              <a href="#" class="navbar-link" style="color: white">Info</a>
-            </li>
-          </ul>
-        </nav>
-
-        <a href="#" class="btn btn-primary">Contact us</a>
-
-        <button class="nav-open-btn" aria-label="open menu" data-nav-toggler>
-          <q-icon name="menu-outline" aria-hidden="true"></q-icon>
-        </button>
-
-        <div class="overlay" data-nav-toggler data-overlay></div>
-      </div>
-    </header>
-
-    <q-page-container>
-      <!-- First Parallax Image -->
-      <div>
-        <q-parallax
-          ref="parallax"
-          src="/img/bg/bg.png"
-          :height="1000"
-          :speed="5"
+      <q-tabs align="right" class="text-white">
+        <a
+          href="#"
+          class="navbar-link"
+          style="color: black"
+          @mouseover="showServiceMenu = true"
+          @mouseleave="showServiceMenu = false"
         >
-          <img
-            ref="parallaxImage"
-            src="/img/bg/bg.png"
-            style="width: 100%; height: 100%"
-          />
-          <div
-            class="slide-inner"
-            style="font-size: 5rem; color: aliceblue; padding-bottom: 200px"
+          <strong>Service</strong>
+          <q-menu
+            style="
+              width: 280px;
+              background-color: rgba(255, 255, 255, 0.721);
+              font-size: 18px;
+            "
+            class="text-white"
+            v-model="showServiceMenu"
           >
-            MyCES SDN BHD
+            <q-list
+              @mouseover="showServiceMenu = true"
+              @mouseleave="showServiceMenu = false"
+            >
+              <q-item class="item_Hover">
+                <q-item-section>
+                  <a href="#">Energy Audit</a>
+                </q-item-section>
+              </q-item>
+              <q-item class="item_Hover">
+                <q-item-section>
+                  <a href="#">Monitoring System (MyCES EMARS)</a>
+                </q-item-section>
+              </q-item>
+              <q-item class="item_Hover">
+                <q-item-section>
+                  <a href="#">Measurement and Verification (M&V)</a>
+                </q-item-section>
+              </q-item>
+            </q-list>
+          </q-menu>
+        </a>
+      </q-tabs>
+      <!-- <q-tabs align="right" class="text-black">
+        <q-route-tab to="/Main_About" label="Corparate" />
+        <q-route-tab to="/try_ajik" label="Service" />
+        <q-route-tab to="/page3" label="Subsidiaries" />
+        <q-route-tab to="/page3" label="Contact Us" />
+      </q-tabs> -->
+    </q-header>
+    <q-page-container>
+      <div class="row">
+        <div class="col">
+          <div class="col">
+            <q-parallax
+              ref="parallax"
+              src="/img/bg/bg.png"
+              :height="900"
+              :speed="5"
+            >
+              <img
+                ref="parallaxImage"
+                src="/img/bg/bg.png"
+                style="width: 100%; height: 100%"
+              />
+            </q-parallax>
           </div>
-        </q-parallax>
+
+          <div class="col q-pa-md">
+            <div class="col text-green-8 flex flex-center">
+              <div class="text-bold" style="width: 18vw; height: 100%">
+                <q-img src="/img/myces_logo.png"> </q-img>
+              </div>
+              <div class="text-bold text-center justify-center">
+                <h3 style="text-align: center" class="text-bold font40">
+                  SAVE ENERGY FOR A BETTER FUTURE
+                </h3>
+                <h5 style="text-align: center">
+                  Since the foundation of MyCES SDN BHD in 2015, the company has
+                  developed very fast, and has taken over a significant part in
+                  the energy saving industry. The company’s goal is to build
+                  long term relationships with our customers and clients and
+                  provide exceptional customer services by pursuing business
+                  through innovation and advanced technology.
+                </h5>
+              </div>
+            </div>
+          </div>
+          <br />
+          <br />
+          <br />
+          <div class="text-center font20"></div>
+          <p
+            class="text-center text-green-8 text-bold font40"
+            style="letter-spacing: 2px"
+          >
+            OUR SERVICES
+          </p>
+          <div
+            class="row flex flex-center"
+            style="font-size: 25px; letter-spacing: 2px"
+          >
+            <q-card
+              v-for="(image, index) in images"
+              :key="index"
+              flat
+              :class="[
+                [
+                  false
+                    ? 'fullscreen bg-black'
+                    : 'mycard col-xs-12 col-sm-6 col-lg-4 transparent',
+                ],
+                [' center-text'],
+              ]"
+              @click="dialog_show(image.src)"
+              style="width: 400px; height: 400px"
+            >
+              <q-img
+                :src="image.src"
+                fit
+                style="height: 200px; width: 350px; border-radius: 20px"
+              />
+              <p class="text-center q-pt-md" style="height: 50px">
+                {{ image.title }}
+              </p>
+            </q-card>
+          </div>
+        </div>
       </div>
-      <!-- Second Parallax Image -->
-      <div>
-        <q-parallax
-          ref="parallax"
-          src="/img/myces_logo.png"
-          :height="900"
-          :speed="5"
-        >
-          <img
-            ref="parallaxImage"
-            src="/img/myces_logo.png"
-            style="width: 300px; height: 300px"
-          />
-        </q-parallax>
-      </div>
-      <router-view />
     </q-page-container>
 
-    <!-- footer -->
-    <footer class="footer" style="background-color: white">
-      <div class="container grid-list">
-        <div class="footer-brand">
-          <a href="#" class="logo">
-            <q-img
-              src="/logo/myces_logo.png"
-              width="60px"
-              height="60px"
-              alt="MyCES Home"
-            />
-          </a>
-
-          <p class="footer-text text-black">
-            &copy; 2015 MyCES. <br />
-            All rights reserved.
+    <!-- FOOTER SECTION -->
+    <div class="bg-white text-black">
+      <p class="text-bold font20 q-px-md q-my-none q-pt-md">
+        MyCES MANUFACTURING SDN. BHD.
+      </p>
+      <p class="text-bold font20 q-px-md q-my-none q-pt-sm">FIND US</p>
+      <div class="row q-pa-md font20">
+        <!-- place -->
+        <div class="col-2">
+          <p>
+            <strong>HQ Address</strong> <br />
+            RK 27-B Jalan Villa 3 <br />
+            Taman Anggerik Villa <br />
+            43500 Semenyih <br />
+            Selangor Darul Ehsan
           </p>
-
-          <!-- <ul class="social-list">
-            <li>
-              <a href="#" class="social-link">
-                <q-icon name="logo-facebook"></q-icon>
-              </a>
-            </li>
-
-            <li>
-              <a href="#" class="social-link">
-                <q-icon name="logo-twitter"></q-icon>
-              </a>
-            </li>
-
-            <li>
-              <a href="#" class="social-link">
-                <q-icon name="logo-dribbble"></q-icon>
-              </a>
-            </li>
-
-            <li>
-              <a href="#" class="social-link">
-                <q-icon name="logo-instagram"></q-icon>
-              </a>
-            </li>
-
-            <li>
-              <a href="#" class="social-link">
-                <q-icon name="logo-youtube"></q-icon>
-              </a>
-            </li>
-          </ul> -->
+        </div>
+        <div class="col-3">
+          <p>
+            <strong>Branch Address</strong> <br />
+            Bangunan Center of Excellent<br />
+            Kolej Kemahiran Tinggi Mara Ledang <br />
+            Seram 4 & 5, Jalan Sg. Mati, BUkit Gambir <br />
+            84410, Ledang, Johor
+          </p>
         </div>
 
-        <ul class="footer-list text-black">
-          <li>
-            <p class="h4 footer-list-title">Contact Us</p>
-          </li>
+        <!-- info -->
+        <div class="col-2">
+          <strong> Telephone : </strong>
+          <p>+603-8725 5811</p>
+          <p>+60 12-775 8732</p>
 
-          <li>
-            <strong>Address</strong>
-            <address class="footer-text">
-              HQ Address RK 27-B Jalan Villa 3 Taman Anggerik Villa 43500
-              Semenyih Selangor Darul Ehsan
-            </address>
-          </li>
+          <strong> Email : </strong>
+          <p>Info@mycesgroup.com</p>
+        </div>
 
-          <li>
-            <p></p>
-            <strong> Email Us</strong>
-            <a href="mailto:info@email.com" class="footer-link"
-              >Info@mycesgroup.com</a
-            >
-          </li>
-
-          <li>
-            <p></p>
-            <strong>Contact Number</strong>
-            <a href="tel:001234567890" class="footer-link">603-8725 5811 </a>
-            <a href="tel:001234567890" class="footer-link">012 775-8732 </a>
-          </li>
-        </ul>
-
-        <!-- <ul class="footer-list text-black">
-        <li>
-          <p class="h4 footer-list-title">Learn More</p>
-        </li>
-
-        <li>
-          <a href="#" class="footer-link">About Us</a>
-        </li>
-
-        <li>
-          <a href="#" class="footer-link">Our Story</a>
-        </li>
-
-        <li>
-          <a href="#" class="footer-link">Projects</a>
-        </li>
-
-        <li>
-          <a href="#" class="footer-link">Terms of Use</a>
-        </li>
-
-        <li>
-          <a href="#" class="footer-link">Privacy Policy</a>
-        </li>
-      </ul> -->
-
-        <div class="footer-list textwidget">
-          <img src="/img/bg/tenaga_bg.png" />
-          <p></p>
-          <img src="/img/bg/KKM_bg.jpg" />
-          <p></p>
-          <!-- <img
-            src="/img/bg/hijau_bg.jpg"
-            height="100"
-            width="100"
-            align="center"
-          /> -->
-          <p></p>
-          <img src="/img/bg/cidb_bg.png" />
-
-          <!-- <p class="footer-text">
-          Enter email to receive the most recent updates.
-        </p> -->
-
-          <!-- <form action="" class="input-wrapper">
-          <input
-            type="email"
-            name="email_address"
-            placeholder="Email Address"
-            required
-            class="input-field"
-          />
-
-          <button type="submit" class="submit-btn">Submit</button>
-        </form> -->
+        <!-- connect with us -->
+        <div class="col-1.5">
+          <strong>Connect with us</strong>
+          <div class="row q-gutter-lg justify-center q-pa-sm">
+            <q-icon
+              size="40px"
+              name="mdi-facebook"
+              class="icon-1"
+              @click="openFacebook"
+            />
+            <q-icon
+              size="40px"
+              name="mdi-linkedin"
+              class="icon-2"
+              @click="openLinkedin"
+            />
+            <div class="row q-gutter-lg justify-center q-pa-sm">
+              <img src="/img/bg/tenaga_bg.png" />
+              <p></p>
+              <img src="/img/bg/KKM_bg.jpg" />
+              <br />
+              <br />
+              <img src="/img/bg/cidb_bg.png" />
+            </div>
+          </div>
         </div>
       </div>
-    </footer>
+    </div>
+    <!-- <q-footer class="footer bg-white text-black">
+      <div class="container grid-list">
+        <q-toolbar>
+          <q-toolbar-title>
+            <div class="footer-brand">
+              <a href="#" class="logo">
+                <q-img
+                  src="/logo/myces_logo.png"
+                  width="60px"
+                  height="60px"
+                  alt="MyCES Home"
+                />
+              </a>
+
+              <p class="footer-text text-black">
+                &copy; 2015 MyCES. <br />
+                All rights reserved.
+              </p>
+            </div>
+            <ul class="footer-list text-black">
+              <li>
+                <address class="footer-text">
+                  HQ Address RK 27-B Jalan Villa 3 Taman Anggerik Villa 43500
+                  Semenyih Selangor Darul Ehsan
+                </address>
+              </li>
+
+              <li>
+                <a href="mailto:info@email.com" class="footer-link"
+                  >Info@mycesgroup.com</a
+                >
+              </li>
+
+              <li>
+                <br />
+                <strong>Contact Number</strong>
+                <a href="tel:001234567890" class="footer-link">603-8725 5811</a>
+                <br />
+                <a href="tel:001234567890" class="footer-link">012 775-8732</a>
+              </li>
+            </ul>
+            <div class="footer-list textwidget align-center">
+              <img src="/img/bg/tenaga_bg.png" />
+              <p></p>
+              <img src="/img/bg/KKM_bg.jpg" />
+              <br />
+              <br />
+              <img src="/img/bg/cidb_bg.png" />
+            </div>
+          </q-toolbar-title>
+        </q-toolbar>
+      </div>
+    </q-footer> -->
   </q-layout>
 </template>
 
-<style>
-q-route-tab {
-  font-size: 50px;
-  /* background-color: #dadada; */
-}
-</style>
 <script>
-export default {
-  methods: {
-    navigateToUrl(url) {
-      // Optional: Perform additional actions before redirecting (e.g., tracking)
-      window.location.href = url;
-    },
-    onItemClick(subitem) {
-      // console.log("Clicked on an Item:", subitem.name);
+import { ref } from "vue";
 
-      // Check if the subitem has a link property
-      if (subitem.link) {
-        this.navigateToUrl(subitem.link);
-      } else {
-        // console.log("Subitem does not have a link:", subitem.name);
-      }
-    },
-  },
-  data() {
+export default {
+  setup() {
+    const showServiceMenu = ref(false);
+    const showSubMenu = ref(false);
+
+    const images = [
+      { src: "/img/Interval Usage.png", title: "Monitoring System " },
+      { src: "/img/bg/energyAudit.jpg", title: "Energy Audit" },
+      { src: "/img/bg/awareness2.jpg", title: "Awareness Training" },
+      { src: "/img/bg/rental.jpg", title: "Rental Equipment" },
+    ];
+    // const images2 = [
+    //   { src: "/img/Asset Management.png", title: "Asset Management" },
+    //   {
+    //     src: "/img/Work Order Performance.jpg",
+    //     title: "Work Order Management",
+    //   },
+    //   { src: "/img/calender WOM.png", title: "Schedule Work Order Management" },
+    // ];
+
     return {
-      linklist: [
-        {
-          name: "Service",
-          type: "list",
-          subitem: [
-            { name: "Energy Audit", link: "" },
-            { name: "Monitoring System (MyCES EMARS)", link: "" },
-            { name: "Measurement and Verification (M&V)", link: "" },
-            { name: "Sustainable Energy Management System (SEMS)", link: "" },
-            { name: "Awareness Training", link: "" },
-            { name: "Equipment Rental", link: "" },
-            { name: "Smart Home Automation", link: "" },
-            { name: "AMARS", link: "" },
-          ],
-        },
-        {
-          name: "Subsidaries",
-          type: "list",
-          subitem: [
-            {
-              name: "MYCES Biomedical Engineering Sdn Bhd",
-              link: "https://biomed.mycesgroup.com/",
-            },
-            { name: "MYCES AgroFarm Sdn Bhd", link: "" },
-            { name: "MYCES Manufacturing Sdn Bhd", link: "" },
-            { name: "MYCES Edutech Sdn Bhd", link: "" },
-            { name: "MYCES Aircond & Electrical Services Sdn Bhd", link: "" },
-          ],
-        },
-        {
-          name: "Home",
-          type: "button1",
-        },
-        {
-          name: "Info",
-          type: "button1",
-        },
-        {
-          name: "About",
-          type: "button2",
-        },
-        {
-          name: "Contact",
-          type: "button3",
-        },
-      ],
+      showServiceMenu,
+      showSubMenu,
+      images,
+      images2,
+
+      // Add any methods or computed properties you need here
     };
+  },
+
+  methods: {
+    openFacebook() {
+      window.open("https://www.facebook.com/mycesgroup/", "_blank");
+    },
+    openLinkedin() {
+      window.open(
+        "https://my.linkedin.com/company/myces-energy-consultant/",
+        "_blank"
+      );
+    },
   },
 };
 </script>

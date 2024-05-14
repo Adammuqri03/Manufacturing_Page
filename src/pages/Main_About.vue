@@ -233,6 +233,18 @@
     </div>
   </div>
 
+  <!-- CTA Section -->
+  <section
+    class="cta"
+    aria-label="call to action"
+    style="background-color: white"
+  >
+    <div class="container">
+      <h2 class="h2 section-title">MyCES SDN BHD.</h2>
+
+      <!-- <a href="#" class="btn btn-primary">Try it For Free</a> -->
+    </div>
+  </section>
   <!-- Footer Section -->
   <footer class="footer" style="background-color: white">
     <div class="container grid-list">
@@ -286,10 +298,6 @@
 
       <ul class="footer-list text-black">
         <li>
-          <p class="h4 footer-list-title">Contact Us</p>
-        </li>
-
-        <li>
           <address class="footer-text">
             HQ Address RK 27-B Jalan Villa 3 Taman Anggerik Villa 43500 Semenyih
             Selangor Darul Ehsan
@@ -303,10 +311,11 @@
         </li>
 
         <li>
-          <p></p>
+          <br />
           <strong>Contact Number</strong>
-          <a href="tel:001234567890" class="footer-link">603-8725 5811 </a>
-          <a href="tel:001234567890" class="footer-link">012 775-8732 </a>
+          <a href="tel:001234567890" class="footer-link">603-8725 5811</a>
+          <br />
+          <a href="tel:001234567890" class="footer-link">012 775-8732</a>
         </li>
       </ul>
 
@@ -336,7 +345,7 @@
         </li>
       </ul> -->
 
-      <div class="footer-list textwidget">
+      <div class="footer-list textwidget align-center">
         <img src="/img/bg/tenaga_bg.png" />
         <p></p>
         <img src="/img/bg/KKM_bg.jpg" />
