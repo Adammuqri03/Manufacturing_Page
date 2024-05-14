@@ -136,77 +136,291 @@
               <p class="text-center q-pt-md" style="height: 50px">
                 {{ image.title }}
               </p>
+              <div class="q-pa-md flex flex-center">
+                <q-btn
+                  color="green"
+                  text-color="white"
+                  label="More Info"
+                  @click="openMonitoring"
+                />
+              </div>
             </q-card>
           </div>
+          <div class="text-center font20"></div>
+          <p
+            class="text-center text-green-8 text-bold font40"
+            style="letter-spacing: 2px"
+          >
+            OUR CLIENTS
+          </p>
+          <template> </template>
+          <!-- <section class="section project" aria-labelledby="project-label">
+            <div class="container">
+              <p class="section-subtitle" id="project-label"></p>
+
+              <div class="row q-gutter-md">
+                <div class="col" style="height: 200px; width: 230px">
+                  <q-img
+                    style="mix-blend-mode: multiply"
+                    src="/img/client/umsc logo.png"
+                  />
+                </div>
+                <div class="col" style="height: 200px; width: 230px">
+                  <q-img
+                    style="mix-blend-mode: multiply"
+                    src="/img/client/NIH.png"
+                  />
+                </div>
+                <div class="col" style="height: 200px; width: 230px">
+                  <q-img
+                    style="mix-blend-mode: multiply"
+                    src="/img/client/MDSB.jpg"
+                  />
+                </div>
+                <div class="col" style="height: 200px; width: 230px">
+                  <q-img
+                    style="mix-blend-mode: multiply"
+                    src="/img/client/MDKS.jpg"
+                  />
+                </div>
+                <div class="col" style="height: 200px; width: 230px">
+                  <q-img
+                    style="mix-blend-mode: multiply"
+                    src="/img/client/MDKL.jpg"
+                  />
+                </div>
+                <div class="col" style="height: 200px; width: 230px">
+                  <q-img
+                    style="mix-blend-mode: multiply"
+                    src="/img/client/MDHL.jpg"
+                  />
+                </div>
+              </div>
+              <div class="row q-gutter-md">
+                <div class="col" style="height: 200px; width: 230px">
+                  <q-img
+                    style="mix-blend-mode: multiply"
+                    src="/img/client/PDT Gombak.jpg"
+                  />
+                </div>
+                <div class="col" style="height: 200px; width: 230px">
+                  <q-img
+                    style="mix-blend-mode: multiply"
+                    src="/img/client/MBPJ.jpg"
+                  />
+                </div>
+                <div class="col" style="height: 200px; width: 230px">
+                  <q-img
+                    style="mix-blend-mode: multiply"
+                    src="/img/client/Demesne.jpg"
+                  />
+                </div>
+                <div class="col" style="height: 200px; width: 230px">
+                  <q-img
+                    style="mix-blend-mode: multiply"
+                    src="/img/client/KPJ Kajang.jpg"
+                  />
+                </div>
+                <div class="col" style="height: 200px; width: 230px">
+                  <q-img
+                    style="mix-blend-mode: multiply"
+                    src="/img/client/KPJ Penang.jpg"
+                  />
+                </div>
+                <div class="col" style="height: 200px; width: 230px">
+                  <q-img
+                    style="mix-blend-mode: multiply"
+                    src="/img/client/KPJ Puteri.jpg"
+                  />
+                </div>
+              </div>
+              <div class="row q-gutter-md">
+                <div class="col" style="height: 200px; width: 230px">
+                  <q-img
+                    style="mix-blend-mode: multiply"
+                    src="/img/client/Pharmaniaga.jpg"
+                  />
+                </div>
+                <div class="col" style="height: 200px; width: 230px">
+                  <q-img
+                    style="mix-blend-mode: multiply"
+                    src="/img/client/SimeDarby.jpg"
+                  />
+                </div>
+                <div class="col" style="height: 200px; width: 230px">
+                  <q-img
+                    style="mix-blend-mode: multiply"
+                    src="/img/client/KTS.jpg"
+                  />
+                </div>
+                <div class="col" style="height: 200px; width: 230px">
+                  <q-img
+                    style="mix-blend-mode: multiply"
+                    src="/img/client/KPJ Perdana.jpg"
+                  />
+                </div>
+                <div class="col" style="height: 200px; width: 230px">
+                  <q-img
+                    style="mix-blend-mode: multiply"
+                    src="/img/client/Salam.jpg"
+                  />
+                </div>
+                <div class="col" style="height: 200px; width: 230px">
+                  <q-img
+                    style="mix-blend-mode: multiply"
+                    src="/img/client/Petronas.jpg"
+                  />
+                </div>
+              </div>
+              <div class="row q-gutter-md">
+                <div class="col" style="height: 200px; width: 230px">
+                  <q-img
+                    style="mix-blend-mode: multiply"
+                    src="img/client/Hospital Pusrawi.jpg"
+                  />
+                </div>
+                <div class="col" style="height: 200px; width: 230px">
+                  <q-img
+                    style="mix-blend-mode: multiply"
+                    src="/img/client/KPJ Seremban.jpg"
+                  />
+                </div>
+                <div class="col" style="height: 200px; width: 230px">
+                  <q-img
+                    style="mix-blend-mode: multiply"
+                    src="/img/client/ColumbiaAsia.jpg"
+                  />
+                </div>
+                <div class="col" style="height: 200px; width: 230px">
+                  <q-img
+                    style="mix-blend-mode: multiply"
+                    src="/img/client/Kayaku.jpg"
+                  />
+                </div>
+                <div class="col" style="height: 200px; width: 230px">
+                  <q-img
+                    style="mix-blend-mode: multiply"
+                    src="/img/client/Medivest.jpg"
+                  />
+                </div>
+                <div class="col" style="height: 200px; width: 230px">
+                  <q-img
+                    style="mix-blend-mode: multiply"
+                    src="/img/client/Terengganu.jpg"
+                  />
+                </div>
+              </div>
+              <div class="row q-gutter-md">
+                <div class="col" style="height: 200px; width: 230px">
+                  <q-img
+                    style="mix-blend-mode: multiply"
+                    src="/img/client/Gleneagles.jpg"
+                  />
+                </div>
+                <div class="col" style="height: 200px; width: 230px">
+                  <q-img
+                    style="mix-blend-mode: multiply"
+                    src="/img/client/UITM.jpg"
+                  />
+                </div>
+                <div class="col" style="height: 200px; width: 230px">
+                  <q-img
+                    style="mix-blend-mode: multiply"
+                    src="/img/client/Radicare.jpg"
+                  />
+                </div>
+                <div class="col" style="height: 200px; width: 230px">
+                  <q-img
+                    style="mix-blend-mode: multiply"
+                    src="/img/client/KKM.jpg"
+                  />
+                </div>
+                <div class="col" style="height: 200px; width: 230px">
+                  <q-img
+                    style="mix-blend-mode: multiply"
+                    src="/img/client/Sibu Water Board.jpg"
+                  />
+                </div>
+                <div class="col" style="height: 200px; width: 230px">
+                  <q-img
+                    style="mix-blend-mode: multiply"
+                    src="/img/client/Jabatan Peguam Negara.jpg"
+                  />
+                </div>
+              </div>
+            </div>
+          </section> -->
         </div>
       </div>
     </q-page-container>
 
     <!-- FOOTER SECTION -->
-    <div class="bg-white text-black">
-      <p class="text-bold font20 q-px-md q-my-none q-pt-md">
-        MyCES MANUFACTURING SDN. BHD.
-      </p>
-      <p class="text-bold font20 q-px-md q-my-none q-pt-sm">FIND US</p>
-      <div class="row q-pa-md font20">
-        <!-- place -->
-        <div class="col-2">
-          <p>
-            <strong>HQ Address</strong> <br />
-            RK 27-B Jalan Villa 3 <br />
-            Taman Anggerik Villa <br />
-            43500 Semenyih <br />
-            Selangor Darul Ehsan
-          </p>
-        </div>
-        <div class="col-3">
-          <p>
-            <strong>Branch Address</strong> <br />
-            Bangunan Center of Excellent<br />
-            Kolej Kemahiran Tinggi Mara Ledang <br />
-            Seram 4 & 5, Jalan Sg. Mati, BUkit Gambir <br />
-            84410, Ledang, Johor
-          </p>
-        </div>
+    <q-footer>
+      <div class="col bg-white text-black">
+        <p class="text-bold font20 q-px-md q-my-none q-pt-md">
+          MyCES MANUFACTURING SDN. BHD.
+        </p>
+        <p class="text-bold font20 q-px-md q-my-none q-pt-sm">FIND US</p>
+        <div class="row q-pa-md font20">
+          <!-- place -->
+          <div class="col-2">
+            <p>
+              <strong>HQ Address</strong> <br />
+              RK 27-B Jalan Villa 3 <br />
+              Taman Anggerik Villa <br />
+              43500 Semenyih <br />
+              Selangor Darul Ehsan
+            </p>
+          </div>
+          <div class="col-3">
+            <p>
+              <strong>Branch Address</strong> <br />
+              Bangunan Center of Excellent<br />
+              Kolej Kemahiran Tinggi Mara Ledang <br />
+              Seram 4 & 5, Jalan Sg. Mati, BUkit Gambir <br />
+              84410, Ledang, Johor
+            </p>
+          </div>
 
-        <!-- info -->
-        <div class="col-2">
-          <strong> Telephone : </strong>
-          <p>+603-8725 5811</p>
-          <p>+60 12-775 8732</p>
+          <!-- info -->
+          <div class="col-2">
+            <strong> Telephone : </strong>
+            <p>+603-8725 5811</p>
+            <p>+60 12-775 8732</p>
 
-          <strong> Email : </strong>
-          <p>Info@mycesgroup.com</p>
-        </div>
+            <strong> Email : </strong>
+            <p>Info@mycesgroup.com</p>
+          </div>
 
-        <!-- connect with us -->
-        <div class="col-1.5">
-          <strong>Connect with us</strong>
-          <div class="row q-gutter-lg justify-center q-pa-sm">
-            <q-icon
-              size="40px"
-              name="mdi-facebook"
-              class="icon-1"
-              @click="openFacebook"
-            />
-            <q-icon
-              size="40px"
-              name="mdi-linkedin"
-              class="icon-2"
-              @click="openLinkedin"
-            />
+          <!-- connect with us -->
+          <div class="col-1.5">
+            <strong>Connect with us</strong>
             <div class="row q-gutter-lg justify-center q-pa-sm">
-              <img src="/img/bg/tenaga_bg.png" />
-              <p></p>
-              <img src="/img/bg/KKM_bg.jpg" />
-              <br />
-              <br />
-              <img src="/img/bg/cidb_bg.png" />
+              <q-icon
+                size="40px"
+                name="mdi-facebook"
+                class="icon-1"
+                @click="openFacebook"
+              />
+              <q-icon
+                size="40px"
+                name="mdi-linkedin"
+                class="icon-2"
+                @click="openLinkedin"
+              />
+              <div class="row q-gutter-lg justify-center q-pa-sm">
+                <img src="/img/bg/tenaga_bg.png" />
+                <p></p>
+                <img src="/img/bg/KKM_bg.jpg" />
+                <br />
+                <br />
+                <img src="/img/bg/cidb_bg.png" />
+              </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
+    </q-footer>
     <!-- <q-footer class="footer bg-white text-black">
       <div class="container grid-list">
         <q-toolbar>
@@ -290,7 +504,7 @@ export default {
       showServiceMenu,
       showSubMenu,
       images,
-      images2,
+      // images2,
 
       // Add any methods or computed properties you need here
     };
