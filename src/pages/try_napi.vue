@@ -64,21 +64,28 @@
     <q-page-container>
       <div class="row">
         <div class="col">
-          <div class="col">
-            <q-parallax
-              ref="parallax"
-              src="/img/bg/bg.png"
-              :height="900"
-              :speed="5"
-            >
-              <img
-                ref="parallaxImage"
-                src="/img/bg/bg.png"
-                style="width: 100%; height: 100%"
-              />
+          <div class="col row justify-between">
+            <q-parallax ref="parallax" src="/img/bg/bg.png" height="900">
+              <h1
+                class="text-white text-h9 text-bold"
+                style="text-shadow: 2px 2px 5px #000000"
+              >
+                MyCES SDN BHD
+              </h1>
+              <q-item>
+                <q-item-section @click="scrollToSection('EMARS')">
+                  <q-btn
+                    class="text-center text-white text-bold font20"
+                    label="EXPLORE MORE"
+                    @click="scrollToSection('')"
+                  />
+                </q-item-section>
+              </q-item>
             </q-parallax>
           </div>
-
+          <div class="col row justify-between bg-1">
+            <div class="absolute"></div>
+          </div>
           <div class="col q-pa-md">
             <div class="col text-green-8 flex flex-center">
               <div class="text-bold" style="width: 18vw; height: 100%">
@@ -88,14 +95,14 @@
                 <h3 style="text-align: center" class="text-bold font40">
                   SAVE ENERGY FOR A BETTER FUTURE
                 </h3>
-                <h5 style="text-align: center">
+                <p class="text-h6 text-center">
                   Since the foundation of MyCES SDN BHD in 2015, the company has
                   developed very fast, and has taken over a significant part in
                   the energy saving industry. The company’s goal is to build
                   long term relationships with our customers and clients and
                   provide exceptional customer services by pursuing business
                   through innovation and advanced technology.
-                </h5>
+                </p>
               </div>
             </div>
           </div>
@@ -153,8 +160,7 @@
           >
             OUR CLIENTS
           </p>
-          <template> </template>
-          <!-- <section class="section project" aria-labelledby="project-label">
+          <section class="section project" aria-labelledby="project-label">
             <div class="container">
               <p class="section-subtitle" id="project-label"></p>
 
@@ -349,7 +355,7 @@
                 </div>
               </div>
             </div>
-          </section> -->
+          </section>
         </div>
       </div>
     </q-page-container>
@@ -357,9 +363,7 @@
     <!-- FOOTER SECTION -->
     <q-footer>
       <div class="col bg-white text-black">
-        <p class="text-bold font20 q-px-md q-my-none q-pt-md">
-          MyCES MANUFACTURING SDN. BHD.
-        </p>
+        <p class="text-bold font20 q-px-md q-my-none q-pt-md">MyCE SDN. BHD.</p>
         <p class="text-bold font20 q-px-md q-my-none q-pt-sm">FIND US</p>
         <div class="row q-pa-md font20">
           <!-- place -->
@@ -377,7 +381,7 @@
               <strong>Branch Address</strong> <br />
               Bangunan Center of Excellent<br />
               Kolej Kemahiran Tinggi Mara Ledang <br />
-              Seram 4 & 5, Jalan Sg. Mati, BUkit Gambir <br />
+              Seram 4 & 5, Jalan Sg. Mati, Bukit Gambir <br />
               84410, Ledang, Johor
             </p>
           </div>

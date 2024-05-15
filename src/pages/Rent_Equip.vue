@@ -175,10 +175,25 @@
         </p>
       </div>
     </div>
+
+    <div class="q-pa-md">
+      <q-table
+        style="height: 400px"
+        flat
+        bordered
+        title="Models"
+        :rows="rows"
+        :columns="columns"
+        row-key="index"
+        virtual-scroll
+        v-model:pagination="pagination"
+        :rows-per-page-options="[0]"
+      />
+    </div>
   </q-page-container>
 
   <!-- FOOTER SECTION -->
-  <!-- <q-footer>
+  <q-footer>
     <div class="col bg-white text-black">
       <p class="text-bold font20 q-px-md q-my-none q-pt-md">
         MyCES MANUFACTURING SDN. BHD.
@@ -205,7 +220,6 @@
           </p>
         </div>
 
-        info
         <div class="col-2">
           <strong> Telephone : </strong>
           <p>+603-8725 5811</p>
@@ -214,8 +228,6 @@
           <strong> Email : </strong>
           <p>Info@mycesgroup.com</p>
         </div>
-
-        connect with us
         <div class="col-1.5">
           <strong>Connect with us</strong>
           <div class="row q-gutter-lg justify-center q-pa-sm">
@@ -243,30 +255,190 @@
         </div>
       </div>
     </div>
-  </q-footer> -->
+  </q-footer>
+  -->
 </template>
 
 <script>
-"use strict";
+import { ref } from "vue";
+import { QTable, QBtn } from "quasar";
+
+const columns = [
+  {
+    name: "index",
+    label: "No",
+    field: "index",
+  },
+  {
+    name: "name",
+    required: true,
+    label: "Dessert (100g serving)",
+    align: "left",
+    field: (row) => row.name,
+    format: (val) => `${val}`,
+    sortable: true,
+  },
+  {
+    name: "calories",
+    align: "center",
+    label: "Calories",
+    field: "calories",
+    sortable: true,
+  },
+  { name: "fat", label: "Fat (g)", field: "fat", sortable: true },
+  { name: "carbs", label: "Carbs (g)", field: "carbs" },
+  { name: "protein", label: "Protein (g)", field: "protein" },
+  { name: "sodium", label: "Sodium (mg)", field: "sodium" },
+  {
+    name: "calcium",
+    label: "Calcium (%)",
+    field: "calcium",
+    sortable: true,
+    sort: (a, b) => parseInt(a, 10) - parseInt(b, 10),
+  },
+  {
+    name: "iron",
+    label: "Iron (%)",
+    field: "iron",
+    sortable: true,
+    sort: (a, b) => parseInt(a, 10) - parseInt(b, 10),
+  },
+];
+
+const seed = [
+  {
+    name: "Frozen Yogurt",
+    calories: 159,
+    fat: 6.0,
+    carbs: 24,
+    protein: 4.0,
+    sodium: 87,
+    calcium: "14%",
+    iron: "1%",
+  },
+  {
+    name: "Ice cream sandwich",
+    calories: 237,
+    fat: 9.0,
+    carbs: 37,
+    protein: 4.3,
+    sodium: 129,
+    calcium: "8%",
+    iron: "1%",
+  },
+  {
+    name: "Eclair",
+    calories: 262,
+    fat: 16.0,
+    carbs: 23,
+    protein: 6.0,
+    sodium: 337,
+    calcium: "6%",
+    iron: "7%",
+  },
+  {
+    name: "Cupcake",
+    calories: 305,
+    fat: 3.7,
+    carbs: 67,
+    protein: 4.3,
+    sodium: 413,
+    calcium: "3%",
+    iron: "8%",
+  },
+  {
+    name: "Gingerbread",
+    calories: 356,
+    fat: 16.0,
+    carbs: 49,
+    protein: 3.9,
+    sodium: 327,
+    calcium: "7%",
+    iron: "16%",
+  },
+  {
+    name: "Jelly bean",
+    calories: 375,
+    fat: 0.0,
+    carbs: 94,
+    protein: 0.0,
+    sodium: 50,
+    calcium: "0%",
+    iron: "0%",
+  },
+  {
+    name: "Lollipop",
+    calories: 392,
+    fat: 0.2,
+    carbs: 98,
+    protein: 0,
+    sodium: 38,
+    calcium: "0%",
+    iron: "2%",
+  },
+  {
+    name: "Honeycomb",
+    calories: 408,
+    fat: 3.2,
+    carbs: 87,
+    protein: 6.5,
+    sodium: 562,
+    calcium: "0%",
+    iron: "45%",
+  },
+  {
+    name: "Donut",
+    calories: 452,
+    fat: 25.0,
+    carbs: 51,
+    protein: 4.9,
+    sodium: 326,
+    calcium: "2%",
+    iron: "22%",
+  },
+  {
+    name: "KitKat",
+    calories: 518,
+    fat: 26.0,
+    carbs: 65,
+    protein: 7,
+    sodium: 54,
+    calcium: "12%",
+    iron: "6%",
+  },
+];
 
 export default {
-  data() {
-    return {
-      showServiceMenu: false,
-      showSubMenu: false,
-    };
-  },
+  setup() {
+    const rows = [];
+    for (let i = 0; i < 1000; i++) {
+      rows.push(
+        ...seed.map((r, index) => ({ ...r, index: index + i * seed.length }))
+      );
+    }
 
-  methods: {
-    openFacebook() {
+    const pagination = ref({
+      rowsPerPage: 0,
+    });
+
+    const openFacebook = () => {
       window.open("https://www.facebook.com/mycesgroup/", "_blank");
-    },
-    openLinkedin() {
+    };
+
+    const openLinkedin = () => {
       window.open(
         "https://my.linkedin.com/company/myces-energy-consultant/",
         "_blank"
       );
-    },
+    };
+
+    return {
+      columns,
+      rows,
+      pagination,
+      openFacebook,
+      openLinkedin,
+    };
   },
 };
 </script>

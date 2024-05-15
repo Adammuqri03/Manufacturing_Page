@@ -231,6 +231,64 @@
         </div>
       </div>
     </div>
+    <br />
+    <!-- Service Section -->
+    <section class="stats" aria-label="our stats">
+      <div class="container">
+        <div class="flex flex-center text-bold font20">
+          <h1>SECTOR</h1>
+        </div>
+        <ul class="stats-card has-bg-image">
+          <li>
+            <p class="card-text">
+              <span class="h1">16</span>
+
+              <span class="span">Goverment Building</span>
+            </p>
+          </li>
+
+          <li>
+            <p class="card-text">
+              <span class="h1">46</span>
+
+              <span class="span">Healthcare</span>
+            </p>
+          </li>
+
+          <li>
+            <p class="card-text">
+              <span class="h1">31</span>
+
+              <span class="span">Administrative</span>
+            </p>
+          </li>
+
+          <li>
+            <p class="card-text">
+              <span class="h1">52</span>
+
+              <span class="span">Educational</span>
+            </p>
+          </li>
+
+          <li>
+            <p class="card-text">
+              <span class="h1">52</span>
+
+              <span class="span">Industrial</span>
+            </p>
+          </li>
+
+          <li>
+            <p class="card-text">
+              <span class="h1">1</span>
+
+              <span class="span">Oil & Gas</span>
+            </p>
+          </li>
+        </ul>
+      </div>
+    </section>
   </div>
 
   <!-- CTA Section -->
