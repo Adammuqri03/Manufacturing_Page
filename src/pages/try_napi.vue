@@ -7,7 +7,7 @@
 
           <q-space />
           <!-- Add your navigation items here -->
-          <div class="row q-gutter-xl text-black font20 text-bold">
+          <div class="row q-gutter-xl text-white font20 ">
             <div class="p_hoverColor">Home</div>
             <div class="p_hoverColor">About</div>
             <div
