@@ -256,6 +256,7 @@
                     src="/img/client/MDKL.jpg"
                   />
                 </div>
+                <q-separator />
                 <div class="col" style="height: 200px; width: 230px">
                   <q-img
                     style="mix-blend-mode: multiply"
@@ -479,7 +480,10 @@
                 <img src="/img/bg/KKM_bg.jpg" />
                 <br />
                 <br />
-                <img src="/img/bg/cidb_bg.png" />
+                <br />
+                <img src="/img/bg/logo-myhijau.png" />
+                <br />
+                <img src="/img/bg/CIDB_3.png" />
               </div>
             </div>
           </div>

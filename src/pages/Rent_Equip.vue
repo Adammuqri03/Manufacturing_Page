@@ -193,7 +193,7 @@
   </q-page-container>
 
   <!-- FOOTER SECTION -->
-  <q-footer>
+  <!-- <q-footer>
     <div class="col bg-white text-black">
       <p class="text-bold font20 q-px-md q-my-none q-pt-md">
         MyCES MANUFACTURING SDN. BHD.
@@ -255,8 +255,7 @@
         </div>
       </div>
     </div>
-  </q-footer>
-  -->
+  </q-footer> -->
 </template>
 
 <script>
