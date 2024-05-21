@@ -1,134 +1,205 @@
 <template>
-  <div class="bg-perang">
-    <q-header class="q-pa-md" style="background: transparent">
-      <div>
-        <q-toolbar class="rounded-borders bg-hijau" style="border-radius: 30px">
-          <q-img src="img/myces_logo.png" style="height: 80px; width:100px" fit="contain"/>
-          <q-space />
+  <q-header class="bg-transparent">
+    <div class="row justify-between">
+      <q-toolbar style="padding-left: 100px; padding-right: 100px">
+        <q-img src="public/img/myces_logo.png" style="width: 100px" />
 
-          <q-btn-group flat v-model="tab" class="q-px-md q-gutter-sm">
-            <!-- home btn -->
-            <q-btn
-              v-if="tab !== 'tab1'"
-              v-ripple
-              @click="goToHomePage"
-              style="font-size: 18px"
+        <q-space />
+        <!-- Add your navigation items here -->
+        <div class="row q-gutter-xl text-black font20 text-bold">
+          <div class="p_hoverColor">Home</div>
+          <div class="p_hoverColor">About</div>
+          <div
+            class="p_hoverColor"
+            @mouseover="showServiceMenu = true"
+            @mouseleave="showServiceMenu = false"
+          >
+            Service
+            <q-menu
+              style="
+                width: 280px;
+                background-color: rgba(0, 0, 0, 0.721);
+                font-size: 18px;
+              "
+              class="text-white"
+              v-model="showServiceMenu"
             >
-              Home
-            </q-btn>
-
-            <!-- Service btn -->
-            <q-btn v-if="tab !== 'tab2'" v-ripple style="font-size: 18px">
-              Service
-            </q-btn>
-
-            <!-- info btn -->
-            <q-btn
-              v-if="tab !== 'tab3'"
-              v-ripple
-              @click="scrollToSection('Info')"
-              style="font-size: 18px"
-            >
-              Info
-            </q-btn>
-
-            <!-- contact us btn -->
-            <q-btn
-              v-if="tab !== 'tab4'"
-              v-ripple
-              @click="goToContactUs"
-              style="font-size: 18px"
-              >Contact Us</q-btn
-            >
-          </q-btn-group>
-        </q-toolbar>
-      </div>
-    </q-header>
-
-    <q-page-container>
-      <q-img src="img/svg/try.svg">
-
-      </q-img>
-    </q-page-container>
-    <!-- footer -->
-    <div class="bg-black text-white">
-      <p class="text-bold font20 q-px-md q-my-none q-pt-md">
-        MyCES MANUFACTURING SDN. BHD.
-      </p>
-      <p class="text-bold font20 q-px-md q-my-none q-pt-sm">FIND US</p>
-      <div class="row q-pa-md font20">
-        <!-- place -->
-        <div class="col-2">
-          <p>
-            <strong>HQ Address</strong> <br />
-            RK 27-B Jalan Villa 3 <br />
-            Taman Anggerik Villa <br />
-            43500 Semenyih <br />
-            Selangor Darul Ehsan
-          </p>
-        </div>
-        <div class="col-3">
-          <p>
-            <strong>Branch Address</strong> <br />
-            Bangunan Center of Excellent<br />
-            Kolej Kemahiran Tinggi Mara Ledang <br />
-            Seram 4 & 5, Jalan Sg. Mati, BUkit Gambir <br />
-            84410, Ledang, Johor
-          </p>
-        </div>
-
-        <!-- info -->
-        <div class="col-2">
-          <strong> Telephone : </strong>
-          <p>603-8725 5811</p>
-
-          <strong> Email : </strong>
-          <p>Info@mycesgroup.com</p>
-        </div>
-
-        <!-- connect with us -->
-        <div class="col-1.5">
-          <strong>Connect with us</strong>
-          <div class="row q-gutter-lg justify-center q-pa-sm">
-            <q-icon size="40px" name="mdi-facebook" class="icon-1" />
-            <q-icon size="40px" name="mdi-instagram" class="icon-2" />
+              <q-list
+                @mouseover="showServiceMenu = true"
+                @mouseleave="showServiceMenu = false"
+              >
+                <q-item class="item_Hover">
+                  <q-item-section>
+                    <a href="#">Energy Audit</a>
+                  </q-item-section>
+                </q-item>
+                <q-item class="item_Hover">
+                  <q-item-section
+                    ><a href="#">Monitoring System (MyCES EMARS)</a>
+                  </q-item-section>
+                </q-item>
+                <q-item class="item_Hover">
+                  <q-item-section>
+                    <a href="#">Measurement and Verification (M&V)</a>
+                  </q-item-section>
+                </q-item>
+                <q-item class="item_Hover">
+                  <q-item-section
+                    ><a href="#">Sustainable Energy Management System(SEMS)</a>
+                  </q-item-section>
+                </q-item>
+                <q-item class="item_Hover">
+                  <q-item-section>
+                    <a hreg="#"> Awareness Training</a></q-item-section
+                  >
+                </q-item>
+                <q-item class="item_Hover">
+                  <q-item-section
+                    ><a href="#">Equipment Rental</a></q-item-section
+                  >
+                </q-item>
+                <q-item class="item_Hover">
+                  <q-item-section
+                    ><a href="#">Smart Home Automation</a></q-item-section
+                  >
+                </q-item>
+                <q-item class="item_Hover">
+                  <q-item-section><a href="#">AMARS</a></q-item-section>
+                </q-item>
+              </q-list>
+            </q-menu>
           </div>
+          <div
+            class="p_hoverColor"
+            @mouseover="showSubMenu = true"
+            @mouseleave="showSubMenu = false"
+          >
+            Subsidiaries<q-menu
+              style="
+                width: 200px;
+                background-color: rgba(0, 0, 0, 0.721);
+                font-size: 18px;
+              "
+              class="text-white"
+              v-model="showSubMenu"
+            >
+              <q-list
+                @mouseover="showSubMenu = true"
+                @mouseleave="showSubMenu = false"
+              >
+                <q-item class="item_Hover">
+                  <q-item-section
+                    ><a href="https://biomed.mycesgroup.com/"
+                      >MYCES Biomedical Engineering Sdn Bhd</a
+                    ></q-item-section
+                  >
+                </q-item>
+                <q-item class="item_Hover">
+                  <q-item-section
+                    ><a href="#">MYCES AgroFarm Sdn Bhd</a></q-item-section
+                  >
+                </q-item>
+                <q-item class="item_Hover">
+                  <q-item-section
+                    ><a href="#">MYCES Manufacturing Sdn Bhd</a></q-item-section
+                  >
+                </q-item>
+                <q-item class="item_Hover">
+                  <q-item-section
+                    ><a href="#">MYCES Edutect Sdn Bhd</a></q-item-section
+                  >
+                </q-item>
+                <q-item class="item_Hover">
+                  <q-item-section
+                    ><a href="#"
+                      >MYCES Aircond & Electrical Services Sdn Bhd</a
+                    ></q-item-section
+                  >
+                </q-item>
+              </q-list>
+            </q-menu>
+          </div>
+          <div class="p_hoverColor">Info</div>
+          <div class="p_hoverColor">Contact</div>
         </div>
-      </div>
+      </q-toolbar>
     </div>
+  </q-header>
+  <div>
+    <q-parallax :height="850" :speed="0.4">
+      <template v-slot:media>
+        <img src="/img/bg/bg.png" style="width: 100%" />
+      </template>
+
+      <h1
+        class="text-white text-h9 text-bold"
+        style="text-shadow: 2px 2px 5px #000000"
+      >
+        MyCES SDN BHD
+      </h1>
+      <div class="hover-btn">Explore More</div>
+    </q-parallax>
   </div>
 </template>
 
 <script>
 export default {
-  methods: {
-    goToHomePage() {
-      this.$router.push("/home_page");
-    },
+  data() {
+    return {
+      showServiceMenu: false,
+      showSubMenu: false,
+    };
   },
 };
 </script>
 
 <style>
-.imgfit {
-  width: 100%;
-  aspect-ratio: 3/2;
-  object-fit: contain;
-  mix-blend-mode: color-burn;
+a {
+  color: inherit;
+  text-decoration: none;
 }
 
-.imgfit:hover {
-  mix-blend-mode: normal;
+@media (max-width: 900px) {
+  .q-parallax {
+    /* Set height for smaller screens */
+    height: 600px !important; /* Adjust as needed */
+  }
 }
 
-.icon-1:hover {
-  color: #1877f2;
-  transform: translateY(-10px);
+.hover-btn {
+  width: 200px;
+  height: 60px;
+  border-radius: 5px;
+  background-color: #258400;
+  font-size: 18px;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: default;
 }
 
-.icon-2:hover {
-  color: #e4405f;
-  transform: translateY(-10px);
+.hover-btn:hover {
+  background-color: transparent;
+  border: 2px solid black;
 }
+
+.p_hoverColor {
+  transition: all 0.4s linear;
+}
+
+.p_hoverColor:hover {
+  color: red; /* change color when hover */
+  cursor: default; /* change cursor when hover */
+}
+
+.item_Hover {
+  transition: all 0.4s linear;
+  border-bottom: 1px solid black;
+}
+
+.item_Hover:hover {
+  background-color: green;
+}
+
 </style>
-/

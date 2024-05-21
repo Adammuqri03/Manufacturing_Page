@@ -7,7 +7,7 @@
       >
         <div class="row justify-between">
           <q-toolbar style="padding-left: 100px; padding-right: 100px">
-            <q-img src="public/img/myces_logo.png" 9 />
+            <q-img src="public/img/myces_logo.png" />
 
             <q-space />
             <!-- Add your navigation items here -->
