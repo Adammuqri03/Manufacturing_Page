@@ -26,6 +26,7 @@ const routes = [
       { path: "/try_ajik", component: () => import("pages/try_ajik.vue") },
       { path: "/Main_About", component: () => import("pages/Main_About.vue") },
       { path: "/Rent_Equip", component: () => import("pages/Rent_Equip.vue") },
+      { path: "/Booking", component: () => import("pages/BookNow.vue") },
     ],
   },
 
