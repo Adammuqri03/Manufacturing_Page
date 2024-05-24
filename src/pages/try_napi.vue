@@ -7,7 +7,7 @@
 
           <q-space />
           <!-- Add your navigation items here -->
-          <div class="row q-gutter-xl text-white font20 ">
+          <div class="row q-gutter-xl text-white font20">
             <div class="p_hoverColor">Home</div>
             <div class="p_hoverColor">About</div>
             <div
@@ -46,7 +46,9 @@
                   </q-item>
                   <q-item class="item_Hover">
                     <q-item-section
-                      ><a href="#">Sustainable Energy Management System(SEMS)</a>
+                      ><a href="#"
+                        >Sustainable Energy Management System(SEMS)</a
+                      >
                     </q-item-section>
                   </q-item>
                   <q-item class="item_Hover">
@@ -102,7 +104,9 @@
                   </q-item>
                   <q-item class="item_Hover">
                     <q-item-section
-                      ><a href="#">MYCES Manufacturing Sdn Bhd</a></q-item-section
+                      ><a href="#"
+                        >MYCES Manufacturing Sdn Bhd</a
+                      ></q-item-section
                     >
                   </q-item>
                   <q-item class="item_Hover">
@@ -138,7 +142,11 @@
         >
           MyCES SDN BHD
         </h1>
-        <div class="hover-btn">Explore More</div>
+        <div class="hover-btn">
+          <q-item-section @click="scrollToSection('SERVICES')">
+            <q-btn flat>Explore More</q-btn>
+          </q-item-section>
+        </div>
       </q-parallax>
     </div>
     <q-page-container>
@@ -170,58 +178,135 @@
           <br />
           <br />
           <br />
-          <div class="text-center font20"></div>
-          <p
-            class="text-center text-green-8 text-bold font40"
-            style="letter-spacing: 2px"
-          >
-            OUR SERVICES
-          </p>
-          <div
-            class="row flex flex-center"
-            style="font-size: 25px; letter-spacing: 2px"
-          >
-            <q-card
-              v-for="(image, index) in images"
-              :key="index"
-              flat
-              :class="[
-                [
-                  false
-                    ? 'fullscreen bg-black'
-                    : 'mycard col-xs-12 col-sm-6 col-lg-4 transparent',
-                ],
-                [' center-text'],
-              ]"
-              @click="dialog_show(image.src)"
-              style="width: 400px; height: 400px"
+          <q-section id="SERVICES">
+            <div class="text-center font20"></div>
+            <p
+              class="text-center text-green-8 text-bold font40"
+              style="letter-spacing: 2px"
             >
-              <q-img
-                :src="image.src"
-                fit
-                style="height: 200px; width: 350px; border-radius: 20px"
-              />
-              <p class="text-center q-pt-md" style="height: 50px">
-                {{ image.title }}
-              </p>
-              <div class="q-pa-md flex flex-center">
-                <q-btn
-                  color="green"
-                  text-color="white"
-                  label="More Info"
-                  @click="openMonitoring"
+              OUR SERVICES
+            </p>
+            <div
+              class="row flex flex-center"
+              style="font-size: 25px; letter-spacing: 2px"
+            >
+              <q-card
+                v-for="(image, index) in images"
+                :key="index"
+                flat
+                :class="[
+                  [
+                    false
+                      ? 'fullscreen bg-black'
+                      : 'mycard col-xs-12 col-sm-6 col-lg-4 transparent',
+                  ],
+                  [' center-text'],
+                ]"
+                @click="dialog_show(image.src)"
+                style="width: 400px; height: 400px"
+              >
+                <q-img
+                  :src="image.src"
+                  fit
+                  style="height: 200px; width: 350px; border-radius: 20px"
                 />
-              </div>
-            </q-card>
-          </div>
+                <p class="text-center q-pt-md" style="height: 50px">
+                  {{ image.title }}
+                </p>
+                <div class="q-pa-md flex flex-center">
+                  <q-btn
+                    color="green"
+                    text-color="white"
+                    label="More Info"
+                    @click="openMonitoring"
+                  />
+                </div>
+              </q-card>
+            </div>
+          </q-section>
+
           <div class="text-center font20"></div>
           <p
             class="text-center text-green-8 text-bold font40"
             style="letter-spacing: 2px"
           >
-            OUR CLIENTS
+            OUR COMMERCIAL CLIENTS
           </p>
-          <section class="section project" aria-labelledby="project-label">
+          <div class="q-px-md">
+            <q-carousel
+              animated
+              v-model="slide"
+              navigation
+              infinite
+              :autoplay="2000"
+              arrows
+              transition-prev="slide-right"
+              transition-next="slide-left"
+              @mouseenter="autoplay = false"
+              @mouseleave="autoplay = true"
+              style="background-color: transparent"
+            >
+              <q-carousel-slide
+                v-for="slideData in slides"
+                :key="slideData.name"
+                :name="slideData.name"
+              >
+                <div
+                  class="row fit justify-center items-center q-gutter-lg no-wrap"
+                >
+                  <q-img
+                    v-for="image in slideData.images"
+                    :key="image"
+                    class="rounded-borders col-2 img-size"
+                    fit="contain"
+                    :src="image"
+                  />
+                </div>
+              </q-carousel-slide>
+            </q-carousel>
+          </div>
+
+          <div class="text-center font20"></div>
+          <p
+            class="text-center text-green-8 text-bold font40"
+            style="letter-spacing: 2px"
+          >
+            OUR INDUSTRIAL CLIENTS
+          </p>
+          <div class="q-px-md">
+            <q-carousel
+              animated
+              v-model="newSlide"
+              navigation
+              infinite
+              :newAutoplay="2000"
+              arrows
+              transition-prev="slide-right"
+              transition-next="slide-left"
+              @mouseenter="newAutoplay = false"
+              @mouseleave="newAutoplay = true"
+              style="background-color: transparent"
+            >
+              <q-carousel-slide
+                v-for="slideData in newSlides"
+                :key="slideData.name"
+                :name="slideData.name"
+              >
+                <div
+                  class="row fit justify-center items-center q-gutter-lg no-wrap"
+                >
+                  <q-img
+                    v-for="image in slideData.images"
+                    :key="image"
+                    class="rounded-borders col-2 img-size"
+                    fit="contain"
+                    :src="image"
+                  />
+                </div>
+              </q-carousel-slide>
+            </q-carousel>
+          </div>
+          <!-- <section class="section project" aria-labelledby="project-label">
             <div class="container">
               <p class="section-subtitle" id="project-label"></p>
 
@@ -417,7 +502,7 @@
                 </div>
               </div>
             </div>
-          </section>
+          </section> -->
         </div>
       </div>
     </q-page-container>
@@ -551,31 +636,157 @@ import { ref } from "vue";
 
 export default {
   setup() {
+    // Existing state from the first code block
     const showServiceMenu = ref(false);
     const showSubMenu = ref(false);
-
     const images = [
-      { src: "/img/Interval Usage.png", title: "Monitoring System " },
+      { src: "/img/Interval Usage.png", title: "Monitoring System" },
       { src: "/img/bg/energyAudit.jpg", title: "Energy Audit" },
       { src: "/img/bg/awareness2.jpg", title: "Awareness Training" },
       { src: "/img/bg/rental.jpg", title: "Rental Equipment" },
     ];
-    // const images2 = [
-    //   { src: "/img/Asset Management.png", title: "Asset Management" },
-    //   {
-    //     src: "/img/Work Order Performance.jpg",
-    //     title: "Work Order Management",
-    //   },
-    //   { src: "/img/calender WOM.png", title: "Schedule Work Order Management" },
-    // ];
+
+    // Additional state from the second code block
+    //Commmercial clients
+    const tab = ref("");
+    const slide = ref(1);
+    const autoplay = ref(true);
+    const slides = [
+      {
+        name: 1,
+        images: [
+          "/img/client/umsc logo.png",
+          "/img/client/NIH.png",
+          "/img/client/MDSB.jpg",
+          "/img/client/MDKS.jpg",
+          "/img/client/MDKL.jpg",
+          "/img/client/MDHL.jpg",
+        ],
+      },
+      {
+        name: 2,
+        images: [
+          "/img/client/PDT Gombak.jpg",
+          "/img/client/MBPJ.jpg",
+          "/img/client/Demesne.jpg",
+          "/img/client/KPJ Kajang.jpg",
+          "/img/client/KPJ Penang.jpg",
+          "/img/client/KPJ Puteri.jpg",
+        ],
+      },
+      {
+        name: 3,
+        images: [
+          "/img/client/Pharmaniaga.jpg",
+          "/img/client/SimeDarby.jpg",
+          "/img/client/KTS.jpg",
+          "/img/client/KPJ Perdana.jpg",
+          "/img/client/Salam.jpg",
+          "/img/client/Petronas.jpg",
+        ],
+      },
+      {
+        name: 4,
+        images: [
+          "/img/client/Hospital Pusrawi.jpg",
+          "/img/client/KPJ Seremban.jpg",
+          "/img/client/ColumbiaAsia.jpg",
+          "/img/client/Kayaku.jpg",
+          "/img/client/Medivest.jpg",
+          "/img/client/Terengganu.jpg",
+        ],
+      },
+      {
+        name: 5,
+        images: [
+          "/img/client/Gleneagles.jpg",
+          "/img/client/UITM.jpg",
+          "/img/client/Radicare.jpg",
+          "/img/client/KKM.jpg",
+          "/img/client/Sibu Water Board.jpg",
+          "/img/client/Jabatan Peguam Negara.jpg",
+        ],
+      },
+      {
+        name: 6,
+        images: [
+          "/img/bg/KPJ_AmpangPuteri.png",
+          "/img/bg/KPJ_Perlis.png",
+          "/img/bg/KPJ_Selangor.png",
+        ],
+      },
+    ];
+
+    //Industrial clients
+    const newTab = ref("");
+    const newSlide = ref(1);
+    const newAutoplay = ref(true);
+    const newSlides = [
+      {
+        name: 1,
+        images: [
+          "/img/bg/KPJ_Selangor.png",
+          "/img/client/newImage2.png",
+          "/img/client/newImage3.jpg",
+          "/img/client/newImage4.jpg",
+          "/img/client/newImage5.jpg",
+          "/img/client/newImage6.jpg",
+        ],
+      },
+      {
+        name: 2,
+        images: [
+          "/img/client/newImage7.jpg",
+          "/img/client/newImage8.jpg",
+          "/img/client/newImage9.jpg",
+          "/img/client/newImage10.jpg",
+          "/img/client/newImage11.jpg",
+          "/img/client/newImage12.jpg",
+        ],
+      },
+      {
+        name: 3,
+        images: [
+          "/img/client/newImage13.jpg",
+          "/img/client/newImage14.jpg",
+          "/img/client/newImage15.jpg",
+          "/img/client/newImage16.jpg",
+          "/img/client/newImage17.jpg",
+          "/img/client/newImage18.jpg",
+        ],
+      },
+      {
+        name: 4,
+        images: [
+          "/img/client/newImage19.jpg",
+          "/img/client/newImage20.jpg",
+          "/img/client/newImage21.jpg",
+          "/img/client/newImage22.jpg",
+          "/img/client/newImage23.jpg",
+          "/img/client/newImage24.jpg",
+        ],
+      },
+      {
+        name: 5,
+        images: [
+          "/img/client/newImage25.jpg",
+          "/img/client/newImage26.jpg",
+          "/img/client/newImage27.jpg",
+          "/img/client/newImage28.jpg",
+          "/img/client/newImage29.jpg",
+          "/img/client/newImage30.jpg",
+        ],
+      },
+    ];
 
     return {
       showServiceMenu,
       showSubMenu,
       images,
-      // images2,
-
-      // Add any methods or computed properties you need here
+      tab,
+      slide,
+      autoplay,
+      slides,
     };
   },
 
@@ -588,6 +799,12 @@ export default {
         "https://my.linkedin.com/company/myces-energy-consultant/",
         "_blank"
       );
+    },
+    scrollToSection(sectionId) {
+      const el = document.getElementById(sectionId);
+      if (el) {
+        el.scrollIntoView({ behavior: "smooth" });
+      }
     },
   },
 };
@@ -640,6 +857,4 @@ a {
 .item_Hover:hover {
   background-color: green;
 }
-
 </style>
-
