@@ -8,8 +8,8 @@
           <q-space />
           <!-- Add your navigation items here -->
           <div class="row q-gutter-xl text-white font20">
-            <div class="p_hoverColor">Home</div>
-            <div class="p_hoverColor">About</div>
+            <div class="p_hoverColor" @click="goToHome">Home</div>
+            <div class="p_hoverColor" @click="goToAboutUs">Corporate</div>
             <div
               class="p_hoverColor"
               @mouseover="showServiceMenu = true"
@@ -58,7 +58,7 @@
                   </q-item>
                   <q-item class="item_Hover">
                     <q-item-section
-                      ><a href="#">Equipment Rental</a></q-item-section
+                      ><a @click="goToRent">Equipment Rental</a></q-item-section
                     >
                   </q-item>
                   <q-item class="item_Hover">
@@ -125,7 +125,7 @@
               </q-menu>
             </div>
             <div class="p_hoverColor">Info</div>
-            <div class="p_hoverColor">Contact</div>
+            <div class="p_hoverColor" @click="goToContactUs">Contact</div>
           </div>
         </q-toolbar>
       </div>
@@ -218,7 +218,7 @@
                     color="green"
                     text-color="white"
                     label="More Info"
-                    @click="openMonitoring"
+                    @click="goToEmars"
                   />
                 </div>
               </q-card>
@@ -805,6 +805,21 @@ export default {
       if (el) {
         el.scrollIntoView({ behavior: "smooth" });
       }
+    },
+    goToAboutUs() {
+      this.$router.push("/Main_About");
+    },
+    goToRent() {
+      this.$router.push("/Rent_Equip");
+    },
+    goToHome() {
+      this.$router.push("/try_napi");
+    },
+    goToContactUs() {
+      this.$router.push("/contact_us");
+    },
+    goToEmars() {
+      this.$router.push("/emars_page");
     },
   },
 };
