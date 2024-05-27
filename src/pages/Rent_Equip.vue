@@ -172,7 +172,7 @@
             color="green"
             text-color="white"
             label="Book Now"
-            @click="openMonitoring"
+            @click="goToBook"
           />
         </div>
       </q-card>
@@ -304,10 +304,12 @@
 <script>
 import { ref } from "vue";
 import { useQuasar } from "quasar";
+import { useRouter } from "vue-router";
 
 export default {
   setup() {
     const $q = useQuasar();
+    const router = useRouter();
 
     // Refs for form data
     const name = ref(null);
@@ -329,11 +331,11 @@ export default {
       { src: "/img/eqp/rental_4.png", title: "Testo 625" },
       { src: "/img/eqp/rental_5.2.png", title: " Testo 315-3" },
       { src: "/img/eqp/rental_6.png", title: "Testo 416" },
-      { src: "/img/eqp/rental_7.png", title: "" },
-      { src: "/img/eqp/rental_8.png", title: "" },
-      { src: "/img/eqp/rental_9.png", title: "" },
-      { src: "/img/eqp/rental_10.png", title: "" },
-      { src: "/img/eqp/rental_11.png", title: "" },
+      { src: "/img/eqp/rental_7.png", title: "KTT 220/KTT 220-O" },
+      { src: "/img/eqp/rental_8.png", title: "Hioki 3280-10F" },
+      { src: "/img/eqp/rental_9.png", title: "KIMO LX100" },
+      { src: "/img/eqp/rental_10.png", title: "FLEXIM F721TE" },
+      { src: "/img/eqp/rental_11.png", title: "Fluxus G601" },
     ];
 
     // Methods for form submission and reset
@@ -373,6 +375,14 @@ export default {
       );
     };
 
+    const goToBook = () => {
+      try {
+        router.push("/Booking");
+      } catch (error) {
+        console.error("An error occurred:", error);
+      }
+    };
+
     return {
       // Data
       name,
@@ -387,7 +397,12 @@ export default {
       onReset,
       openFacebook,
       openInstagram,
+      goToBook,
     };
+
+    methods: {
+      goToBook;
+    }
   },
 };
 </script>

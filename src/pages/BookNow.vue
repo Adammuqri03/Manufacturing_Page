@@ -171,10 +171,17 @@
             />
           </div>
         </q-form>
+        <div class="q-pa-md">
+          <q-date v-model="date" multiple :events="eventsFn" />
+        </div>
       </div>
     </div>
   </div>
-  <q-page-container> </q-page-container>
+  <q-page-container>
+    <!-- <div class="q-pa-md">
+      <q-date v-model="date" minimal />
+    </div> -->
+  </q-page-container>
   <!-- footer -->
   <div class="bg-white text-black">
     <p class="text-bold font20 q-px-md q-my-none q-pt-md">
@@ -287,6 +294,9 @@ export default {
       );
     };
 
+    // Date ref
+    const date = ref("2019/02/01");
+
     return {
       // Data
       name,
@@ -294,6 +304,7 @@ export default {
       accept,
       showServiceMenu,
       showSubMenu,
+      date,
 
       // Methods
       onSubmit,

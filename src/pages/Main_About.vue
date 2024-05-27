@@ -288,3 +288,41 @@ export default {
   },
 };
 </script>
+<style scoped>
+.center-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.mycard {
+  width: 350px;
+}
+
+.text-outline {
+  letter-spacing: 2px;
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke-width: 3px;
+}
+.img-size {
+  height: 200px;
+  width: 230px;
+}
+
+.floating-btn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+}
+
+.icon-1:hover {
+  color: #1877f2;
+  transform: translateY(-10px);
+}
+
+.icon-2:hover {
+  color: #e4405f;
+  transform: translateY(-10px);
+}
+</style>

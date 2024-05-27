@@ -87,6 +87,32 @@
         </div>
       </div>
     </q-page-container>
+    <!-- VIDEO -->
+    <q-page-container>
+      <div class="q-pa-md">
+        <q-parallax :height="800">
+          <template v-slot:media>
+            <video
+              width="720"
+              height="440"
+              poster="public/img/myces_logo.png"
+              autoplay
+              loop
+              muted
+              playsinline
+            >
+              <!-- <source
+                type="video/webm"
+                src="https://cdn.quasar.dev/img/polina.webm"
+              /> -->
+              <source type="video/mp4" src="public/video/emars_video.mp4" />
+            </video>
+          </template>
+
+          <h3 class="text-white"></h3>
+        </q-parallax>
+      </div>
+    </q-page-container>
 
     <q-section id="Service">
       <q-page-container>

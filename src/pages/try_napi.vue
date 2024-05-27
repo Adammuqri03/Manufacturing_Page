@@ -124,7 +124,7 @@
                 </q-list>
               </q-menu>
             </div>
-            <div class="p_hoverColor">Info</div>
+            <!-- <div class="p_hoverColor">Info</div> -->
             <div class="p_hoverColor" @click="goToContactUs">Contact</div>
           </div>
         </q-toolbar>
@@ -212,6 +212,12 @@
                 />
                 <p class="text-center q-pt-md" style="height: 50px">
                   {{ image.title }}
+                  <q-btn
+                    color="green"
+                    text-color="white"
+                    label="More Info"
+                    @click="goToFMS"
+                  ></q-btn>
                 </p>
                 <div class="q-pa-md flex flex-center">
                   <q-btn
@@ -636,190 +642,247 @@ import { ref } from "vue";
 
 export default {
   setup() {
-    // Existing state from the first code block
-    const showServiceMenu = ref(false);
-    const showSubMenu = ref(false);
-    const images = [
-      { src: "/img/Interval Usage.png", title: "Monitoring System" },
-      { src: "/img/bg/energyAudit.jpg", title: "Energy Audit" },
-      { src: "/img/bg/awareness2.jpg", title: "Awareness Training" },
-      { src: "/img/bg/rental.jpg", title: "Rental Equipment" },
-    ];
+    try {
+      // Existing state from the first code block
+      const showServiceMenu = ref(false);
+      const showSubMenu = ref(false);
+      const images = [
+        {
+          src: "/img/Interval Usage.png",
+          title: "Monitoring System",
+          link: "",
+        },
+        { src: "/img/bg/energyAudit.jpg", title: "Energy Audit" },
+        { src: "/img/bg/awareness2.jpg", title: "Awareness Training" },
+        { src: "/img/bg/rental.jpg", title: "Rental Equipment" },
+      ];
 
-    // Additional state from the second code block
-    //Commmercial clients
-    const tab = ref("");
-    const slide = ref(1);
-    const autoplay = ref(true);
-    const slides = [
-      {
-        name: 1,
-        images: [
-          "/img/client/umsc logo.png",
-          "/img/client/NIH.png",
-          "/img/client/MDSB.jpg",
-          "/img/client/MDKS.jpg",
-          "/img/client/MDKL.jpg",
-          "/img/client/MDHL.jpg",
-        ],
-      },
-      {
-        name: 2,
-        images: [
-          "/img/client/PDT Gombak.jpg",
-          "/img/client/MBPJ.jpg",
-          "/img/client/Demesne.jpg",
-          "/img/client/KPJ Kajang.jpg",
-          "/img/client/KPJ Penang.jpg",
-          "/img/client/KPJ Puteri.jpg",
-        ],
-      },
-      {
-        name: 3,
-        images: [
-          "/img/client/Pharmaniaga.jpg",
-          "/img/client/SimeDarby.jpg",
-          "/img/client/KTS.jpg",
-          "/img/client/KPJ Perdana.jpg",
-          "/img/client/Salam.jpg",
-          "/img/client/Petronas.jpg",
-        ],
-      },
-      {
-        name: 4,
-        images: [
-          "/img/client/Hospital Pusrawi.jpg",
-          "/img/client/KPJ Seremban.jpg",
-          "/img/client/ColumbiaAsia.jpg",
-          "/img/client/Kayaku.jpg",
-          "/img/client/Medivest.jpg",
-          "/img/client/Terengganu.jpg",
-        ],
-      },
-      {
-        name: 5,
-        images: [
-          "/img/client/Gleneagles.jpg",
-          "/img/client/UITM.jpg",
-          "/img/client/Radicare.jpg",
-          "/img/client/KKM.jpg",
-          "/img/client/Sibu Water Board.jpg",
-          "/img/client/Jabatan Peguam Negara.jpg",
-        ],
-      },
-      {
-        name: 6,
-        images: [
-          "/img/bg/KPJ_AmpangPuteri.png",
-          "/img/bg/KPJ_Perlis.png",
-          "/img/bg/KPJ_Selangor.png",
-        ],
-      },
-    ];
+      // Additional state from the second code block
+      //Commercial clients
+      const tab = ref("");
+      const slide = ref(1);
+      const autoplay = ref(true);
+      const slides = [
+        {
+          name: 1,
+          images: [
+            "/img/client/umsc logo.png",
+            "/img/client/NIH.png",
+            "/img/client/MDSB.jpg",
+            "/img/client/MDKS.jpg",
+            "/img/client/MDKL.jpg",
+            "/img/client/MDHL.jpg",
+          ],
+        },
+        {
+          name: 2,
+          images: [
+            "/img/client/PDT Gombak.jpg",
+            "/img/client/MBPJ.jpg",
+            "/img/client/Demesne.jpg",
+            "/img/client/KPJ Kajang.jpg",
+            "/img/client/KPJ Penang.jpg",
+            "/img/client/KPJ Puteri.jpg",
+          ],
+        },
+        {
+          name: 3,
+          images: [
+            "/img/client/Pharmaniaga.jpg",
+            "/img/client/SimeDarby.jpg",
+            "/img/client/KTS.jpg",
+            "/img/client/KPJ Perdana.jpg",
+            "/img/client/Salam.jpg",
+            "/img/client/Petronas.jpg",
+          ],
+        },
+        {
+          name: 4,
+          images: [
+            "/img/client/Hospital Pusrawi.jpg",
+            "/img/client/KPJ Seremban.jpg",
+            "/img/client/ColumbiaAsia.jpg",
+            "/img/client/Kayaku.jpg",
+            "/img/client/Medivest.jpg",
+            "/img/client/Terengganu.jpg",
+          ],
+        },
+        {
+          name: 5,
+          images: [
+            "/img/client/Gleneagles.jpg",
+            "/img/client/UITM.jpg",
+            "/img/client/Radicare.jpg",
+            "/img/client/KKM.jpg",
+            "/img/client/Sibu Water Board.jpg",
+            "/img/client/Jabatan Peguam Negara.jpg",
+          ],
+        },
+        {
+          name: 6,
+          images: [
+            "/img/bg/KPJ_AmpangPuteri.png",
+            "/img/bg/KPJ_Perlis.png",
+            "/img/bg/KPJ_Selangor.png",
+          ],
+        },
+      ];
 
-    //Industrial clients
-    const newTab = ref("");
-    const newSlide = ref(1);
-    const newAutoplay = ref(true);
-    const newSlides = [
-      {
-        name: 1,
-        images: [
-          "/img/bg/KPJ_Selangor.png",
-          "/img/client/newImage2.png",
-          "/img/client/newImage3.jpg",
-          "/img/client/newImage4.jpg",
-          "/img/client/newImage5.jpg",
-          "/img/client/newImage6.jpg",
-        ],
-      },
-      {
-        name: 2,
-        images: [
-          "/img/client/newImage7.jpg",
-          "/img/client/newImage8.jpg",
-          "/img/client/newImage9.jpg",
-          "/img/client/newImage10.jpg",
-          "/img/client/newImage11.jpg",
-          "/img/client/newImage12.jpg",
-        ],
-      },
-      {
-        name: 3,
-        images: [
-          "/img/client/newImage13.jpg",
-          "/img/client/newImage14.jpg",
-          "/img/client/newImage15.jpg",
-          "/img/client/newImage16.jpg",
-          "/img/client/newImage17.jpg",
-          "/img/client/newImage18.jpg",
-        ],
-      },
-      {
-        name: 4,
-        images: [
-          "/img/client/newImage19.jpg",
-          "/img/client/newImage20.jpg",
-          "/img/client/newImage21.jpg",
-          "/img/client/newImage22.jpg",
-          "/img/client/newImage23.jpg",
-          "/img/client/newImage24.jpg",
-        ],
-      },
-      {
-        name: 5,
-        images: [
-          "/img/client/newImage25.jpg",
-          "/img/client/newImage26.jpg",
-          "/img/client/newImage27.jpg",
-          "/img/client/newImage28.jpg",
-          "/img/client/newImage29.jpg",
-          "/img/client/newImage30.jpg",
-        ],
-      },
-    ];
+      //Industrial clients
+      const newTab = ref("");
+      const newSlide = ref(1);
+      const newAutoplay = ref(true);
+      const newSlides = [
+        {
+          name: 1,
+          images: [
+            "/img/bg/KPJ_Selangor.png",
+            "/img/client/newImage2.png",
+            "/img/client/newImage3.jpg",
+            "/img/client/newImage4.jpg",
+            "/img/client/newImage5.jpg",
+            "/img/client/newImage6.jpg",
+          ],
+        },
+        {
+          name: 2,
+          images: [
+            "/img/client/newImage7.jpg",
+            "/img/client/newImage8.jpg",
+            "/img/client/newImage9.jpg",
+            "/img/client/newImage10.jpg",
+            "/img/client/newImage11.jpg",
+            "/img/client/newImage12.jpg",
+          ],
+        },
+        {
+          name: 3,
+          images: [
+            "/img/client/newImage13.jpg",
+            "/img/client/newImage14.jpg",
+            "/img/client/newImage15.jpg",
+            "/img/client/newImage16.jpg",
+            "/img/client/newImage17.jpg",
+            "/img/client/newImage18.jpg",
+          ],
+        },
+        {
+          name: 4,
+          images: [
+            "/img/client/newImage19.jpg",
+            "/img/client/newImage20.jpg",
+            "/img/client/newImage21.jpg",
+            "/img/client/newImage22.jpg",
+            "/img/client/newImage23.jpg",
+            "/img/client/newImage24.jpg",
+          ],
+        },
+        {
+          name: 5,
+          images: [
+            "/img/client/newImage25.jpg",
+            "/img/client/newImage26.jpg",
+            "/img/client/newImage27.jpg",
+            "/img/client/newImage28.jpg",
+            "/img/client/newImage29.jpg",
+            "/img/client/newImage30.jpg",
+          ],
+        },
+      ];
 
-    return {
-      showServiceMenu,
-      showSubMenu,
-      images,
-      tab,
-      slide,
-      autoplay,
-      slides,
-    };
+      return {
+        showServiceMenu,
+        showSubMenu,
+        images,
+        tab,
+        slide,
+        autoplay,
+        slides,
+      };
+    } catch (error) {
+      console.error("An error occurred:", error);
+    }
   },
 
   methods: {
     openFacebook() {
-      window.open("https://www.facebook.com/mycesgroup/", "_blank");
+      try {
+        window.open("https://www.facebook.com/mycesgroup/", "_blank");
+      } catch (error) {
+        console.error("An error occurred:", error);
+      }
     },
     openLinkedin() {
-      window.open(
-        "https://my.linkedin.com/company/myces-energy-consultant/",
-        "_blank"
-      );
+      try {
+        window.open(
+          "https://my.linkedin.com/company/myces-energy-consultant/",
+          "_blank"
+        );
+      } catch (error) {
+        console.error("An error occurred:", error);
+      }
     },
     scrollToSection(sectionId) {
-      const el = document.getElementById(sectionId);
-      if (el) {
-        el.scrollIntoView({ behavior: "smooth" });
+      try {
+        const el = document.getElementById(sectionId);
+        if (el) {
+          el.scrollIntoView({ behavior: "smooth" });
+        }
+      } catch (error) {
+        console.error("An error occurred:", error);
       }
     },
     goToAboutUs() {
-      this.$router.push("/Main_About");
+      try {
+        this.$router.push("/Main_About");
+      } catch (error) {
+        console.error("An error occurred:", error);
+      }
     },
     goToRent() {
-      this.$router.push("/Rent_Equip");
+      try {
+        this.$router.push("/Rent_Equip");
+      } catch (error) {
+        console.error("An error occurred:", error);
+      }
     },
     goToHome() {
-      this.$router.push("/try_napi");
+      try {
+        this.$router.push("/try_napi");
+      } catch (error) {
+        console.error("An error occurred:", error);
+      }
     },
     goToContactUs() {
-      this.$router.push("/contact_us");
+      try {
+        window.location.href = "https://biomed.mycesgroup.com/contact/";
+      } catch (error) {
+        console.error("An error occurred:", error);
+      }
     },
+
     goToEmars() {
-      this.$router.push("/emars_page");
+      try {
+        this.$router.push("/emars_page");
+      } catch (error) {
+        console.error("An error occurred:", error);
+      }
+    },
+    goToFMS() {
+      try {
+        this.$router.push("/fms_page");
+      } catch (error) {
+        console.error("An error occurred:", error);
+      }
+    },
+    dialog_show(image) {
+      try {
+        this.fsFlag = !this.fsFlag;
+        this.currentImage = image;
+      } catch (error) {
+        console.error("An error occurred:", error);
+        throw error;
+      }
     },
   },
 };
