@@ -8,7 +8,7 @@ const routes = [
         component: () => import("pages/IndexPage.vue"),
       },
       { path: "", redirect: "/home_page" },
-      { path: "/home_page", component: () => import("pages/Home-page.vue") },
+      { path: "/home_page", component: () => import("pages/try_napi.vue") },
       { path: "/try_item", component: () => import("pages/try_item.vue") },
       {
         path: "/aircond_page",
@@ -22,7 +22,7 @@ const routes = [
       },
       { path: "/fms_page", component: () => import("pages/Fms_page.vue") },
       { path: "/try_new", component: () => import("pages/try_new.vue") },
-      { path: "/try_napi", component: () => import("pages/try_napi.vue") },
+      { path: "/home_page", component: () => import("pages/try_napi.vue") },
       { path: "/try_ajik", component: () => import("pages/try_ajik.vue") },
       { path: "/Main_About", component: () => import("pages/Main_About.vue") },
       { path: "/Rent_Equip", component: () => import("pages/Rent_Equip.vue") },

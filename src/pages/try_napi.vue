@@ -1,12 +1,12 @@
 <template>
   <q-layout view="hhh lpR fff">
-    <q-header class="bg-transparent">
+    <!-- <q-header class="bg-transparent">
       <div class="row justify-between">
         <q-toolbar style="padding-left: 100px; padding-right: 100px">
           <q-img src="public/img/myces_logo.png" style="width: 100px" />
 
           <q-space />
-          <!-- Add your navigation items here -->
+          #### Add your navigation items here
           <div class="row q-gutter-xl text-white font20">
             <div class="p_hoverColor" @click="goToHome">Home</div>
             <div class="p_hoverColor" @click="goToAboutUs">Corporate</div>
@@ -124,31 +124,29 @@
                 </q-list>
               </q-menu>
             </div>
-            <!-- <div class="p_hoverColor">Info</div> -->
+           ### <div class="p_hoverColor">Info</div>
             <div class="p_hoverColor" @click="goToContactUs">Contact</div>
           </div>
         </q-toolbar>
       </div>
-    </q-header>
-    <div>
-      <q-parallax :height="850" :speed="0.4">
-        <template v-slot:media>
-          <img src="/img/bg/bg.png" style="width: 100%" />
-        </template>
+    </q-header> -->
+    <q-parallax :height="850" :speed="0.4">
+      <template v-slot:media>
+        <q-img src="/img/bg/bg.png" style="width: 100%" />
+      </template>
 
-        <h1
-          class="text-white text-h9 text-bold"
-          style="text-shadow: 2px 2px 5px #000000"
-        >
-          MyCES SDN BHD
-        </h1>
-        <div class="hover-btn">
-          <q-item-section @click="scrollToSection('SERVICES')">
-            <q-btn flat>Explore More</q-btn>
-          </q-item-section>
-        </div>
-      </q-parallax>
-    </div>
+      <h1
+        class="text-white text-h9 text-bold"
+        style="text-shadow: 2px 2px 5px #000000"
+      >
+        MyCES SDN BHD
+      </h1>
+      <div class="hover-btn">
+        <q-item-section @click="scrollToSection('SERVICES')">
+          <q-btn flat>Explore More</q-btn>
+        </q-item-section>
+      </div>
+    </q-parallax>
     <q-page-container>
       <div class="row">
         <div class="col">
@@ -212,12 +210,6 @@
                 />
                 <p class="text-center q-pt-md" style="height: 50px">
                   {{ image.title }}
-                  <q-btn
-                    color="green"
-                    text-color="white"
-                    label="More Info"
-                    @click="goToFMS"
-                  ></q-btn>
                 </p>
                 <div class="q-pa-md flex flex-center">
                   <q-btn

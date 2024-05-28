@@ -90,7 +90,7 @@
     <!-- VIDEO -->
     <q-page-container>
       <div class="q-pa-md">
-        <q-parallax :height="800">
+        <q-parallax :height="900">
           <template v-slot:media>
             <video
               width="720"
