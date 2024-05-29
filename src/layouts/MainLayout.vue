@@ -1,12 +1,12 @@
 <template>
   <q-layout view="lHh Lpr lFf">
-    <q-header class="bg-transparent">
+    <!-- <q-header class="bg-transparent">
       <div class="row justify-between">
         <q-toolbar style="padding-left: 100px; padding-right: 100px">
           <q-img src="public/img/myces_logo.png" style="width: 100px" />
 
           <q-space />
-          <!-- Add your navigation items here -->
+          ### Add your navigation items here
           <div class="row q-gutter-xl text-white font20">
             <div class="p_hoverColor" @click="goToHome">Home</div>
             <div class="p_hoverColor" @click="goToAboutUs">Corporate</div>
@@ -124,12 +124,12 @@
                 </q-list>
               </q-menu>
             </div>
-            <!-- <div class="p_hoverColor">Info</div> -->
+            ###<div class="p_hoverColor">Info</div>
             <div class="p_hoverColor" @click="goToContactUs">Contact</div>
           </div>
         </q-toolbar>
       </div>
-    </q-header>
+    </q-header> -->
     <router-view />
   </q-layout>
 </template>

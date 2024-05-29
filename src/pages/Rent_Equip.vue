@@ -8,8 +8,8 @@
           <q-space />
           <!-- Add your navigation items here -->
           <div class="row q-gutter-xl text-white font20">
-            <div class="p_hoverColor">Home</div>
-            <div class="p_hoverColor">About</div>
+            <div class="p_hoverColor" @click="goToHome">Home</div>
+            <div class="p_hoverColor" @click="goToAbout">Corporate</div>
             <div
               class="p_hoverColor"
               @mouseover="showServiceMenu = true"
@@ -31,26 +31,26 @@
                 >
                   <q-item class="item_Hover">
                     <q-item-section>
-                      <a href="#">Energy Audit</a>
+                      <a @click="goToEmars">Energy Audit</a>
                     </q-item-section>
                   </q-item>
                   <q-item class="item_Hover">
                     <q-item-section
-                      ><a href="#">Monitoring System (MyCES EMARS)</a>
+                      ><a @click="goToFMS">Monitoring System (MyCES EMARS)</a>
                     </q-item-section>
                   </q-item>
-                  <q-item class="item_Hover">
+                  <!-- <q-item class="item_Hover">
                     <q-item-section>
                       <a href="#">Measurement and Verification (M&V)</a>
                     </q-item-section>
-                  </q-item>
-                  <q-item class="item_Hover">
+                  </q-item> -->
+                  <!-- <q-item class="item_Hover">
                     <q-item-section
                       ><a href="#"
                         >Sustainable Energy Management System(SEMS)</a
                       >
                     </q-item-section>
-                  </q-item>
+                  </q-item> -->
                   <q-item class="item_Hover">
                     <q-item-section>
                       <a hreg="#"> Awareness Training</a></q-item-section
@@ -58,17 +58,20 @@
                   </q-item>
                   <q-item class="item_Hover">
                     <q-item-section
-                      ><a href="#">Equipment Rental</a></q-item-section
+                      ><a @click="goToRent">Equipment Rental</a></q-item-section
                     >
                   </q-item>
-                  <q-item class="item_Hover">
+                  <!-- <q-item class="item_Hover">
                     <q-item-section
                       ><a href="#">Smart Home Automation</a></q-item-section
                     >
-                  </q-item>
-                  <q-item class="item_Hover">
+                  </q-item> -->
+                  <!-- <q-item class="item_Hover">
                     <q-item-section><a href="#">AMARS</a></q-item-section>
-                  </q-item>
+                  </q-item> -->
+                  <!-- <q-item class="item_Hover">
+                    <q-item-section><a href="#">AMARS</a></q-item-section>
+                  </q-item> -->
                 </q-list>
               </q-menu>
             </div>
@@ -124,8 +127,8 @@
                 </q-list>
               </q-menu>
             </div>
-            <div class="p_hoverColor">Info</div>
-            <div class="p_hoverColor">Contact</div>
+            <!-- <div class="p_hoverColor">Info</div> -->
+            <div class="p_hoverColor" @click="goToUs">Contact</div>
           </div>
         </q-toolbar>
       </div>
@@ -382,6 +385,36 @@ export default {
         console.error("An error occurred:", error);
       }
     };
+    const goToUs = () => {
+      try {
+        window.location.href = "https://biomed.mycesgroup.com/contact/";
+      } catch (error) {
+        console.error("An error occurred:", error);
+      }
+    };
+
+    const goToHome = () => {
+      try {
+        router.push("/home_page");
+      } catch (error) {
+        console.error("An error occurred:", error);
+      }
+    };
+
+    const goToAbout = () => {
+      try {
+        router.push("/Main_about");
+      } catch (error) {
+        console.error("An error occurred:", error);
+      }
+    };
+    const goToRent = () => {
+      try {
+        this.$router.push("/Rent_Equip");
+      } catch (error) {
+        console.error("An error occurred:", error);
+      }
+    };
 
     return {
       // Data
@@ -398,16 +431,20 @@ export default {
       openFacebook,
       openInstagram,
       goToBook,
+      goToUs,
+      goToHome,
+      goToAbout,
+      goToRent,
     };
-
-    methods: {
-      goToBook;
-    }
   },
 };
 </script>
 
 <style scoped>
+a {
+  color: inherit;
+  text-decoration: none;
+}
 .container {
   display: flex;
   justify-content: center;
@@ -418,5 +455,41 @@ export default {
 .form-container {
   max-width: 400px;
   width: 100%;
+}
+
+.hover-btn {
+  width: 200px;
+  height: 60px;
+  border-radius: 5px;
+  background-color: #258400;
+  font-size: 18px;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: default;
+}
+
+.hover-btn:hover {
+  background-color: transparent;
+  border: 2px solid black;
+}
+
+.p_hoverColor {
+  transition: all 0.4s linear;
+}
+
+.p_hoverColor:hover {
+  color: red; /* change color when hover */
+  cursor: default; /* change cursor when hover */
+}
+
+.item_Hover {
+  transition: all 0.4s linear;
+  border-bottom: 1px solid black;
+}
+
+.item_Hover:hover {
+  background-color: green;
 }
 </style>

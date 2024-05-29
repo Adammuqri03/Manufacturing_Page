@@ -205,6 +205,47 @@
         </div>
       </div>
     </q-page-container>
+    <q-page-container>
+      <p
+        class="text-center text-green-8 text-bold font40"
+        style="letter-spacing: 2px"
+      >
+        COLLABORATIONS
+      </p>
+      <div class="q-px-md">
+        <q-carousel
+          animated
+          v-model="slide"
+          navigation
+          infinite
+          :autoplay="2000"
+          arrows
+          transition-prev="slide-right"
+          transition-next="slide-left"
+          @mouseenter="autoplay = false"
+          @mouseleave="autoplay = true"
+          style="background-color: transparent"
+        >
+          <q-carousel-slide
+            v-for="slideData in slides"
+            :key="slideData.name"
+            :name="slideData.name"
+          >
+            <div
+              class="row fit justify-center items-center q-gutter-lg no-wrap"
+            >
+              <q-img
+                v-for="image in slideData.images"
+                :key="image"
+                class="rounded-borders col-2 img-size"
+                fit="contain"
+                :src="image"
+              />
+            </div>
+          </q-carousel-slide>
+        </q-carousel>
+      </div>
+    </q-page-container>
 
     <br />
   </div>
@@ -268,11 +309,33 @@
 </template>
 
 <script>
+import { ref } from "vue";
+
 export default {
-  data() {
+  setup() {
+    const tab = ref("");
+    const slide = ref(1);
+    const autoplay = ref(true);
+    const slides = [
+      {
+        name: 1,
+        images: [
+          "/img/client/KPM_Beranang.png",
+          "/img/bg/Collab_UMP.png",
+          "/img/client/UITM.jpg",
+          "/img/client/RDM.png",
+          "/img/client/G&B.png",
+        ],
+      },
+    ];
+
     return {
-      showServiceMenu: false,
-      showSubMenu: false,
+      tab,
+      slide,
+      autoplay,
+      slides,
+      showServiceMenu: ref(false),
+      showSubMenu: ref(false),
     };
   },
   methods: {
@@ -289,6 +352,10 @@ export default {
 };
 </script>
 <style scoped>
+a {
+  color: inherit;
+  text-decoration: none;
+}
 .center-text {
   display: flex;
   flex-direction: column;

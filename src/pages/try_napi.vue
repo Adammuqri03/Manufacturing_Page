@@ -1,21 +1,21 @@
 <template>
   <q-layout view="hhh lpR fff">
-    <!-- <q-header class="bg-transparent">
+    <q-header class="bg-transparent">
       <div class="row justify-between">
         <q-toolbar style="padding-left: 100px; padding-right: 100px">
           <q-img src="public/img/myces_logo.png" style="width: 100px" />
 
           <q-space />
-          #### Add your navigation items here
+
           <div class="row q-gutter-xl text-white font20">
-            <div class="p_hoverColor" @click="goToHome">Home</div>
+            <!-- <div class="p_hoverColor" @click="goToHome">Home</div> -->
             <div class="p_hoverColor" @click="goToAboutUs">Corporate</div>
             <div
               class="p_hoverColor"
               @mouseover="showServiceMenu = true"
               @mouseleave="showServiceMenu = false"
             >
-              Service
+              Services
               <q-menu
                 style="
                   width: 280px;
@@ -31,26 +31,26 @@
                 >
                   <q-item class="item_Hover">
                     <q-item-section>
-                      <a href="#">Energy Audit</a>
+                      <a @click="goToEmars">Energy Audit</a>
                     </q-item-section>
                   </q-item>
                   <q-item class="item_Hover">
                     <q-item-section
-                      ><a href="#">Monitoring System (MyCES EMARS)</a>
+                      ><a @click="goToFMS">Monitoring System (MyCES EMARS)</a>
                     </q-item-section>
                   </q-item>
-                  <q-item class="item_Hover">
+                  <!-- <q-item class="item_Hover">
                     <q-item-section>
                       <a href="#">Measurement and Verification (M&V)</a>
                     </q-item-section>
-                  </q-item>
-                  <q-item class="item_Hover">
+                  </q-item> -->
+                  <!-- <q-item class="item_Hover">
                     <q-item-section
                       ><a href="#"
                         >Sustainable Energy Management System(SEMS)</a
                       >
                     </q-item-section>
-                  </q-item>
+                  </q-item> -->
                   <q-item class="item_Hover">
                     <q-item-section>
                       <a hreg="#"> Awareness Training</a></q-item-section
@@ -61,14 +61,14 @@
                       ><a @click="goToRent">Equipment Rental</a></q-item-section
                     >
                   </q-item>
-                  <q-item class="item_Hover">
+                  <!-- <q-item class="item_Hover">
                     <q-item-section
                       ><a href="#">Smart Home Automation</a></q-item-section
                     >
-                  </q-item>
-                  <q-item class="item_Hover">
+                  </q-item> -->
+                  <!-- <q-item class="item_Hover">
                     <q-item-section><a href="#">AMARS</a></q-item-section>
-                  </q-item>
+                  </q-item> -->
                 </q-list>
               </q-menu>
             </div>
@@ -97,14 +97,14 @@
                       ></q-item-section
                     >
                   </q-item>
-                  <q-item class="item_Hover">
+                  <!-- <q-item class="item_Hover">
                     <q-item-section
                       ><a href="#">MYCES AgroFarm Sdn Bhd</a></q-item-section
                     >
-                  </q-item>
+                  </q-item> -->
                   <q-item class="item_Hover">
                     <q-item-section
-                      ><a href="#"
+                      ><a @click="goToManu"
                         >MYCES Manufacturing Sdn Bhd</a
                       ></q-item-section
                     >
@@ -124,12 +124,12 @@
                 </q-list>
               </q-menu>
             </div>
-           ### <div class="p_hoverColor">Info</div>
+            <!-- <div class="p_hoverColor">Info</div> -->
             <div class="p_hoverColor" @click="goToContactUs">Contact</div>
           </div>
         </q-toolbar>
       </div>
-    </q-header> -->
+    </q-header>
     <q-parallax :height="850" :speed="0.4">
       <template v-slot:media>
         <q-img src="/img/bg/bg.png" style="width: 100%" />
@@ -185,10 +185,74 @@
               OUR SERVICES
             </p>
             <div
-              class="row flex flex-center"
+              class="col flex flex-center"
               style="font-size: 25px; letter-spacing: 2px"
             >
-              <q-card
+              <q-card>
+                <q-img
+                  src="/img/Interval Usage.png"
+                  style="height: 300px; width: 450px; border-radius: 20px"
+                >
+                  <div class="absolute-bottom">
+                    <div class="text-h6-center">Monitoring System</div>
+                    <!-- <div class="text-subtitle2">by John Doe</div> -->
+                  </div>
+                </q-img>
+
+                <q-card-actions style="border-radius: 20px">
+                  <q-btn flat @click="goToFMS">More Info</q-btn>
+                  <!-- <q-btn flat>Action 2</q-btn> -->
+                </q-card-actions>
+              </q-card>
+              <q-card>
+                <q-img
+                  src="/img/bg/energyAudit.jpg"
+                  style="height: 300px; width: 450px; border-radius: 20px"
+                >
+                  <div class="absolute-bottom">
+                    <div class="text-h6-center">Energy Audit</div>
+                    <!-- <div class="text-subtitle2">by John Doe</div> -->
+                  </div>
+                </q-img>
+
+                <q-card-actions style="border-radius: 20px">
+                  <q-btn flat @click="goToEmars">More Info</q-btn>
+                  <!-- <q-btn flat>Action 2</q-btn> -->
+                </q-card-actions>
+              </q-card>
+              <q-card>
+                <q-img
+                  src="/img/bg/awareness2.jpg"
+                  style="height: 300px; width: 450px; border-radius: 20px"
+                >
+                  <div class="absolute-bottom">
+                    <div class="text-h6-center">Awareness Training</div>
+                    <!-- <div class="text-subtitle2">by John Doe</div> -->
+                  </div>
+                </q-img>
+
+                <q-card-actions style="border-radius: 20px">
+                  <q-btn flat @click="goToEmars">More Info</q-btn>
+                  <!-- <q-btn flat>Action 2</q-btn> -->
+                </q-card-actions>
+              </q-card>
+              <q-card>
+                <q-img
+                  src="/img/bg/rental.jpg"
+                  style="height: 300px; width: 450px; border-radius: 20px"
+                >
+                  <div class="absolute-bottom">
+                    <div class="text-h6-center">Equipment Rental</div>
+                    <!-- <div class="text-subtitle2">by John Doe</div> -->
+                  </div>
+                </q-img>
+
+                <q-card-actions style="border-radius: 20px">
+                  <q-btn flat @click="goToRental">More Info</q-btn>
+                  <!-- <q-btn flat>Action 2</q-btn> -->
+                </q-card-actions>
+              </q-card>
+              <!-- <q-card
                 v-for="(image, index) in images"
                 :key="index"
                 flat
@@ -219,16 +283,18 @@
                     @click="goToEmars"
                   />
                 </div>
-              </q-card>
+              </q-card> -->
             </div>
           </q-section>
 
           <div class="text-center font20"></div>
+          <br />
+          <br />
           <p
             class="text-center text-green-8 text-bold font40"
             style="letter-spacing: 2px"
           >
-            OUR COMMERCIAL CLIENTS
+            OUR CLIENTS
           </p>
           <div class="q-px-md">
             <q-carousel
@@ -264,7 +330,7 @@
             </q-carousel>
           </div>
 
-          <div class="text-center font20"></div>
+          <!-- <div class="text-center font20"></div>
           <p
             class="text-center text-green-8 text-bold font40"
             style="letter-spacing: 2px"
@@ -303,7 +369,7 @@
                 </div>
               </q-carousel-slide>
             </q-carousel>
-          </div>
+          </div> -->
           <!-- <section class="section project" aria-labelledby="project-label">
             <div class="container">
               <p class="section-subtitle" id="project-label"></p>
@@ -506,7 +572,7 @@
     </q-page-container>
 
     <!-- FOOTER SECTION -->
-    <q-footer>
+    <q-footer elevated>
       <div class="col bg-white text-black">
         <p class="text-bold font20 q-px-md q-my-none q-pt-md">MyCE SDN. BHD.</p>
         <p class="text-bold font20 q-px-md q-my-none q-pt-sm">FIND US</p>
@@ -642,7 +708,6 @@ export default {
         {
           src: "/img/Interval Usage.png",
           title: "Monitoring System",
-          link: "",
         },
         { src: "/img/bg/energyAudit.jpg", title: "Energy Audit" },
         { src: "/img/bg/awareness2.jpg", title: "Awareness Training" },
@@ -716,68 +781,6 @@ export default {
             "/img/bg/KPJ_AmpangPuteri.png",
             "/img/bg/KPJ_Perlis.png",
             "/img/bg/KPJ_Selangor.png",
-          ],
-        },
-      ];
-
-      //Industrial clients
-      const newTab = ref("");
-      const newSlide = ref(1);
-      const newAutoplay = ref(true);
-      const newSlides = [
-        {
-          name: 1,
-          images: [
-            "/img/bg/KPJ_Selangor.png",
-            "/img/client/newImage2.png",
-            "/img/client/newImage3.jpg",
-            "/img/client/newImage4.jpg",
-            "/img/client/newImage5.jpg",
-            "/img/client/newImage6.jpg",
-          ],
-        },
-        {
-          name: 2,
-          images: [
-            "/img/client/newImage7.jpg",
-            "/img/client/newImage8.jpg",
-            "/img/client/newImage9.jpg",
-            "/img/client/newImage10.jpg",
-            "/img/client/newImage11.jpg",
-            "/img/client/newImage12.jpg",
-          ],
-        },
-        {
-          name: 3,
-          images: [
-            "/img/client/newImage13.jpg",
-            "/img/client/newImage14.jpg",
-            "/img/client/newImage15.jpg",
-            "/img/client/newImage16.jpg",
-            "/img/client/newImage17.jpg",
-            "/img/client/newImage18.jpg",
-          ],
-        },
-        {
-          name: 4,
-          images: [
-            "/img/client/newImage19.jpg",
-            "/img/client/newImage20.jpg",
-            "/img/client/newImage21.jpg",
-            "/img/client/newImage22.jpg",
-            "/img/client/newImage23.jpg",
-            "/img/client/newImage24.jpg",
-          ],
-        },
-        {
-          name: 5,
-          images: [
-            "/img/client/newImage25.jpg",
-            "/img/client/newImage26.jpg",
-            "/img/client/newImage27.jpg",
-            "/img/client/newImage28.jpg",
-            "/img/client/newImage29.jpg",
-            "/img/client/newImage30.jpg",
           ],
         },
       ];
@@ -874,6 +877,20 @@ export default {
       } catch (error) {
         console.error("An error occurred:", error);
         throw error;
+      }
+    },
+    goToRental() {
+      try {
+        this.$router.push("/Rent_Equip");
+      } catch (error) {
+        console.log("An error", error);
+      }
+    },
+    goToManu() {
+      try {
+        this.$router.push("/Manufacturing");
+      } catch (error) {
+        console.log("An error", error);
       }
     },
   },
