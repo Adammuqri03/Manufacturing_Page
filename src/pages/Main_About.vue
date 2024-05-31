@@ -9,7 +9,7 @@
           <!-- Add your navigation items here -->
           <div class="row q-gutter-xl text-black font20">
             <div class="p_hoverColor">Home</div>
-            <div class="p_hoverColor">About</div>
+            <div class="p_hoverColor" @click="goToAboutUs">Corporate</div>
             <div
               class="p_hoverColor"
               @mouseover="showServiceMenu = true"
@@ -124,8 +124,8 @@
                 </q-list>
               </q-menu>
             </div>
-            <div class="p_hoverColor">Info</div>
-            <div class="p_hoverColor">Contact</div>
+            <!-- <div class="p_hoverColor">Info</div> -->
+            <div class="p_hoverColor" @click="goToContactUs">Contact</div>
           </div>
         </q-toolbar>
       </div>
@@ -246,15 +246,25 @@
         </q-carousel>
       </div>
     </q-page-container>
+    <q-page-container>
+      <div class="q-pa-md">
+        <q-carousel animated v-model="slide" arrows navigation infinite>
+          <q-carousel-slide :name="1" img-src="/img/client/Aweness_9.jpg" />
+          <q-carousel-slide :name="2" img-src="/img/client/Aweness_5.jpg" />
+          <q-carousel-slide :name="3" img-src="/img/client/Aweness_2.jpg" />
+          <q-carousel-slide :name="4" img-src="/img/client/Aweness_6.jpg" />
+          <q-carousel-slide :name="5" img-src="/img/client/EA_2.jpg" />
+          <q-carousel-slide :name="6" img-src="/img/client/EA_4.jpg" />
+        </q-carousel>
+      </div>
+    </q-page-container>
 
     <br />
   </div>
 
   <!-- footer -->
   <div class="bg-white text-black">
-    <p class="text-bold font20 q-px-md q-my-none q-pt-md">
-      MyCES MANUFACTURING SDN. BHD.
-    </p>
+    <p class="text-bold font20 q-px-md q-my-none q-pt-md">MyCES SDN. BHD.</p>
     <p class="text-bold font20 q-px-md q-my-none q-pt-sm">FIND US</p>
     <div class="row q-pa-md font20">
       <!-- place -->
@@ -272,7 +282,7 @@
           <strong>Branch Address</strong> <br />
           Bangunan Center of Excellent<br />
           Kolej Kemahiran Tinggi Mara Ledang <br />
-          Seram 4 & 5, Jalan Sg. Mati, BUkit Gambir <br />
+          Seram 4 & 5, Jalan Sg. Mati, Bukit Gambir <br />
           84410, Ledang, Johor
         </p>
       </div>
@@ -348,48 +358,69 @@ export default {
         "_blank"
       );
     },
+    goToAboutUs() {
+      try {
+        this.$router.push("/Main_About");
+      } catch (error) {
+        console.error("An error occurred:", error);
+      }
+    },
+    goToContactUs() {
+      try {
+        window.location.href = "https://biomed.mycesgroup.com/contact/";
+      } catch (error) {
+        console.error("An error occurred:", error);
+      }
+    },
   },
 };
 </script>
-<style scoped>
+<style>
 a {
   color: inherit;
   text-decoration: none;
 }
-.center-text {
+
+@media (max-width: 900px) {
+  .q-parallax {
+    /* Set height for smaller screens */
+    height: 600px !important; /* Adjust as needed */
+  }
+}
+
+.hover-btn {
+  width: 200px;
+  height: 60px;
+  border-radius: 5px;
+  background-color: #258400;
+  font-size: 18px;
+  color: white;
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
+  cursor: default;
 }
 
-.mycard {
-  width: 350px;
+.hover-btn:hover {
+  background-color: transparent;
+  border: 2px solid black;
 }
 
-.text-outline {
-  letter-spacing: 2px;
-  -webkit-text-fill-color: transparent;
-  -webkit-text-stroke-width: 3px;
-}
-.img-size {
-  height: 200px;
-  width: 230px;
+.p_hoverColor {
+  transition: all 0.4s linear;
 }
 
-.floating-btn {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
+.p_hoverColor:hover {
+  color: red; /* change color when hover */
+  cursor: default; /* change cursor when hover */
 }
 
-.icon-1:hover {
-  color: #1877f2;
-  transform: translateY(-10px);
+.item_Hover {
+  transition: all 0.4s linear;
+  border-bottom: 1px solid black;
 }
 
-.icon-2:hover {
-  color: #e4405f;
-  transform: translateY(-10px);
+.item_Hover:hover {
+  background-color: green;
 }
 </style>

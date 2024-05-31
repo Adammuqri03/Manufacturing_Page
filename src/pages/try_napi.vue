@@ -31,7 +31,7 @@
                 >
                   <q-item class="item_Hover">
                     <q-item-section>
-                      <a @click="goToEmars">Energy Audit</a>
+                      <a @click="goToEnergy">Energy Audit</a>
                     </q-item-section>
                   </q-item>
                   <q-item class="item_Hover">
@@ -192,6 +192,7 @@
                 <q-img
                   src="/img/Interval Usage.png"
                   style="height: 300px; width: 450px; border-radius: 20px"
+                  @click="goToEmars"
                 >
                   <div class="absolute-bottom">
                     <div class="text-h6-center">Monitoring System</div>
@@ -199,15 +200,15 @@
                   </div>
                 </q-img>
 
-                <q-card-actions style="border-radius: 20px">
-                  <q-btn flat @click="goToFMS">More Info</q-btn>
-                  <!-- <q-btn flat>Action 2</q-btn> -->
-                </q-card-actions>
+                <!-- <q-card-actions style="border-radius: 20px">
+                  <q-btn flat @click="goToEmars">More Info</q-btn>
+                </q-card-actions> -->
               </q-card>
               <q-card>
                 <q-img
                   src="/img/bg/energyAudit.jpg"
                   style="height: 300px; width: 450px; border-radius: 20px"
+                  @onclick="goToEnergy"
                 >
                   <div class="absolute-bottom">
                     <div class="text-h6-center">Energy Audit</div>
@@ -215,31 +216,26 @@
                   </div>
                 </q-img>
 
-                <q-card-actions style="border-radius: 20px">
+                <!-- <q-card-actions style="border-radius: 20px">
                   <q-btn flat @click="goToEmars">More Info</q-btn>
-                  <!-- <q-btn flat>Action 2</q-btn> -->
-                </q-card-actions>
+
+                </q-card-actions> -->
               </q-card>
-              <q-card>
+              <!-- <q-card>
                 <q-img
                   src="/img/bg/awareness2.jpg"
                   style="height: 300px; width: 450px; border-radius: 20px"
                 >
                   <div class="absolute-bottom">
                     <div class="text-h6-center">Awareness Training</div>
-                    <!-- <div class="text-subtitle2">by John Doe</div> -->
                   </div>
                 </q-img>
-
-                <q-card-actions style="border-radius: 20px">
-                  <q-btn flat @click="goToEmars">More Info</q-btn>
-                  <!-- <q-btn flat>Action 2</q-btn> -->
-                </q-card-actions>
-              </q-card>
+              </q-card> -->
               <q-card>
                 <q-img
                   src="/img/bg/rental.jpg"
                   style="height: 300px; width: 450px; border-radius: 20px"
+                  @click="goToRent"
                 >
                   <div class="absolute-bottom">
                     <div class="text-h6-center">Equipment Rental</div>
@@ -247,10 +243,27 @@
                   </div>
                 </q-img>
 
-                <q-card-actions style="border-radius: 20px">
+                <!-- <q-card-actions style="border-radius: 20px">
                   <q-btn flat @click="goToRental">More Info</q-btn>
-                  <!-- <q-btn flat>Action 2</q-btn> -->
-                </q-card-actions>
+
+                </q-card-actions> -->
+              </q-card>
+              <q-card>
+                <q-img
+                  src="/img/bg/ssFMS.png"
+                  style="height: 300px; width: 450px; border-radius: 20px"
+                  @click="goToFMS"
+                >
+                  <div class="absolute-bottom">
+                    <div class="text-h6-center">Facility Management System</div>
+                    <!-- <div class="text-subtitle2">by John Doe</div> -->
+                  </div>
+                </q-img>
+
+                <!-- <q-card-actions style="border-radius: 20px">
+                  <q-btn flat @click="goToRental">More Info</q-btn>
+
+                </q-card-actions> -->
               </q-card>
               <!-- <q-card
                 v-for="(image, index) in images"
@@ -889,6 +902,13 @@ export default {
     goToManu() {
       try {
         this.$router.push("/Manufacturing");
+      } catch (error) {
+        console.log("An error", error);
+      }
+    },
+    goToEnergy() {
+      try {
+        this.$router.push("/Energy_Audit");
       } catch (error) {
         console.log("An error", error);
       }

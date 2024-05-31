@@ -51,7 +51,7 @@
     </div>
   </q-header>
 
-  <div style="background: rgba(241, 242, 181, 1)">
+  <div style="background: #ffffff">
     <q-page-container>
       <div>
         <div class="row q-pa-md q-gutter-xl justify-center">
@@ -95,7 +95,7 @@
             <video
               width="720"
               height="440"
-              poster="public/img/myces_logo.png"
+              src="/video/emars_video.mp4"
               autoplay
               loop
               muted
@@ -105,7 +105,7 @@
                 type="video/webm"
                 src="https://cdn.quasar.dev/img/polina.webm"
               /> -->
-              <source type="video/mp4" src="public/video/emars_video.mp4" />
+              <source type="video/mp4" />
             </video>
           </template>
 
@@ -339,10 +339,8 @@
     </q-section>
 
     <!-- footer -->
-    <div class="bg-black text-white">
-      <p class="text-bold font20 q-px-md q-my-none q-pt-md">
-        MyCES MANUFACTURING SDN. BHD.
-      </p>
+    <div class="bg-white text-black">
+      <p class="text-bold font20 q-px-md q-my-none q-pt-md">MyCES SDN. BHD.</p>
       <p class="text-bold font20 q-px-md q-my-none q-pt-sm">FIND US</p>
       <div class="row q-pa-md font20">
         <!-- place -->
@@ -360,7 +358,7 @@
             <strong>Branch Address</strong> <br />
             Bangunan Center of Excellent<br />
             Kolej Kemahiran Tinggi Mara Ledang <br />
-            Seram 4 & 5, Jalan Sg. Mati, BUkit Gambir <br />
+            Seram 4 & 5, Jalan Sg. Mati, Bukit Gambir <br />
             84410, Ledang, Johor
           </p>
         </div>
@@ -369,6 +367,7 @@
         <div class="col-2">
           <strong> Telephone : </strong>
           <p>603-8725 5811</p>
+          <p>012-775 8732</p>
 
           <strong> Email : </strong>
           <p>Info@mycesgroup.com</p>
@@ -378,8 +377,29 @@
         <div class="col-1.5">
           <strong>Connect with us</strong>
           <div class="row q-gutter-lg justify-center q-pa-sm">
-            <q-icon size="40px" name="mdi-facebook" class="icon-1" />
-            <q-icon size="40px" name="mdi-instagram" class="icon-2" />
+            <q-icon
+              size="40px"
+              name="mdi-facebook"
+              class="icon-1"
+              @click="openFacebook"
+            />
+            <q-icon
+              size="40px"
+              name="mdi-linkedin"
+              class="icon-2"
+              @click="openLinkedin"
+            />
+            <div class="row q-gutter-lg justify-center q-pa-sm">
+              <img src="/img/bg/tenaga_bg.png" />
+              <p></p>
+              <img src="/img/bg/KKM_bg.jpg" />
+              <br />
+              <br />
+              <br />
+              <img src="/img/bg/logo-myhijau.png" />
+              <br />
+              <img src="/img/bg/CIDB_3.png" />
+            </div>
           </div>
         </div>
       </div>
@@ -466,6 +486,23 @@ export default {
     },
     goToHomePage() {
       this.$router.push("/home_page");
+    },
+    openLinkedin() {
+      try {
+        window.open(
+          "https://my.linkedin.com/company/myces-energy-consultant/",
+          "_blank"
+        );
+      } catch (error) {
+        console.error("An error occurred:", error);
+      }
+    },
+    openFacebook() {
+      try {
+        window.open("https://www.facebook.com/mycesgroup/", "_blank");
+      } catch (error) {
+        console.error("An error occurred:", error);
+      }
     },
   },
 };

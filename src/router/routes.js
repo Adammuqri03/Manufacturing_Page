@@ -27,6 +27,7 @@ const routes = [
       { path: "/Main_About", component: () => import("pages/Main_About.vue") },
       { path: "/Rent_Equip", component: () => import("pages/Rent_Equip.vue") },
       { path: "/Booking", component: () => import("pages/BookNow.vue") },
+      { path: "/Energy_Audit", component: () => import("pages/EA.vue") },
       {
         path: "/Manufacturing",
         component: () => import("pages/Home-page.vue"),

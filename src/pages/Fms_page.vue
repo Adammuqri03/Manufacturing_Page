@@ -52,7 +52,7 @@
     </div>
   </q-header>
 
-  <div style="background: rgba(241, 242, 181, 1)">
+  <div style="background: #ffffff">
     <q-page-container>
       <div class="row justify-center q-gutter-lg q-pa-md">
         <div class="col-5">
@@ -181,10 +181,8 @@
     </q-page-container>
 
     <!-- footer -->
-    <div class="bg-black text-white">
-      <p class="text-bold font20 q-px-md q-my-none q-pt-md">
-        MyCES MANUFACTURING SDN. BHD.
-      </p>
+    <div class="bg-white text-black">
+      <p class="text-bold font20 q-px-md q-my-none q-pt-md">MyCES SDN. BHD.</p>
       <p class="text-bold font20 q-px-md q-my-none q-pt-sm">FIND US</p>
       <div class="row q-pa-md font20">
         <!-- place -->
@@ -211,6 +209,7 @@
         <div class="col-2">
           <strong> Telephone : </strong>
           <p>603-8725 5811</p>
+          <p>012-775 8732</p>
 
           <strong> Email : </strong>
           <p>Info@mycesgroup.com</p>
@@ -220,8 +219,29 @@
         <div class="col-1.5">
           <strong>Connect with us</strong>
           <div class="row q-gutter-lg justify-center q-pa-sm">
-            <q-icon size="40px" name="mdi-facebook" class="icon-1" />
-            <q-icon size="40px" name="mdi-instagram" class="icon-2" />
+            <q-icon
+              size="40px"
+              name="mdi-facebook"
+              class="icon-1"
+              @click="openFacebook"
+            />
+            <q-icon
+              size="40px"
+              name="mdi-linkedin"
+              class="icon-2"
+              @click="openLinkedin"
+            />
+            <div class="row q-gutter-lg justify-center q-pa-sm">
+              <img src="/img/bg/tenaga_bg.png" />
+              <p></p>
+              <img src="/img/bg/KKM_bg.jpg" />
+              <br />
+              <br />
+              <br />
+              <img src="/img/bg/logo-myhijau.png" />
+              <br />
+              <img src="/img/bg/CIDB_3.png" />
+            </div>
           </div>
         </div>
       </div>
@@ -370,7 +390,24 @@ export default {
       this.$router.push("/contact_us");
     },
     goToHomePage() {
-      this.$router.push('/home_page');
+      this.$router.push("/home_page");
+    },
+    openLinkedin() {
+      try {
+        window.open(
+          "https://my.linkedin.com/company/myces-energy-consultant/",
+          "_blank"
+        );
+      } catch (error) {
+        console.error("An error occurred:", error);
+      }
+    },
+    openFacebook() {
+      try {
+        window.open("https://www.facebook.com/mycesgroup/", "_blank");
+      } catch (error) {
+        console.error("An error occurred:", error);
+      }
     },
   },
 };

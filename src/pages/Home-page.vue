@@ -63,7 +63,7 @@
     </div>
   </q-header>
 
-  <q-page-container style="background: #f1f2b5">
+  <q-page-container style="background: #ffffff">
     <q-section id="Home">
       <div style="">
         <div class="row q-pa-md" style="padding-top: 100px">
@@ -80,15 +80,16 @@
               background: rgba(230, 229, 229, 0.788);
               padding: 20px;
               border-radius: 50px;
+              background: #59aa32;
             "
           >
             <p
-              class="text-center text-bold text-outline text-hijau"
+              class="text-center text-bold text-outline text-white"
               style="font-size: 47px; letter-spacing: 5px"
             >
               MANUFACTURING
             </p>
-            <p style="font-size: 23px">
+            <p style="font-size: 23px" class="text-white">
               MyCES Manufacturing unveils EMARS, a patented Energy Monitoring,
               Analysis & Reporting System crafted over five years. It seamlessly
               blends local products with global energy monitoring standards,
@@ -425,10 +426,8 @@
   </q-page-container>
 
   <!-- footer -->
-  <div class="bg-black text-white">
-    <p class="text-bold font20 q-px-md q-my-none q-pt-md">
-      MyCES MANUFACTURING SDN. BHD.
-    </p>
+  <div class="bg-white text-black">
+    <p class="text-bold font20 q-px-md q-my-none q-pt-md">MyCES SDN. BHD.</p>
     <p class="text-bold font20 q-px-md q-my-none q-pt-sm">FIND US</p>
     <div class="row q-pa-md font20">
       <!-- place -->
@@ -455,6 +454,7 @@
       <div class="col-2">
         <strong> Telephone : </strong>
         <p>603-8725 5811</p>
+        <p>012-775 8732</p>
 
         <strong> Email : </strong>
         <p>Info@mycesgroup.com</p>
@@ -472,10 +472,21 @@
           />
           <q-icon
             size="40px"
-            name="mdi-instagram"
+            name="mdi-linkedin"
             class="icon-2"
-            @click="openFacebook"
+            @click="openLinkedin"
           />
+          <div class="row q-gutter-lg justify-center q-pa-sm">
+            <img src="/img/bg/tenaga_bg.png" />
+            <p></p>
+            <img src="/img/bg/KKM_bg.jpg" />
+            <br />
+            <br />
+            <br />
+            <img src="/img/bg/logo-myhijau.png" />
+            <br />
+            <img src="/img/bg/CIDB_3.png" />
+          </div>
         </div>
       </div>
     </div>
@@ -622,6 +633,16 @@ export default {
     },
     openInstagram() {
       window.open("https://www.instagram.com/mycessmarthome/", "_blank");
+    },
+    openLinkedin() {
+      try {
+        window.open(
+          "https://my.linkedin.com/company/myces-energy-consultant/",
+          "_blank"
+        );
+      } catch (error) {
+        console.error("An error occurred:", error);
+      }
     },
   },
 };
