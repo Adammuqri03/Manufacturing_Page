@@ -208,7 +208,7 @@
                 <q-img
                   src="/img/bg/energyAudit.jpg"
                   style="height: 300px; width: 450px; border-radius: 20px"
-                  @onclick="goToEnergy"
+                  @click="goToEnergy"
                 >
                   <div class="absolute-bottom">
                     <div class="text-h6-center">Energy Audit</div>
