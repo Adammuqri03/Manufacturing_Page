@@ -696,7 +696,7 @@ export default {
     },
     goToHome() {
       try {
-        this.$router.push("/contact_us");
+        this.$router.push("/home_page");
       } catch (error) {
         console.error("An error occurred:", error);
       }

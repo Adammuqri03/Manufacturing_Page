@@ -36,7 +36,7 @@
                   </q-item>
                   <q-item class="item_Hover">
                     <q-item-section
-                      ><a @click="goToFMS">Monitoring System (MyCES EMARS)</a>
+                      ><a @click="goToEmars">Monitoring System (MyCES EMARS)</a>
                     </q-item-section>
                   </q-item>
                   <!-- <q-item class="item_Hover">
