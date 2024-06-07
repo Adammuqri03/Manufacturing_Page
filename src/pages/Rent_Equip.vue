@@ -144,13 +144,13 @@
       RENTAL EQUIPMENTS
     </p>
     <div
-      class="row flex flex-center"
+      class="row q-gutter-md flex flex-center"
       style="font-size: 25px; letter-spacing: 2px"
     >
       <q-card
+        square
         v-for="(image, index) in images"
         :key="index"
-        flat
         :class="[
           [
             false
@@ -162,11 +162,13 @@
         @click="dialog_show(image.src)"
         style="width: 400px; height: 400px"
       >
-        <q-img
-          :src="image.src"
-          fit
-          style="height: 200px; width: 350px; border-radius: 20px"
-        />
+        <q-card-section>
+          <q-img
+            :src="image.src"
+            fit="contain"
+            style="height: 200px; width: 350px; border-radius: 20px"
+          />
+        </q-card-section>
         <p class="text-center q-pt-md" style="height: 50px">
           {{ image.title }}
         </p>

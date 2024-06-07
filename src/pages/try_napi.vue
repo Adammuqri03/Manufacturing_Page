@@ -3,7 +3,7 @@
     <q-header class="bg-transparent">
       <div class="row justify-between">
         <q-toolbar style="padding-left: 100px; padding-right: 100px">
-          <q-img src="public/img/myces_logo.png" style="width: 100px" />
+          <img src="img/myces_logo.png" style="width: 100px" />
 
           <q-space />
 
@@ -36,7 +36,7 @@
                   </q-item>
                   <q-item class="item_Hover">
                     <q-item-section
-                      ><a @click="goToEmars">Monitoring System (MyCES EMARS)</a>
+                      ><a @click="goToFMS">Monitoring System (MyCES EMARS)</a>
                     </q-item-section>
                   </q-item>
                   <!-- <q-item class="item_Hover">
@@ -51,11 +51,11 @@
                       >
                     </q-item-section>
                   </q-item> -->
-                  <q-item class="item_Hover">
+                  <!-- <q-item class="item_Hover">
                     <q-item-section>
                       <a hreg="#"> Awareness Training</a></q-item-section
                     >
-                  </q-item>
+                  </q-item> -->
                   <q-item class="item_Hover">
                     <q-item-section
                       ><a @click="goToRent">Equipment Rental</a></q-item-section
@@ -109,7 +109,7 @@
                       ></q-item-section
                     >
                   </q-item>
-                  <q-item class="item_Hover">
+                  <!-- <q-item class="item_Hover">
                     <q-item-section
                       ><a href="#">MYCES Edutect Sdn Bhd</a></q-item-section
                     >
@@ -120,7 +120,7 @@
                         >MYCES Aircond & Electrical Services Sdn Bhd</a
                       ></q-item-section
                     >
-                  </q-item>
+                  </q-item> -->
                 </q-list>
               </q-menu>
             </div>
@@ -130,22 +130,22 @@
         </q-toolbar>
       </div>
     </q-header>
-    <q-parallax :height="850" :speed="0.4">
-      <template v-slot:media>
-        <q-img src="/img/bg/bg.png" style="width: 100%" />
-      </template>
-
+    <q-parallax :height="$q.screen.height + 150" :speed="-0.3">
       <h1
         class="text-white text-h9 text-bold"
         style="text-shadow: 2px 2px 5px #000000"
       >
         MyCES SDN BHD
       </h1>
-      <div class="hover-btn">
-        <q-item-section @click="scrollToSection('SERVICES')">
-          <q-btn flat>Explore More</q-btn>
-        </q-item-section>
-      </div>
+      <q-btn push @click="scrollToSection('SecPage')" class="hover-btn"
+        >Explore More</q-btn
+      >
+      <template v-slot:media>
+        <img
+          src="public/img/bg/bg.png"
+          style="width: 80%; object-fit: contain"
+        />
+      </template>
     </q-parallax>
     <q-page-container>
       <div class="row">
@@ -153,75 +153,80 @@
           <div class="col row justify-between bg-1">
             <div class="absolute"></div>
           </div>
-          <div class="col q-pa-md">
-            <div class="col text-green-8 flex flex-center">
-              <div class="text-bold" style="width: 18vw; height: 100%">
-                <q-img src="/img/myces_logo.png"> </q-img>
-              </div>
-              <div class="text-bold text-center justify-center">
-                <h3 style="text-align: center" class="text-bold font40">
-                  SAVE ENERGY FOR A BETTER FUTURE
-                </h3>
-                <p class="text-h6 text-center">
-                  Since the foundation of MyCES SDN BHD in 2015, the company has
-                  developed very fast, and has taken over a significant part in
-                  the energy saving industry. The company’s goal is to build
-                  long term relationships with our customers and clients and
-                  provide exceptional customer services by pursuing business
-                  through innovation and advanced technology.
-                </p>
+          <q-section id="SecPage">
+            <div class="col q-pa-md">
+              <div class="col text-green-8 flex flex-center">
+                <div class="text-bold" style="width: 18vw; height: 100%">
+                  <q-img src="/img/myces_logo.png"> </q-img>
+                </div>
+                <div class="text-center justify-center">
+                  <h3 style="text-align: center" class="text-bold font40">
+                    SAVE ENERGY FOR A BETTER FUTURE
+                  </h3>
+                  <p class="text-black text-light text-center">
+                    Since the foundation of MyCES SDN BHD in 2015, the company
+                    has developed very fast, and has taken over a significant
+                    part in the energy saving industry. The company’s goal is to
+                    build long term relationships with our customers and clients
+                    and provide exceptional customer services by pursuing
+                    business through innovation and advanced technology.
+                  </p>
+                </div>
               </div>
             </div>
-          </div>
+          </q-section>
           <br />
           <br />
           <br />
-          <q-section id="SERVICES">
-            <div class="text-center font20"></div>
-            <p
-              class="text-center text-green-8 text-bold font40"
-              style="letter-spacing: 2px"
-            >
-              OUR SERVICES
-            </p>
-            <div
-              class="col flex flex-center"
-              style="font-size: 25px; letter-spacing: 2px"
-            >
-              <q-card>
+
+          <div class="text-center font20"></div>
+          <p
+            class="text-center text-green-8 text-bold font40"
+            style="letter-spacing: 2px"
+          >
+            OUR SERVICES
+          </p>
+          Energy Audit ,Energy MMonitoring system, Energy mmanagement sytem and
+          consultancy, Facility management sytem, Equipment Rental, Energy
+          awareness training
+
+          <div
+            class="row q-gutter-md q-pa-md justify-center items-center"
+            style="font-size: 25px; letter-spacing: 2px"
+          >
+            <q-card class="col-md-4" style="border-radius: 20px">
+              <q-card-section class="q-pa-none">
                 <q-img
                   src="/img/Interval Usage.png"
-                  style="height: 300px; width: 450px; border-radius: 20px"
+                  style="border-radius: 20px; width"
                   @click="goToEmars"
                 >
-                  <div class="absolute-bottom">
-                    <div class="text-h6-center">Monitoring System</div>
-                    <!-- <div class="text-subtitle2">by John Doe</div> -->
-                  </div>
                 </q-img>
+              </q-card-section>
 
-                <!-- <q-card-actions style="border-radius: 20px">
-                  <q-btn flat @click="goToEmars">More Info</q-btn>
-                </q-card-actions> -->
-              </q-card>
-              <q-card>
+              <q-card-section
+                class="q-py-xs text-bold text-center text-black-8"
+              >
+                Energy Monitoring System
+              </q-card-section>
+            </q-card>
+            <q-card class="col-md-4" style="border-radius: 20px">
+              <q-card-section class="q-pa-none">
                 <q-img
                   src="/img/bg/energyAudit.jpg"
-                  style="height: 300px; width: 450px; border-radius: 20px"
+                  fit="contain"
+                  style="width: 100%; border-radius: 20px"
                   @click="goToEnergy"
                 >
-                  <div class="absolute-bottom">
-                    <div class="text-h6-center">Energy Audit</div>
-                    <!-- <div class="text-subtitle2">by John Doe</div> -->
-                  </div>
                 </q-img>
-
-                <!-- <q-card-actions style="border-radius: 20px">
-                  <q-btn flat @click="goToEmars">More Info</q-btn>
-
-                </q-card-actions> -->
-              </q-card>
-              <!-- <q-card>
+              </q-card-section>
+              <q-card-section class="q-pa-none q-ma-none">
+                <p class="q-py-xs text-bold text-center text-black-8">
+                  Energy Audit
+                </p>
+              </q-card-section>
+            </q-card>
+            <!-- <q-card>
                 <q-img
                   src="/img/bg/awareness2.jpg"
                   style="height: 300px; width: 450px; border-radius: 20px"
@@ -231,41 +236,39 @@
                   </div>
                 </q-img>
               </q-card> -->
-              <q-card>
+            <q-card class="col-md-4" style="border-radius: 20px">
+              <q-card-section class="q-pa-none">
                 <q-img
-                  src="/img/bg/rental.jpg"
-                  style="height: 300px; width: 450px; border-radius: 20px"
-                  @click="goToRent"
+                  src="/img/Interval Usage.png"
+                  style="border-radius: 20px; width"
+                  @click="goToEmars"
                 >
-                  <div class="absolute-bottom">
-                    <div class="text-h6-center">Equipment Rental</div>
-                    <!-- <div class="text-subtitle2">by John Doe</div> -->
-                  </div>
                 </q-img>
+              </q-card-section>
 
-                <!-- <q-card-actions style="border-radius: 20px">
-                  <q-btn flat @click="goToRental">More Info</q-btn>
-
-                </q-card-actions> -->
-              </q-card>
-              <q-card>
+              <q-card-section
+                class="q-py-xs text-bold text-center text-black-8"
+              >
+                Equipments Rental
+              </q-card-section>
+            </q-card>
+            <q-card class="col-md-4" style="border-radius: 20px">
+              <q-card-section class="q-pa-none">
                 <q-img
-                  src="/img/bg/ssFMS.png"
-                  style="height: 300px; width: 450px; border-radius: 20px"
-                  @click="goToFMS"
+                  src="/img/Interval Usage.png"
+                  style="border-radius: 20px; width"
+                  @click="goToEmars"
                 >
-                  <div class="absolute-bottom">
-                    <div class="text-h6-center">Facility Management System</div>
-                    <!-- <div class="text-subtitle2">by John Doe</div> -->
-                  </div>
                 </q-img>
+              </q-card-section>
 
-                <!-- <q-card-actions style="border-radius: 20px">
-                  <q-btn flat @click="goToRental">More Info</q-btn>
-
-                </q-card-actions> -->
-              </q-card>
-              <!-- <q-card
+              <q-card-section
+                class="q-py-xs text-bold text-center text-black-8"
+              >
+                Facility Managements System
+              </q-card-section>
+            </q-card>
+            <!-- <q-card
                 v-for="(image, index) in images"
                 :key="index"
                 flat
@@ -297,8 +300,7 @@
                   />
                 </div>
               </q-card> -->
-            </div>
-          </q-section>
+          </div>
 
           <div class="text-center font20"></div>
           <br />
@@ -586,10 +588,11 @@
 
     <!-- FOOTER SECTION -->
     <q-footer elevated>
-      <div class="col bg-white text-black">
-        <p class="text-bold font20 q-px-md q-my-none q-pt-md">MyCE SDN. BHD.</p>
-        <p class="text-bold font20 q-px-md q-my-none q-pt-sm">FIND US</p>
-        <div class="row q-pa-md font20">
+      <div class="col bg-grey-10 text-grey-1 q-pa-sm">
+        <p class="text-bold font20 q-px-md q-my-none q-pt-md text-h2">
+          MyCE SDN. BHD.
+        </p>
+        <div class="row q-pa-md font20 q-gutter-xl">
           <!-- place -->
           <div class="col-2">
             <p>
@@ -600,7 +603,7 @@
               Selangor Darul Ehsan
             </p>
           </div>
-          <div class="col-3">
+          <div class="col-auto">
             <p>
               <strong>Branch Address</strong> <br />
               Bangunan Center of Excellent<br />
@@ -613,7 +616,7 @@
           <!-- info -->
           <div class="col-2">
             <strong> Telephone : </strong>
-            <p>+603-8725 5811</p>
+            <p class="q-my-none">+603-8725 5811</p>
             <p>+60 12-775 8732</p>
 
             <strong> Email : </strong>
@@ -621,9 +624,9 @@
           </div>
 
           <!-- connect with us -->
-          <div class="col-1.5">
+          <div class="col">
             <strong>Connect with us</strong>
-            <div class="row q-gutter-lg justify-center q-pa-sm">
+            <div class="row q-gutter-lg justify-left q-pa-sm">
               <q-icon
                 size="40px"
                 name="mdi-facebook"
@@ -636,18 +639,13 @@
                 class="icon-2"
                 @click="openLinkedin"
               />
-              <div class="row q-gutter-lg justify-center q-pa-sm">
-                <img src="/img/bg/tenaga_bg.png" />
-                <p></p>
-                <img src="/img/bg/KKM_bg.jpg" />
-                <br />
-                <br />
-                <br />
-                <img src="/img/bg/logo-myhijau.png" />
-                <br />
-                <img src="/img/bg/CIDB_3.png" />
-              </div>
             </div>
+          </div>
+          <div class="row q-gutter-lg justify-center q-pa-sm full-width">
+            <q-img src="/img/bg/tenaga_bg.png" fit="contain" class="col-2" />
+            <q-img src="/img/bg/KKM_bg.jpg" fit="contain" class="col-2" />
+            <q-img src="/img/bg/logo-myhijau.png" fit="contain" class="col-1" />
+            <q-img src="/img/bg/CIDB_3.png" fit="contain" class="col-2" />
           </div>
         </div>
       </div>
@@ -963,5 +961,10 @@ a {
 
 .item_Hover:hover {
   background-color: green;
+}
+.drop-shadow {
+  -webkit-box-shadow: 24px 25px 58px 22px;
+  -moz-box-shadow: 24px 25px 58px 22px;
+  box-shadow: 24px 25px 58px 22px;
 }
 </style>

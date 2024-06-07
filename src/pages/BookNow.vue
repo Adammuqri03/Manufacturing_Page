@@ -234,6 +234,18 @@
             class="icon-2"
             @click="openInstagram"
           />
+          <div class="row q-gutter-lg justify-center q-pa-sm">
+            <img src="/img/bg/tenaga_bg.png" />
+            <br />
+            <br />
+            <img src="/img/bg/KKM_bg.jpg" style="width: 350px" />
+            <br />
+            <br />
+            <br />
+            <img src="/img/bg/logo-myhijau.png" style="width: 200px" />
+            <br />
+            <img src="/img/bg/CIDB_3.png" style="width: 300px" />
+          </div>
         </div>
       </div>
     </div>

@@ -334,152 +334,6 @@
 
   <q-page-container>
     <!-- why need this system -->
-    <q-section id="Info">
-      <div class="q-pa-md q-mb-lg">
-        <p
-          class="font40 text-center q-pa-md text-white"
-          style="text-shadow: 1px 1px 3px #000000"
-        >
-          <strong>Why need this system in you company?</strong>
-        </p>
-        <div class="row q-gutter-md justify-center">
-          <div style="width: 800px">
-            <q-card flat style="background-color: transparent">
-              <div
-                class="row q-pa-md justify-around"
-                style="border-radius: 80px; background-color: #fe4794"
-              >
-                <div
-                  class="q-pt-md bg-white flex justify-center items-center shadow-7"
-                  style="height: 120px; width: 120px; border-radius: 50%"
-                >
-                  <p
-                    class="text-center flex flex-center text-bold"
-                    style="font-size: 50px; color: #fe4794"
-                  >
-                    01
-                  </p>
-                </div>
-                <div
-                  class="flex justify-center items-center q-pl-xl q-pt-md text-bold"
-                >
-                  <p style="font-size: 20px; text-align: center">
-                    The main objective of this system is to ensure that building
-                    <br />
-                    owners understand the energy consumption of their building,
-                    <br />
-                    whether it operates efficiently or not.
-                  </p>
-                </div>
-              </div>
-            </q-card>
-          </div>
-
-          <div style="width: 800px">
-            <q-card flat style="background-color: transparent">
-              <div
-                class="row q-pa-md justify-start"
-                style="border-radius: 80px; background-color: #00deff"
-              >
-                <div
-                  class="q-pt-md bg-white flex justify-center items-center shadow-7"
-                  style="height: 120px; width: 120px; border-radius: 50%"
-                >
-                  <p
-                    class="text-center flex flex-center text-bold"
-                    style="font-size: 50px; color: #00deff"
-                  >
-                    02
-                  </p>
-                </div>
-                <div
-                  class="flex justify-center items-center q-pl-xl q-pt-md text-bold"
-                >
-                  <p style="font-size: 20px; text-align: center">
-                    Building owners can identify baseline energy usage and
-                    discover
-                    <br />
-                    no-cost energy-saving opportunities. Focusing on monitoring
-                    and
-                    <br />
-                    efficiency can lead to up to a 5% reduction in consumption.
-                  </p>
-                </div>
-              </div>
-            </q-card>
-          </div>
-        </div>
-
-        <br />
-
-        <div class="row q-gutter-md justify-center">
-          <div style="width: 800px">
-            <q-card flat style="background-color: transparent">
-              <div
-                class="row q-pa-md justify-start"
-                style="border-radius: 80px; background-color: #fed32d"
-              >
-                <div
-                  class="q-pt-md bg-white flex justify-center items-center shadow-7"
-                  style="height: 120px; width: 120px; border-radius: 50%"
-                >
-                  <p
-                    class="text-center flex flex-center text-bold"
-                    style="font-size: 50px; color: #fed32d"
-                  >
-                    03
-                  </p>
-                </div>
-                <div
-                  class="flex justify-center items-center q-pl-xl q-pt-md text-bold"
-                >
-                  <p style="font-size: 20px; text-align: center">
-                    Building owners can also monitor and support maintenance
-                    <br />
-                    departments or facilities management to operate the building
-                    <br />
-                    more energy efficiently.
-                  </p>
-                </div>
-              </div>
-            </q-card>
-          </div>
-          <!-- <div style="width: 800px">
-            <q-card flat style="background-color: transparent">
-              <div
-                class="row q-pa-md justify-start"
-                style="border-radius: 80px; background-color: #04e1be"
-              >
-                <div
-                  class="q-pt-md bg-white flex justify-center items-center shadow-7"
-                  style="height: 120px; width: 120px; border-radius: 50%"
-                >
-                  <p
-                    class="text-center flex flex-center text-bold"
-                    style="font-size: 50px; color: #04e1be"
-                  >
-                    04
-                  </p>
-                </div>
-                <div
-                  class="flex justify-center items-center q-pl-xl q-pt-md text-bold"
-                >
-                  <p style="font-size: 20px; text-align: center">
-                    Building owners can identify and verify areas for
-                    improvement
-                    <br />
-                    (with investment) that can be made in the future by using
-                    the
-                    <br />
-                    data collected in this monitoring system.
-                  </p>
-                </div>
-              </div>
-            </q-card>
-          </div> -->
-        </div>
-      </div>
-    </q-section>
   </q-page-container>
   <div class="bg-white text-black">
     <p class="text-bold font20 q-px-md q-my-none q-pt-md">MyCES SDN. BHD.</p>
@@ -533,14 +387,15 @@
           />
           <div class="row q-gutter-lg justify-center q-pa-sm">
             <img src="/img/bg/tenaga_bg.png" />
-            <p></p>
-            <img src="/img/bg/KKM_bg.jpg" />
+            <br />
+            <br />
+            <img src="/img/bg/KKM_bg.jpg" style="width: 350px" />
             <br />
             <br />
             <br />
-            <img src="/img/bg/logo-myhijau.png" />
+            <img src="/img/bg/logo-myhijau.png" style="width: 200px" />
             <br />
-            <img src="/img/bg/CIDB_3.png" />
+            <img src="/img/bg/CIDB_3.png" style="width: 300px" />
           </div>
         </div>
       </div>

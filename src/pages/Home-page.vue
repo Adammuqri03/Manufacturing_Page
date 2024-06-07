@@ -99,14 +99,16 @@
               decisions.
             </p>
             <div class="text-center q-pa-lg">
-              <q-btn
-                flat
-                class="q-px-xl bg-hijau text-white"
-                label="Explore More"
-                style="border-radius: 40px"
-                size="25px"
-                @click="goToAboutUs"
-              />
+              <q-item-section>
+                <q-btn
+                  flat
+                  class="q-px-xl bg-hijau text-white"
+                  label="Explore More"
+                  style="border-radius: 40px"
+                  size="25px"
+                  @click="scrollToSection('EMARS')"
+                />
+              </q-item-section>
             </div>
           </div>
         </div>
@@ -478,14 +480,15 @@
           />
           <div class="row q-gutter-lg justify-center q-pa-sm">
             <img src="/img/bg/tenaga_bg.png" />
-            <p></p>
-            <img src="/img/bg/KKM_bg.jpg" />
+            <br />
+            <br />
+            <img src="/img/bg/KKM_bg.jpg" style="width: 350px" />
             <br />
             <br />
             <br />
-            <img src="/img/bg/logo-myhijau.png" />
+            <img src="/img/bg/logo-myhijau.png" style="width: 200px" />
             <br />
-            <img src="/img/bg/CIDB_3.png" />
+            <img src="/img/bg/CIDB_3.png" style="width: 300px" />
           </div>
         </div>
       </div>

@@ -1,21 +1,25 @@
 <template>
   <div>
-    <q-header class="bg-transparent">
+    <q-header style="background: #59aa32">
       <div class="row justify-between">
         <q-toolbar style="padding-left: 100px; padding-right: 100px">
-          <q-img src="public/img/myces_logo.png" style="width: 100px" />
+          <q-img
+            src="public/img/myces_logo.png"
+            style="width: 100px"
+            @onclick="goToHome"
+          />
 
           <q-space />
-          <!-- Add your navigation items here -->
-          <div class="row q-gutter-xl text-black font20">
-            <div class="p_hoverColor">Home</div>
+
+          <div class="row q-gutter-xl text-white font20">
+            <div class="p_hoverColor" @click="goToHome">Home</div>
             <div class="p_hoverColor" @click="goToAboutUs">Corporate</div>
             <div
               class="p_hoverColor"
               @mouseover="showServiceMenu = true"
               @mouseleave="showServiceMenu = false"
             >
-              Service
+              Services
               <q-menu
                 style="
                   width: 280px;
@@ -31,26 +35,26 @@
                 >
                   <q-item class="item_Hover">
                     <q-item-section>
-                      <a href="#">Energy Audit</a>
+                      <a @click="goToEmars">Energy Audit</a>
                     </q-item-section>
                   </q-item>
                   <q-item class="item_Hover">
                     <q-item-section
-                      ><a href="#">Monitoring System (MyCES EMARS)</a>
+                      ><a @click="goToFMS">Monitoring System (MyCES EMARS)</a>
                     </q-item-section>
                   </q-item>
-                  <q-item class="item_Hover">
+                  <!-- <q-item class="item_Hover">
                     <q-item-section>
                       <a href="#">Measurement and Verification (M&V)</a>
                     </q-item-section>
-                  </q-item>
-                  <q-item class="item_Hover">
+                  </q-item> -->
+                  <!-- <q-item class="item_Hover">
                     <q-item-section
                       ><a href="#"
                         >Sustainable Energy Management System(SEMS)</a
                       >
                     </q-item-section>
-                  </q-item>
+                  </q-item> -->
                   <q-item class="item_Hover">
                     <q-item-section>
                       <a hreg="#"> Awareness Training</a></q-item-section
@@ -58,17 +62,17 @@
                   </q-item>
                   <q-item class="item_Hover">
                     <q-item-section
-                      ><a href="#">Equipment Rental</a></q-item-section
+                      ><a @click="goToRent">Equipment Rental</a></q-item-section
                     >
                   </q-item>
-                  <q-item class="item_Hover">
+                  <!-- <q-item class="item_Hover">
                     <q-item-section
                       ><a href="#">Smart Home Automation</a></q-item-section
                     >
-                  </q-item>
-                  <q-item class="item_Hover">
+                  </q-item> -->
+                  <!-- <q-item class="item_Hover">
                     <q-item-section><a href="#">AMARS</a></q-item-section>
-                  </q-item>
+                  </q-item> -->
                 </q-list>
               </q-menu>
             </div>
@@ -97,14 +101,14 @@
                       ></q-item-section
                     >
                   </q-item>
-                  <q-item class="item_Hover">
+                  <!-- <q-item class="item_Hover">
                     <q-item-section
                       ><a href="#">MYCES AgroFarm Sdn Bhd</a></q-item-section
                     >
-                  </q-item>
+                  </q-item> -->
                   <q-item class="item_Hover">
                     <q-item-section
-                      ><a href="#"
+                      ><a @click="goToManu"
                         >MYCES Manufacturing Sdn Bhd</a
                       ></q-item-section
                     >
@@ -131,15 +135,15 @@
       </div>
     </q-header>
 
-    <div class="q-pa-md q-gutter-md">
+    <!-- <div class="q-pa-md q-gutter-md">
       <div class="row justify-between">
         <q-parallax src="/img/bg/bg_lampu.jpg" style="height: 300px">
           <h1 class="text-bold text-grey-8"></h1>
         </q-parallax>
       </div>
-    </div>
+    </div> -->
 
-    <q-page-container>
+    <div>
       <div id="container" class="page-wrap">
         <div
           class="container content-wrapper text-green-8"
@@ -204,8 +208,10 @@
           </div>
         </div>
       </div>
-    </q-page-container>
-    <q-page-container>
+    </div>
+    <hr />
+    <q-separator />
+    <div>
       <p
         class="text-center text-green-8 text-bold font40"
         style="letter-spacing: 2px"
@@ -240,24 +246,32 @@
                 class="rounded-borders col-2 img-size"
                 fit="contain"
                 :src="image"
+                style="width: 300px"
               />
             </div>
           </q-carousel-slide>
         </q-carousel>
       </div>
-    </q-page-container>
-    <q-page-container>
+    </div>
+    <div>
       <div class="q-pa-md">
-        <q-carousel animated v-model="slide" arrows navigation infinite>
+        <q-carousel
+          animated
+          v-model="slide"
+          arrows
+          navigation
+          infinite
+          style="width: 1500px; height: 500px"
+        >
           <q-carousel-slide :name="1" img-src="/img/client/Aweness_9.jpg" />
           <q-carousel-slide :name="2" img-src="/img/client/Aweness_5.jpg" />
           <q-carousel-slide :name="3" img-src="/img/client/Aweness_2.jpg" />
           <q-carousel-slide :name="4" img-src="/img/client/Aweness_6.jpg" />
-          <q-carousel-slide :name="5" img-src="/img/client/EA_2.jpg" />
-          <q-carousel-slide :name="6" img-src="/img/client/EA_4.jpg" />
+          <q-carousel-slide :name="5" img-src="/img/client/EA_12.jpg" />
+          <q-carousel-slide :name="6" img-src="/img/client/Aweness.jpg" />
         </q-carousel>
       </div>
-    </q-page-container>
+    </div>
 
     <br />
   </div>
@@ -312,6 +326,18 @@
             class="icon-2"
             @click="openInstagram"
           />
+          <div class="row q-gutter-lg justify-center q-pa-sm">
+            <img src="/img/bg/tenaga_bg.png" />
+            <br />
+            <br />
+            <img src="/img/bg/KKM_bg.jpg" style="width: 350px" />
+            <br />
+            <br />
+            <br />
+            <img src="/img/bg/logo-myhijau.png" style="width: 200px" />
+            <br />
+            <img src="/img/bg/CIDB_3.png" style="width: 300px" />
+          </div>
         </div>
       </div>
     </div>
@@ -368,6 +394,20 @@ export default {
     goToContactUs() {
       try {
         window.location.href = "https://biomed.mycesgroup.com/contact/";
+      } catch (error) {
+        console.error("An error occurred:", error);
+      }
+    },
+    goToHome() {
+      try {
+        this.$router.push("/home_page");
+      } catch (error) {
+        console.error("An error occurred:", error);
+      }
+    },
+    goToFMS() {
+      try {
+        this.$router.push("/fms_page");
       } catch (error) {
         console.error("An error occurred:", error);
       }
