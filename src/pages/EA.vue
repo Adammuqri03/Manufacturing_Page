@@ -300,8 +300,48 @@
     </div>
   </q-page-container> -->
   <q-separator size="10px" color="hijau" />
-
   <q-page-container>
+    <div
+      class="row q-gutter-md flex flex-center"
+      style="font-size: 25px; letter-spacing: 2px"
+    >
+      <q-card
+        square
+        v-for="(image, index) in images"
+        :key="index"
+        :class="[
+          [
+            false
+              ? 'fullscreen bg-black'
+              : 'mycard col-xs-12 col-sm-6 col-lg-4 transparent',
+          ],
+          [' center-text'],
+        ]"
+        @click="dialog_show(image.src)"
+        style="width: 400px; height: 400px"
+      >
+        <q-card-section>
+          <q-img
+            :src="image.src"
+            fit="contain"
+            style="height: 200px; width: 350px; border-radius: 20px"
+          />
+        </q-card-section>
+        <p class="text-center q-pt-md" style="height: 50px">
+          {{ image.title }}
+        </p>
+        <!-- <div class="q-pa-md flex flex-center">
+          <q-btn
+            color="green"
+            text-color="white"
+            label="Book Now"
+            @click="goToBook"
+          />
+        </div> -->
+      </q-card>
+    </div>
+  </q-page-container>
+  <!-- <q-page-container>
     <p
       class="text-center text-black text-bold font40 text-shadow"
       style="letter-spacing: 2px"
@@ -328,12 +368,13 @@
         <q-carousel-slide :name="9" img-src="/img/client/EA_11.jpg" />
       </q-carousel>
     </div>
-  </q-page-container>
+  </q-page-container> -->
 
   <q-separator size="10px" color="hijau" />
 
   <q-page-container>
     <!-- why need this system -->
+    <q-page> </q-page>
   </q-page-container>
   <div class="bg-white text-black">
     <p class="text-bold font20 q-px-md q-my-none q-pt-md">MyCES SDN. BHD.</p>
@@ -414,12 +455,14 @@ export default {
       const showSubMenu = ref(false);
       const images = [
         {
-          src: "/img/Interval Usage.png",
-          title: "Monitoring System",
+          src: "/img/client/Aweness_2.jpg",
+          title: "",
         },
-        { src: "/img/bg/energyAudit.jpg", title: "Energy Audit" },
-        { src: "/img/bg/awareness2.jpg", title: "Awareness Training" },
-        { src: "/img/bg/rental.jpg", title: "Rental Equipment" },
+        { src: "img/client/Aweness_7.jpg", title: "" },
+        { src: "/img/client/EA_3.jpg", title: "" },
+        { src: "/img/client/EA_4.jpg", title: "" },
+        { src: "/img/client/EA_5.jpg", title: "" },
+        { src: "/img/client/EA_7.jpg", title: "" },
       ];
 
       // Additional state from the second code block
@@ -611,7 +654,7 @@ export default {
   justify-content: center;
   align-items: center;
   height: 100vh;
-  background: url("/img/solar_3.jpeg");
+  background: url("img/bg/bg-1.jpeg");
   background-size: cover;
 }
 

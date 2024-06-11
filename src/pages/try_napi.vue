@@ -147,6 +147,7 @@
         />
       </template>
     </q-parallax>
+
     <q-page-container>
       <div class="row">
         <div class="col">
@@ -163,7 +164,7 @@
                   <h3 style="text-align: center" class="text-bold font40">
                     SAVE ENERGY FOR A BETTER FUTURE
                   </h3>
-                  <p class="text-black text-light text-center">
+                  <p class="text-black text-light text-center big-text">
                     Since the foundation of MyCES SDN BHD in 2015, the company
                     has developed very fast, and has taken over a significant
                     part in the energy saving industry. The company’s goal is to
@@ -197,7 +198,7 @@
             <q-card class="col-md-4" style="border-radius: 20px">
               <q-card-section class="q-pa-none">
                 <q-img
-                  src="/img/Interval Usage.png"
+                  src="/img/Emars_system.png"
                   style="border-radius: 20px; width"
                   @click="goToEmars"
                 >
@@ -239,8 +240,8 @@
             <q-card class="col-md-4" style="border-radius: 20px">
               <q-card-section class="q-pa-none">
                 <q-img
-                  src="/img/Interval Usage.png"
-                  style="border-radius: 20px; width"
+                  src="/img/eqp/rental_8.png"
+                  style="border-radius: 20px; height: 230px"
                   @click="goToEmars"
                 >
                 </q-img>
@@ -255,8 +256,8 @@
             <q-card class="col-md-4" style="border-radius: 20px">
               <q-card-section class="q-pa-none">
                 <q-img
-                  src="/img/Interval Usage.png"
-                  style="border-radius: 20px; width"
+                  src="/img/calender WOM.png"
+                  style="border-radius: 20px"
                   @click="goToEmars"
                 >
                 </q-img>
@@ -266,6 +267,54 @@
                 class="q-py-xs text-bold text-center text-black-8"
               >
                 Facility Managements System
+              </q-card-section>
+            </q-card>
+            <q-card class="col-md-4" style="border-radius: 20px">
+              <q-card-section class="q-pa-none">
+                <q-img
+                  src="/img/icon/Energy management sytem and consultancy.jpg"
+                  style="border-radius: 20px"
+                  @click="goToEmars"
+                >
+                </q-img>
+              </q-card-section>
+
+              <q-card-section
+                class="q-py-xs text-bold text-center text-black-8"
+              >
+                Energy management sytem and consultancy
+              </q-card-section>
+            </q-card>
+            <q-card class="col-md-4" style="border-radius: 20px">
+              <q-card-section class="q-pa-none">
+                <q-img
+                  src="/img/logo/FMS_2.png"
+                  style="border-radius: 20px"
+                  @click="goToEmars"
+                >
+                </q-img>
+              </q-card-section>
+
+              <q-card-section
+                class="q-py-xs text-bold text-center text-black-8"
+              >
+                Equipment Rental
+              </q-card-section>
+            </q-card>
+            <q-card class="col-md-4" style="border-radius: 20px">
+              <q-card-section class="q-pa-none">
+                <q-img
+                  src="/img/logo/FMS_2.png"
+                  style="border-radius: 20px"
+                  @click="goToEmars"
+                >
+                </q-img>
+              </q-card-section>
+
+              <q-card-section
+                class="q-py-xs text-bold text-center text-black-8"
+              >
+                Energy awareness
               </q-card-section>
             </q-card>
             <!-- <q-card
@@ -966,5 +1015,11 @@ a {
   -webkit-box-shadow: 24px 25px 58px 22px;
   -moz-box-shadow: 24px 25px 58px 22px;
   box-shadow: 24px 25px 58px 22px;
+}
+.big-text {
+  font-size: 1.3rem; /* Adjust the size as needed */
+}
+.p {
+  font-family: "Roboto", sans-serif; /* Using the imported font */
 }
 </style>

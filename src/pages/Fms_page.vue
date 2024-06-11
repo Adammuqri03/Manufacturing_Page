@@ -83,35 +83,33 @@
 
     <!-- why fms? -->
     <q-section id="Info">
-      <q-page-container>
-        <div class="q-pl-xl">
-          <p class="text-hijau text-center" style="font-size: 50px">
-            <strong>Why FMS ?</strong>
-          </p>
-          <div class="row q-gutter-md q-pa-md justify-center">
-            <div v-for="(card, index) in cards" :key="index">
-              <q-card class="card_height" style="border-radius: 30px">
-                <div>
-                  <p class="text-hijau font20 text-center text-bold q-pt-sm">
-                    {{ card.title }}
-                  </p>
-                  <q-separator size="3px" color="grey" />
-                  <div class="row q-px-md q-pa-md" style="width: 400px">
-                    <div class="col">
-                      <q-img :src="card.image" />
-                    </div>
-                    <div class="col">
-                      <p class="" style="font-size: 16px">
-                        {{ card.description }}
-                      </p>
-                    </div>
+      <div class="q-pl-xl">
+        <p class="text-hijau text-center" style="font-size: 50px">
+          <strong>Why FMS ?</strong>
+        </p>
+        <div class="row q-gutter-md q-pa-md justify-center">
+          <div v-for="(card, index) in cards" :key="index">
+            <q-card class="card_height" style="border-radius: 30px">
+              <div>
+                <p class="text-hijau font20 text-center text-bold q-pt-sm">
+                  {{ card.title }}
+                </p>
+                <q-separator size="3px" color="grey" />
+                <div class="row q-px-md q-pa-md" style="width: 450px">
+                  <div class="col">
+                    <q-img :src="card.image" />
+                  </div>
+                  <div class="col">
+                    <p class="" style="font-size: 16px">
+                      {{ card.description }}
+                    </p>
                   </div>
                 </div>
-              </q-card>
-            </div>
+              </div>
+            </q-card>
           </div>
         </div>
-      </q-page-container>
+      </div>
     </q-section>
 
     <!-- targeted issue -->

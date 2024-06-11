@@ -115,7 +115,36 @@
     </q-page-container>
 
     <q-section id="Service">
-      <q-page-container>
+      <q-section id="Info">
+        <div class="q-pl-xl">
+          <p class="text-hijau text-center" style="font-size: 50px">
+            <strong>Why EMARS ?</strong>
+          </p>
+          <div class="row q-gutter-md q-pa-md justify-center">
+            <div v-for="(card, index) in cards" :key="index">
+              <q-card class="card_height" style="border-radius: 30px">
+                <div>
+                  <p class="text-hijau font20 text-center text-bold q-pt-sm">
+                    {{ card.title }}
+                  </p>
+                  <q-separator size="3px" color="grey" />
+                  <div class="row q-px-md q-pa-md" style="width: 450px">
+                    <div class="col">
+                      <q-img :src="card.image" />
+                    </div>
+                    <div class="col">
+                      <p class="" style="font-size: 16px">
+                        {{ card.description }}
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </q-card>
+            </div>
+          </div>
+        </div>
+      </q-section>
+      <!-- <q-page-container>
         <div>
           <p class="text-center font40 text-hijau">
             <strong>Our Automated System</strong>
@@ -143,7 +172,7 @@
             </div>
           </div>
         </div>
-      </q-page-container>
+      </q-page-container> -->
     </q-section>
 
     <!-- feature -->
@@ -434,38 +463,33 @@ export default {
       images,
       fsFlag,
       currentImage,
-      items: [
+      cards: [
         {
           title: "MONITORING",
-          description: [
-            "Instananeous Power.",
-            "24 reading and data collection.",
-            "Safe Data Protection.",
-          ],
-          color: "bg-darkerbrightblue",
+          image: "img/digitalform.png",
+          description:
+            "Instananeous power, 24 reading and data collection and safe data protection.",
         },
         {
           title: "ANALYSIS",
-          description: [
-            "Automated generation of report according to EMIS.",
-            "Easy access and easy to understand.",
-          ],
-          color: "bg-darkerbrightgreen",
+          image: "img/datadriven.png",
+          description:
+            "Automated generation of report according to EMISEasy access and easy to understand.",
         },
         {
           title: "REPORTING",
-          description: [
-            "Automated calculation and analysis.",
-            "Reporting chart is auto generated and combine all report information.",
-          ],
+          image: "img/planned.png",
+          description:
+            "Automated calculation and analysis. Reporting chart is auto generated and combine all report information.",
+
           color: "bg-darkerbrightyellow",
         },
         {
           title: "AWARENESS",
-          description: [
-            "Alert if baseline kW is exceeded.",
-            "Projection of the monthly cost and power usage.",
-          ],
+          image: "img/planned.png",
+          description:
+            "Alert if baseline kW is exceeded.Projection of the monthly cost and power usage.",
+
           color: "bg-darkerbrightorange",
         },
       ],
