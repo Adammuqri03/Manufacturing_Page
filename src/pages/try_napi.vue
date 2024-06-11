@@ -36,7 +36,7 @@
                   </q-item>
                   <q-item class="item_Hover">
                     <q-item-section
-                      ><a @click="goToFMS">Monitoring System (MyCES EMARS)</a>
+                      ><a @click="goToEmars">Monitoring System (MyCES EMARS)</a>
                     </q-item-section>
                   </q-item>
                   <!-- <q-item class="item_Hover">
@@ -130,7 +130,11 @@
         </q-toolbar>
       </div>
     </q-header>
-    <q-parallax :height="$q.screen.height + 150" :speed="-0.3">
+    <q-parallax
+      :height="$q.screen.height + 150"
+      :speed="-0.3"
+      style="background: url('img/bg/bg-1.jpeg')"
+    >
       <h1
         class="text-white text-h9 text-bold"
         style="text-shadow: 2px 2px 5px #000000"
@@ -142,13 +146,12 @@
       >
       <template v-slot:media>
         <img
-          src="public/img/bg/bg.png"
+          src="public/img/bg/bg-canva-3.png"
           style="width: 80%; object-fit: contain"
         />
       </template>
     </q-parallax>
-
-    <q-page-container>
+    <q-page-container style="background: url('img/bg/bg-1.jpeg')">
       <div class="row">
         <div class="col">
           <div class="col row justify-between bg-1">
@@ -164,7 +167,7 @@
                   <h3 style="text-align: center" class="text-bold font40">
                     SAVE ENERGY FOR A BETTER FUTURE
                   </h3>
-                  <p class="text-black text-light text-center big-text">
+                  <p class="text-black text-light text-center text-h5">
                     Since the foundation of MyCES SDN BHD in 2015, the company
                     has developed very fast, and has taken over a significant
                     part in the energy saving industry. The company’s goal is to
@@ -180,20 +183,21 @@
           <br />
           <br />
 
-          <div class="text-center font20"></div>
+          <!-- <div class="text-center font20"></div> -->
           <p
             class="text-center text-green-8 text-bold font40"
             style="letter-spacing: 2px"
           >
             OUR SERVICES
           </p>
-          Energy Audit ,Energy MMonitoring system, Energy mmanagement sytem and
-          consultancy, Facility management sytem, Equipment Rental, Energy
-          awareness training
 
           <div
-            class="row q-gutter-md q-pa-md justify-center items-center"
-            style="font-size: 25px; letter-spacing: 2px"
+            class="row q-gutter-lg q-pa-md justify-center items-center"
+            style="
+              font-size: 25px;
+              letter-spacing: 2px;
+              background: url('img/bg/bg-1.jpeg');
+            "
           >
             <q-card class="col-md-4" style="border-radius: 20px">
               <q-card-section class="q-pa-none">
@@ -258,7 +262,7 @@
                 <q-img
                   src="/img/calender WOM.png"
                   style="border-radius: 20px"
-                  @click="goToEmars"
+                  @click="goToFMS"
                 >
                 </q-img>
               </q-card-section>
@@ -272,7 +276,24 @@
             <q-card class="col-md-4" style="border-radius: 20px">
               <q-card-section class="q-pa-none">
                 <q-img
-                  src="/img/icon/Energy management sytem and consultancy.jpg"
+                  src="/img/client/Aweness_9.jpg"
+                  style="border-radius: 20px"
+                  @click="goToEmars"
+                >
+                </q-img>
+              </q-card-section>
+
+              <q-card-section
+                class="q-py-xs text-bold text-center text-black-8"
+              >
+                Energy Awareness
+              </q-card-section>
+            </q-card>
+
+            <q-card class="col-md-4" style="border-radius: 20px">
+              <q-card-section class="q-pa-none">
+                <q-img
+                  src="/img/icon/consult.jpg"
                   style="border-radius: 20px"
                   @click="goToEmars"
                 >
@@ -283,38 +304,6 @@
                 class="q-py-xs text-bold text-center text-black-8"
               >
                 Energy management sytem and consultancy
-              </q-card-section>
-            </q-card>
-            <q-card class="col-md-4" style="border-radius: 20px">
-              <q-card-section class="q-pa-none">
-                <q-img
-                  src="/img/logo/FMS_2.png"
-                  style="border-radius: 20px"
-                  @click="goToEmars"
-                >
-                </q-img>
-              </q-card-section>
-
-              <q-card-section
-                class="q-py-xs text-bold text-center text-black-8"
-              >
-                Equipment Rental
-              </q-card-section>
-            </q-card>
-            <q-card class="col-md-4" style="border-radius: 20px">
-              <q-card-section class="q-pa-none">
-                <q-img
-                  src="/img/logo/FMS_2.png"
-                  style="border-radius: 20px"
-                  @click="goToEmars"
-                >
-                </q-img>
-              </q-card-section>
-
-              <q-card-section
-                class="q-py-xs text-bold text-center text-black-8"
-              >
-                Energy awareness
               </q-card-section>
             </q-card>
             <!-- <q-card
@@ -360,13 +349,12 @@
           >
             OUR CLIENTS
           </p>
-          <div class="q-px-md">
+          <div class="q-px-md" style="background: url('img/bg/bg-1.jpeg')">
             <q-carousel
               animated
               v-model="slide"
               navigation
               infinite
-              :autoplay="2000"
               arrows
               transition-prev="slide-right"
               transition-next="slide-left"
@@ -378,6 +366,7 @@
                 v-for="slideData in slides"
                 :key="slideData.name"
                 :name="slideData.name"
+                style="overflow: hidden"
               >
                 <div
                   class="row fit justify-center items-center q-gutter-lg no-wrap"
@@ -805,7 +794,6 @@ export default {
         {
           name: 3,
           images: [
-            "/img/client/Pharmaniaga.jpg",
             "/img/client/SimeDarby.jpg",
             "/img/client/KTS.jpg",
             "/img/client/KPJ Perdana.jpg",
@@ -827,7 +815,6 @@ export default {
         {
           name: 5,
           images: [
-            "/img/client/Gleneagles.jpg",
             "/img/client/UITM.jpg",
             "/img/client/Radicare.jpg",
             "/img/client/KKM.jpg",
@@ -840,7 +827,19 @@ export default {
           images: [
             "/img/bg/KPJ_AmpangPuteri.png",
             "/img/bg/KPJ_Perlis.png",
-            "/img/bg/KPJ_Selangor.png",
+            "/img/client/purecircle-1.png",
+            "/img/client/Pharmaniaga.jpg",
+            "/img/client/Gleneagles.jpg",
+          ],
+        },
+        {
+          name: 7,
+          images: [
+            "/img/bg/KPJ_AmpangPuteri.png",
+            "/img/bg/KPJ_Perlis.png",
+            "/img/client/purecircle-1.png",
+            "/img/client/Pharmaniaga.jpg",
+            "/img/client/Gleneagles.jpg",
           ],
         },
       ];
@@ -1016,10 +1015,16 @@ a {
   -moz-box-shadow: 24px 25px 58px 22px;
   box-shadow: 24px 25px 58px 22px;
 }
-.big-text {
-  font-size: 1.3rem; /* Adjust the size as needed */
+
+/* Example of importing a Google Font */
+/* @import url("https://fonts.googleapis.com/css2?family=Cactus+Classical+Serif&display=swap");
+body {
+  font-family: "Cactus Classical Serif", serif;
+} */
+.text-h5 {
+  font-family: "Cactus Classical Serif", serif;
 }
-.p {
-  font-family: "Roboto", sans-serif; /* Using the imported font */
+.background {
+  size: cover;
 }
 </style>

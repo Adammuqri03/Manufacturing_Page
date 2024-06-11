@@ -146,9 +146,9 @@
               :active="tab === 'home'"
             >
               <q-item-section avatar>
-                <q-icon name="home" class="text-white"></q-icon>
+                <q-icon name="home" class="text-black"></q-icon>
               </q-item-section>
-              <q-item-section class="text-white"> Our Service </q-item-section>
+              <q-item-section class="text-black"> Our Service </q-item-section>
             </q-item>
             <q-item
               clickable
@@ -157,10 +157,10 @@
               :active="tab === 'blog'"
             >
               <q-item-section avatar>
-                <q-icon name="article" class="text-white"></q-icon>
+                <q-icon name="article" class="text-black"></q-icon>
               </q-item-section>
-              <q-item-section class="text-white">
-                Energy Usage Information
+              <q-item-section class="text-black">
+                Our Objectives
               </q-item-section>
             </q-item>
             <q-item
@@ -170,10 +170,10 @@
               :active="tab === 'help'"
             >
               <q-item-section avatar>
-                <q-icon name="help" class="text-white"></q-icon>
+                <q-icon name="help" class="text-black"></q-icon>
               </q-item-section>
-              <q-item-section class="text-white">
-                Active System
+              <q-item-section class="text-black">
+                Scope of Work
               </q-item-section>
             </q-item>
           </q-list>
@@ -222,37 +222,38 @@
           </q-card>
           <q-card class="q-card1" v-if="tab === 'blog'">
             <q-card-section>
-              <div class="text-h6">Energy Usage Information</div>
+              <div class="text-h6">Objectives</div>
               <div class="row q-gutter-lg">
                 <q-card class="q-card2" style="width: 400px">
                   <p>
-                    To conduct power distribution profile monitoring and
-                    analysis for overall electrical supply and main electrical
-                    equipment
+                    <strong>Provide awareness </strong>The importance of impleme
+                    nting energy audits as part of energy efficiency and
+                    conservation exercise.
                   </p>
                 </q-card>
                 <q-card class="q-card2" style="width: 400px">
                   <p>
-                    To study on the energy usage for all equipment, systems and
-                    provide baseline for each major system
-                  </p>
-                </q-card>
+                    <strong>Provide financing assistance</strong> through grant,
+                    as a catalyst for the imple mentation of energy audit, in
+                    order to identify the current energy consumption pattern,
+                    setting the Baseline and identify the energy savings
+                    potential.
+                  </p></q-card
+                >
               </div>
               <br />
               <div class="row q-gutter-lg">
                 <q-card class="q-card2" style="width: 400px">
                   <p>
-                    To establish electricity consumption distribution (load
-                    apportioning) based on equipment/system e.g., air
-                    conditioning, indoor lighting, compound lighting, plug loads
-                    & etc. The load distribution tabulated in kWh and percentage
+                    <strong>Provide a platform and facilitation </strong>
+                    implementation of energy saving measures based on the energy
+                    audit report outcome.
                   </p>
                 </q-card>
                 <q-card class="q-card2" style="width: 400px">
                   <p>
-                    To establish electricity consumption distribution (load
-                    apportioning) by plant block. The load distribution is
-                    tabulated in kWh and percentage
+                    <strong>Saving achieved through the implementation</strong>
+                    energy saving measures proposed in the energy auditor report
                   </p>
                 </q-card>
               </div>
@@ -260,7 +261,7 @@
           </q-card>
           <q-card class="q-card1" v-if="tab === 'help'">
             <q-card-section>
-              <div class="text-h6">Active System</div>
+              <div class="text-h6">Details Energy Audit</div>
               <div class="row q-gutter-lg">
                 <q-card class="q-card2" style="width: 400px">
                   <p>
@@ -305,7 +306,7 @@
       class="row q-gutter-md flex flex-center"
       style="font-size: 25px; letter-spacing: 2px"
     >
-      <q-card
+      <q-img
         square
         v-for="(image, index) in images"
         :key="index"
@@ -338,7 +339,7 @@
             @click="goToBook"
           />
         </div> -->
-      </q-card>
+      </q-img>
     </div>
   </q-page-container>
   <!-- <q-page-container>

@@ -1,3 +1,4 @@
+<!-- eslint-disable vue/multi-word-component-names -->
 <template>
   <q-header
     class="q-pa-md"
@@ -9,7 +10,7 @@
         style="border-radius: 30px; width: 1200px; height: 70px"
       >
         <p class="q-pt-md q-px-md text-bold" style="font-size: 20px">
-          MYCES EMARS
+          MYCES AGROFARM
         </p>
         <q-space />
 
@@ -56,31 +57,29 @@
       <div>
         <div class="row q-pa-md q-gutter-xl justify-center">
           <div class="col-6">
-            <q-img src="img/bg/bg02.png" />
+            <q-img src="img/bg/agro.jpg" />
           </div>
           <div class="col-5 q-pa-md flex justify-center item-center">
             <p
               class="text-bold text-hijau"
               style="font-size: 50px; text-shadow: 1px 1px 3px #000000"
             >
-              <strong>EMARS</strong>
+              <strong>AGRO FARM</strong>
             </p>
             <p class="font20">
-              <strong
-                >EMARS (Energy Monitoring, Analysis, and Reporting
-                System)</strong
-              >
-              by MyCES is a state-of-the-art solution designed to provide
-              continuous monitoring, analysis, and reporting on the energy
-              consumption of electrical systems within buildings. Our system
-              offers real-time insights and comprehensive reports, empowering
-              organizations to optimize their energy usage, identify potential
-              savings, and make informed decisions for a more sustainable
-              future. Through the innovation of the company in developing our
-              very own MYCES EMARS (Energy Monitoring, Analysis, and Reporting
-              System), we are confident that this will revolutionize the Energy
-              Efficiency Industry not only impacting the market within Malaysia
-              itself but inciting changes to the market outside of the country.
+              <strong>Welcome to Agrofarm</strong>
+              Your trusted partner in sustainable agriculture, we are dedicated
+              to providing high-quality products and services designed to help
+              farmers thrive. With a commitment to innovation and
+              sustainability, we offer a wide range of solutions tailored to
+              meet the unique needs of modern agriculture. From eco-friendly
+              fertilizers and advanced irrigation systems to expert advice and
+              ongoing support, we are here to ensure your farming operations
+              succeed. Explore our website to learn more about our offerings and
+              discover how we can support your farming journey, enhancing
+              productivity while preserving the environment for future
+              generations. Let us be your guide to a more prosperous and
+              sustainable agricultural future.
             </p>
             <br />
           </div>
@@ -88,7 +87,7 @@
       </div>
     </q-page-container>
     <!-- VIDEO -->
-    <q-page-container>
+    <!-- <q-page-container>
       <div class="q-pa-md">
         <q-parallax :height="900">
           <template v-slot:media>
@@ -101,10 +100,6 @@
               muted
               playsinline
             >
-              <!-- <source
-                type="video/webm"
-                src="https://cdn.quasar.dev/img/polina.webm"
-              /> -->
               <source type="video/mp4" />
             </video>
           </template>
@@ -112,7 +107,7 @@
           <h3 class="text-white"></h3>
         </q-parallax>
       </div>
-    </q-page-container>
+    </q-page-container> -->
 
     <q-section id="Service">
       <q-section id="Info">
@@ -121,7 +116,7 @@
             class="text-center text-hijau text-bold font40"
             style="letter-spacing: 2px; text-shadow: 1px 1px 3px #000000"
           >
-            <strong>WHY EMARS?</strong>
+            <strong>WHY AGROFARM?</strong>
           </p>
           <div class="row q-gutter-md q-pa-md justify-center">
             <div v-for="(card, index) in cards" :key="index">
@@ -187,7 +182,7 @@
             class="text-center text-hijau text-bold font40"
             style="letter-spacing: 2px; text-shadow: 1px 1px 3px #000000"
           >
-            FEATURE
+            PRODUCTS
           </p>
           <div
             class="row text-bold text-center justify-center q-gutter-xl"
@@ -468,32 +463,24 @@ export default {
       currentImage,
       cards: [
         {
-          title: "MONITORING",
+          title: "Eco-Friendly Products",
           image: "img/digitalform.png",
           description:
-            "Instananeous power, 24 reading and data collection and safe data protection.",
+            "We offer a diverse range of eco-friendly products designed to minimize environmental impact while maximizing agricultural efficiency. ",
         },
         {
-          title: "ANALYSIS",
-          image: "img/icon/awareness-icon-3.png",
+          title: "Sustainable Practices",
+          image: "img/datadriven.png",
           description:
-            "Automated generation of report according to EMISEasy access and easy to understand.",
+            " We encourage and support sustainable farming practices that improve soil health and biodiversity.",
         },
         {
-          title: "REPORTING",
+          title: "Community Initiatives",
           image: "img/planned.png",
           description:
-            "Automated calculation and analysis. Reporting chart is auto generated and combine all report information.",
+            " We engage in community projects that promote sustainable agriculture and support local farmers.",
 
           color: "bg-darkerbrightyellow",
-        },
-        {
-          title: "AWARENESS",
-          image: "img/planned.png",
-          description:
-            "Alert if baseline kW is exceeded.Projection of the monthly cost and power usage.",
-
-          color: "bg-darkerbrightorange",
         },
       ],
     };
