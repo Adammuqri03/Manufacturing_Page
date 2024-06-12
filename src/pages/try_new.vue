@@ -2,7 +2,7 @@
   <q-header class="no-shadow" id="header">
     <div class="row justify-between">
       <q-toolbar style="padding-left: 100px; padding-right: 100px">
-        <img src="img/myces_logo.png" style="width: 100px" />
+        <img src="img/myces_logo.png" style="width: 100px" class="animation" />
 
         <q-space />
 
@@ -133,7 +133,7 @@
     <q-page>
       <q-parallax :height="$q.screen.height + 150" :speed="-0.3">
         <h1
-          class="text-white text-bold text-left q-pa-md"
+          class="text-white text-bold text-h7 text-left q-pa-md"
           style="text-shadow: 2px 2px 5px #000000"
         >
           ENERGY AUDIT
@@ -150,7 +150,7 @@
         </p>
         <q-btn
           push
-          @click="scrollToSection('SecPage')"
+          @click="scrollToSection('objectives')"
           class="hover-btn text-white"
           >Explore More</q-btn
         >
@@ -198,59 +198,74 @@
           </div>
         </q-section>
       </q-section> -->
-      <q-parallax :height="$q.screen.height + 150" :speed="-0.3">
-        <h1
-          class="text-center text-hijau text-bold font40 q-pa-lg"
-          style="letter-spacing: 2px; text-shadow: 2px 2px 5px #000000"
-        >
-          OUR OBJECTIVES
-        </h1>
-        <q-card-section
-          class="text-black text-light text-center text-h5 q-pa-lg"
-          style="letter-spacing: 2px"
-        >
-          <div class="row q-gutter-lg">
-            <q-card class="q-card2" style="width: 400px">
-              <p>
-                <strong>Provide awareness </strong>The importance of impleme
-                nting energy audits as part of energy efficiency and
-                conservation exercise.
-              </p>
-            </q-card>
-            <q-card class="q-card2" style="width: 400px">
-              <p>
-                <strong>Provide financing assistance</strong> through grant, as
-                a catalyst for the imple mentation of energy audit, in order to
-                identify the current energy consumption pattern, setting the
-                Baseline and identify the energy savings potential.
-              </p></q-card
-            >
-          </div>
-          <br />
-          <div class="row q-gutter-lg">
-            <q-card class="q-card2" style="width: 400px">
-              <p>
-                <strong>Provide a platform and facilitation </strong>
-                implementation of energy saving measures based on the energy
-                audit report outcome.
-              </p>
-            </q-card>
-            <q-card class="q-card2" style="width: 400px">
-              <p>
-                <strong>Saving achieved through the implementation</strong>
-                energy saving measures proposed in the energy auditor report
-              </p>
-            </q-card>
-          </div>
-        </q-card-section>
-        <template v-slot:media>
-          <img
-            src="/img/client/EA_5.jpg"
-            style="width: 80%; object-fit: contain"
-            class="dimmed"
-          />
-        </template>
-      </q-parallax>
+      <q-selection id="objectives">
+        <q-parallax :height="$q.screen.height + 150" :speed="-0.3">
+          <h1
+            class="text-center text-white text-bold text-h7 font40 q-pa-lg"
+            style="letter-spacing: 2px; text-shadow: 2px 2px 5px #000000"
+          >
+            OUR OBJECTIVES
+          </h1>
+          <q-card-section
+            class="text-black text-light text-center text-h5 q-pa-lg"
+            style="letter-spacing: 2px"
+          >
+            <div class="row q-gutter-lg">
+              <q-card
+                class="q-card2 glass-card text-white text-center"
+                style="width: 400px"
+              >
+                <p>
+                  <strong>Provide awareness </strong>The importance of impleme
+                  nting energy audits as part of energy efficiency and
+                  conservation exercise.
+                </p>
+              </q-card>
+              <q-card
+                class="q-card2 glass-card text-white"
+                style="width: 400px"
+              >
+                <p>
+                  <strong>Provide financing assistance</strong> through grant,
+                  as a catalyst for the imple mentation of energy audit, in
+                  order to identify the current energy consumption pattern,
+                  setting the Baseline and identify the energy savings
+                  potential.
+                </p></q-card
+              >
+            </div>
+            <br />
+            <div class="row q-gutter-lg">
+              <q-card
+                class="q-card2 glass-card text-white"
+                style="width: 400px"
+              >
+                <p>
+                  <strong>Provide a platform and facilitation </strong>
+                  implementation of energy saving measures based on the energy
+                  audit report outcome.
+                </p>
+              </q-card>
+              <q-card
+                class="q-card2 glass-card text-white"
+                style="width: 400px"
+              >
+                <p>
+                  <strong>Saving achieved through the implementation</strong>
+                  energy saving measures proposed in the energy auditor report
+                </p>
+              </q-card>
+            </div>
+          </q-card-section>
+          <template v-slot:media>
+            <img
+              src="/img/client/EA_5.jpg"
+              style="width: 80%; object-fit: contain"
+              class="dimmed"
+            />
+          </template>
+        </q-parallax>
+      </q-selection>
     </q-page>
   </q-page-container>
 </template>
@@ -589,5 +604,14 @@ body {
   background-color: rgb(63, 168, 28, 1); /* Transparent background */
   transition: background-color 0.3s ease; /* Smooth transition */
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional: Add shadow for depth */
+}
+
+.glass-card {
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(6.9px);
+  -webkit-backdrop-filter: blur(6.9px);
+  border: 1px solid rgba(255, 255, 255, 1);
 }
 </style>

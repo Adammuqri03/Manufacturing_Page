@@ -3,7 +3,11 @@
     <q-header class="bg-transparent">
       <div class="row justify-between">
         <q-toolbar style="padding-left: 100px; padding-right: 100px">
-          <img src="img/myces_logo.png" style="width: 100px" />
+          <img
+            src="img/myces_logo.png"
+            style="width: 100px"
+            class="animation"
+          />
 
           <q-space />
 
@@ -1026,5 +1030,40 @@ body {
 }
 .background {
   size: cover;
+}
+.animation {
+  width: 100px;
+  height: 100px;
+  position: relative;
+  background-color: transparent;
+  animation-name: example;
+  animation-duration: 4s;
+}
+@keyframes example {
+  0% {
+    background-color: transparent;
+    left: 0px;
+    top: 0px;
+  }
+  25% {
+    background-color: transparent;
+    left: 200px;
+    top: 0px;
+  }
+  50% {
+    background-color: transparent;
+    left: 200px;
+    top: 200px;
+  }
+  75% {
+    background-color: transparent;
+    left: 0px;
+    top: 200px;
+  }
+  100% {
+    background-color: transparent;
+    left: 0px;
+    top: 0px;
+  }
 }
 </style>
