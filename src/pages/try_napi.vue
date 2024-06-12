@@ -146,7 +146,7 @@
       >
       <template v-slot:media>
         <img
-          src="public/img/bg/bg-canva-3.png"
+          src="/img/bg/bg-canva-3.png"
           style="width: 80%; object-fit: contain"
         />
       </template>

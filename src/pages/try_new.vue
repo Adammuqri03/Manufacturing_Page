@@ -1,5 +1,5 @@
 <template>
-  <q-header class="bg-transparent no-shadow">
+  <q-header class="no-shadow" id="header">
     <div class="row justify-between">
       <q-toolbar style="padding-left: 100px; padding-right: 100px">
         <img src="img/myces_logo.png" style="width: 100px" />
@@ -133,17 +133,119 @@
     <q-page>
       <q-parallax :height="$q.screen.height + 150" :speed="-0.3">
         <h1
-          class="text-white text-h9 text-bold text-left"
+          class="text-white text-bold text-left q-pa-md"
           style="text-shadow: 2px 2px 5px #000000"
         >
-          MyCES SDN BHD
+          ENERGY AUDIT
         </h1>
-        <q-btn push @click="scrollToSection('SecPage')" class="hover-btn"
+        <p
+          class="text-white text-light text-center text-h5 q-pa-lg"
+          style="text-shadow: 2px 2px 5px #000000; letter-spacing: 2px"
+        >
+          Energy services are a key part of our dedicated energy efficiency
+          services and the first step towards your comprehensive energy
+          management strategy. Our audit provides you with a clear understanding
+          of energy consumption in your buildings and facilities. Quantitative
+          findings can provide substantial practical guideline
+        </p>
+        <q-btn
+          push
+          @click="scrollToSection('SecPage')"
+          class="hover-btn text-white"
           >Explore More</q-btn
         >
+
         <template v-slot:media>
           <img
-            src="public/img/bg/bg-canva-3.png"
+            src="/img/client/EA_4.jpg"
+            style="width: 80%; object-fit: contain"
+            class="dimmed"
+          />
+        </template>
+      </q-parallax>
+      <q-separator size="10px" color="hijau" />
+      <!-- <q-section id="SecPage">
+        <q-section id="Info">
+          <div class="q-pl-xl">
+            <h1
+              class="text-center text-hijau text-bold text-h7 font40"
+              style="letter-spacing: 2px; text-shadow: 1px 1px 3px #000000"
+            >
+              <strong>OUR OBJECTIVES</strong>
+            </h1>
+            <div class="row q-gutter-md q-pa-md justify-center">
+              <div v-for="(card, index) in cards" :key="index">
+                <q-card class="card_height" style="border-radius: 30px">
+                  <div>
+                    <p class="text-hijau font20 text-center text-bold q-pt-sm">
+                      {{ card.title }}
+                    </p>
+                    <q-separator size="3px" color="grey" />
+                    <div class="row q-px-md q-pa-md" style="width: 450px">
+                      <div class="col">
+                        <q-img :src="card.image" />
+                      </div>
+                      <div class="col">
+                        <p class="" style="font-size: 16px">
+                          {{ card.description }}
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </q-card>
+              </div>
+            </div>
+          </div>
+        </q-section>
+      </q-section> -->
+      <q-parallax :height="$q.screen.height + 150" :speed="-0.3">
+        <h1
+          class="text-center text-hijau text-bold font40 q-pa-lg"
+          style="letter-spacing: 2px; text-shadow: 2px 2px 5px #000000"
+        >
+          OUR OBJECTIVES
+        </h1>
+        <q-card-section
+          class="text-black text-light text-center text-h5 q-pa-lg"
+          style="letter-spacing: 2px"
+        >
+          <div class="row q-gutter-lg">
+            <q-card class="q-card2" style="width: 400px">
+              <p>
+                <strong>Provide awareness </strong>The importance of impleme
+                nting energy audits as part of energy efficiency and
+                conservation exercise.
+              </p>
+            </q-card>
+            <q-card class="q-card2" style="width: 400px">
+              <p>
+                <strong>Provide financing assistance</strong> through grant, as
+                a catalyst for the imple mentation of energy audit, in order to
+                identify the current energy consumption pattern, setting the
+                Baseline and identify the energy savings potential.
+              </p></q-card
+            >
+          </div>
+          <br />
+          <div class="row q-gutter-lg">
+            <q-card class="q-card2" style="width: 400px">
+              <p>
+                <strong>Provide a platform and facilitation </strong>
+                implementation of energy saving measures based on the energy
+                audit report outcome.
+              </p>
+            </q-card>
+            <q-card class="q-card2" style="width: 400px">
+              <p>
+                <strong>Saving achieved through the implementation</strong>
+                energy saving measures proposed in the energy auditor report
+              </p>
+            </q-card>
+          </div>
+        </q-card-section>
+        <template v-slot:media>
+          <img
+            src="/img/client/EA_5.jpg"
             style="width: 80%; object-fit: contain"
             class="dimmed"
           />
@@ -250,6 +352,28 @@ export default {
             "/img/client/Gleneagles.jpg",
           ],
         },
+        // Combine card
+        (cards = [
+          {
+            title: "Eco-Friendly Products",
+            image: "img/digitalform.png",
+            description:
+              "We offer a diverse range of eco-friendly products designed to minimize environmental impact while maximizing agricultural efficiency. ",
+          },
+          {
+            title: "Sustainable Practices",
+            image: "img/datadriven.png",
+            description:
+              " We encourage and support sustainable farming practices that improve soil health and biodiversity.",
+          },
+          {
+            title: "Community Initiatives",
+            image: "img/planned.png",
+            description:
+              " We engage in community projects that promote sustainable agriculture and support local farmers.",
+            color: "bg-darkerbrightyellow",
+          },
+        ]),
       ];
 
       return {
@@ -260,6 +384,7 @@ export default {
         slide,
         autoplay,
         slides,
+        cards,
       };
     } catch (error) {
       console.error("An error occurred:", error);
@@ -368,6 +493,23 @@ export default {
       }
     },
   },
+  created() {
+    window.addEventListener("scroll", function () {
+      const header = document.getElementById("header");
+      const scrollPosition = window.scrollY;
+
+      // Calculate opacity based on scroll position
+      const opacity =
+        scrollPosition > 50 ? Math.min(0.9, 1 - scrollPosition / 250) : 1; // Adjust 200 for speed
+      console.log(1 - scrollPosition / 250);
+      console.log(header);
+      // Apply opacity to the header background
+      header.style.setProperty(
+        "background-color",
+        `rgba(63, 168, 28, ${opacity})`
+      );
+    });
+  },
 };
 </script>
 <style>
@@ -387,7 +529,7 @@ a {
   width: 200px;
   height: 60px;
   border-radius: 5px;
-  background-color: #258400;
+  background-color: #21ba45;
   font-size: 18px;
   color: white;
   display: flex;
@@ -429,10 +571,23 @@ a {
 body {
   font-family: "Cactus Classical Serif", serif;
 } */
-.text-h5 {
-  font-family: "Cactus Classical Serif", serif;
+@import url("https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@200..900&display=swap");
+.font-noto {
+  font-family: "Noto Serif SC", serif;
 }
 .background {
   size: cover;
+}
+.dimmed {
+  opacity: 1; /* Adjust the opacity to make the image more transparent */
+  filter: brightness(
+    30%
+  ); /* Adjust the brightness to make the image more dimmed */
+}
+
+#header {
+  background-color: rgb(63, 168, 28, 1); /* Transparent background */
+  transition: background-color 0.3s ease; /* Smooth transition */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional: Add shadow for depth */
 }
 </style>
