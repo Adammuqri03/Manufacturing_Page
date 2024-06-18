@@ -206,7 +206,7 @@
             <q-card class="col-md-4" style="border-radius: 20px">
               <q-card-section class="q-pa-none">
                 <q-img
-                  src="/img/Emars_system.png"
+                  src="/img/bg/emars_bg.png"
                   style="border-radius: 20px; width"
                   @click="goToEmars"
                 >
@@ -264,7 +264,7 @@
             <q-card class="col-md-4" style="border-radius: 20px">
               <q-card-section class="q-pa-none">
                 <q-img
-                  src="/img/calender WOM.png"
+                  src="/img/bg/fms_bg_2.png"
                   style="border-radius: 20px"
                   @click="goToFMS"
                 >
@@ -305,9 +305,9 @@
               </q-card-section>
 
               <q-card-section
-                class="q-py-xs text-bold text-center text-black-8"
+                class="q-py-xs text-bold text-center text-black-8 text-h9"
               >
-                Energy management sytem and consultancy
+                Energy management sytem and consultancy (/)
               </q-card-section>
             </q-card>
             <!-- <q-card
@@ -371,6 +371,7 @@
                 :key="slideData.name"
                 :name="slideData.name"
                 style="overflow: hidden"
+                :autoplay="autoplay"
               >
                 <div
                   class="row fit justify-center items-center q-gutter-lg no-wrap"

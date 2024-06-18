@@ -343,7 +343,7 @@
         class="text-center text-bold text-hijau"
         style="font-size: 60px; text-shadow: 2px 2px 4px hijau"
       >
-        OUR CLIENT
+        OUR CLIENT (fixed)
       </p>
       <div class="q-px-md">
         <q-carousel
