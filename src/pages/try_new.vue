@@ -266,6 +266,167 @@
           </template>
         </q-parallax>
       </q-selection>
+      <div class="q-gutter-xl">
+        <div class="row">
+          <div class="col-3">
+            <q-list style="width: 700px; height: 500px">
+              <q-item
+                clickable
+                v-ripple
+                @click="tab = 'home'"
+                :active="tab === 'home'"
+              >
+                <q-item-section avatar>
+                  <q-icon name="home" class="text-black"></q-icon>
+                </q-item-section>
+                <q-item-section class="text-black">
+                  Our Service
+                </q-item-section>
+              </q-item>
+              <q-item
+                clickable
+                v-ripple
+                @click="tab = 'blog'"
+                :active="tab === 'blog'"
+              >
+                <q-item-section avatar>
+                  <q-icon name="article" class="text-black"></q-icon>
+                </q-item-section>
+                <q-item-section class="text-black">
+                  Our Objectives
+                </q-item-section>
+              </q-item>
+              <q-item
+                clickable
+                v-ripple
+                @click="tab = 'help'"
+                :active="tab === 'help'"
+              >
+                <q-item-section avatar>
+                  <q-icon name="help" class="text-black"></q-icon>
+                </q-item-section>
+                <q-item-section class="text-black">
+                  Scope of Work
+                </q-item-section>
+              </q-item>
+            </q-list>
+          </div>
+          <div class="col-9">
+            <q-card class="q-card1" v-if="tab === 'home'">
+              <q-card-section>
+                <div class="text-h6">Energy Service</div>
+                <br />
+                <div class="row q-gutter-xl">
+                  <q-card class="q-card2" style="width: 700px">
+                    <p>
+                      Energy services are a key part of our dedicated energy
+                      efficiency services and the first step towards your
+                      comprehensive energy management strategy. Our audit
+                      provides you with a clear understanding of energy
+                      consumption in your buildings and facilities. Quantitative
+                      findings can provide substantial practical guideline for:
+                    </p>
+                  </q-card>
+                  <!-- <q-card class="q-card2" style="width: 400px">
+                  <p>
+                    Our audit provides you with a clear understanding of energy
+                    consumption in your buildings and facilities. Quantitative
+                    findings can provide substantial practical guideline for.
+                  </p>
+                </q-card> -->
+                </div>
+                <br />
+                <div class="row q-gutter-xl">
+                  <q-card class="q-card2" style="width: 400px">
+                    <p>
+                      Continuous improvement in production efficiency and reduce
+                      your operation expenses, increase your profit.
+                    </p>
+                  </q-card>
+                  <br />
+                  <q-card class="q-card2" style="width: 400px">
+                    <p>
+                      To determine which are the best building energy efficiency
+                      measures and to increase value of your building.
+                    </p>
+                  </q-card>
+                </div>
+              </q-card-section>
+            </q-card>
+            <q-card class="q-card1" v-if="tab === 'blog'">
+              <q-card-section>
+                <div class="text-h6">Objectives</div>
+                <div class="row q-gutter-lg">
+                  <q-card class="q-card2" style="width: 400px">
+                    <p>
+                      <strong>Provide awareness </strong>The importance of
+                      impleme nting energy audits as part of energy efficiency
+                      and conservation exercise.
+                    </p>
+                  </q-card>
+                  <q-card class="q-card2" style="width: 400px">
+                    <p>
+                      <strong>Provide financing assistance</strong> through
+                      grant, as a catalyst for the imple mentation of energy
+                      audit, in order to identify the current energy consumption
+                      pattern, setting the Baseline and identify the energy
+                      savings potential.
+                    </p></q-card
+                  >
+                </div>
+                <br />
+                <div class="row q-gutter-lg">
+                  <q-card class="q-card2" style="width: 400px">
+                    <p>
+                      <strong>Provide a platform and facilitation </strong>
+                      implementation of energy saving measures based on the
+                      energy audit report outcome.
+                    </p>
+                  </q-card>
+                  <q-card class="q-card2" style="width: 400px">
+                    <p>
+                      <strong
+                        >Saving achieved through the implementation</strong
+                      >
+                      energy saving measures proposed in the energy auditor
+                      report
+                    </p>
+                  </q-card>
+                </div>
+              </q-card-section>
+            </q-card>
+            <q-card class="q-card1" v-if="tab === 'help'">
+              <q-card-section>
+                <div class="text-h6">Details Energy Audit</div>
+                <div class="row q-gutter-lg">
+                  <q-card class="q-card2" style="width: 400px">
+                    <p>
+                      Heating, Ventilation and Air Conditioning (HVAC) System To
+                      identify the technical information compared to the current
+                      status of Centralized Air Conditioning System such as
+                      Chiller, Cooling Tower, Condenser Pump (CWP), Chilled
+                      Water Pump (ChWP), Air Handling Unit (AHU), Fan Coil Unit
+                      (FCU) and its related system. (if applicable). To identify
+                      the technical information compared to the current status
+                      of Water-Cooled Package Unit (WCPU), Air-Cooled Package
+                      Unit (ACPU) and Split Unit (ACSU). (if applicable)
+                    </p>
+                  </q-card>
+                  <q-card class="q-card2" style="width: 400px">
+                    <p>
+                      To identify and study operating schedule and identify its
+                      control system and to conduct measurement and analysis for
+                      the related system as below: Chiller - Power Measurement
+                      and Flowrate: Minimum 7 days for each chiller (if
+                      applicable)
+                    </p>
+                  </q-card>
+                </div>
+              </q-card-section>
+            </q-card>
+          </div>
+        </div>
+      </div>
     </q-page>
   </q-page-container>
 </template>
@@ -586,10 +747,10 @@ a {
 body {
   font-family: "Cactus Classical Serif", serif;
 } */
-@import url("https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@200..900&display=swap");
+/* @import url("https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@200..900&display=swap");
 .font-noto {
   font-family: "Noto Serif SC", serif;
-}
+} */
 .background {
   size: cover;
 }

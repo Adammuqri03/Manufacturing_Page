@@ -206,7 +206,7 @@
             <q-card class="col-md-4" style="border-radius: 20px">
               <q-card-section class="q-pa-none">
                 <q-img
-                  src="/img/bg/emars_bg.png"
+                  src="/img/emars.png"
                   style="border-radius: 20px; width"
                   @click="goToEmars"
                 >
@@ -360,6 +360,7 @@
               navigation
               infinite
               arrows
+              :autoplay="autoplay"
               transition-prev="slide-right"
               transition-next="slide-left"
               @mouseenter="autoplay = false"
@@ -371,7 +372,6 @@
                 :key="slideData.name"
                 :name="slideData.name"
                 style="overflow: hidden"
-                :autoplay="autoplay"
               >
                 <div
                   class="row fit justify-center items-center q-gutter-lg no-wrap"
@@ -840,11 +840,31 @@ export default {
         {
           name: 7,
           images: [
-            "/img/bg/KPJ_AmpangPuteri.png",
-            "/img/bg/KPJ_Perlis.png",
-            "/img/client/purecircle-1.png",
-            "/img/client/Pharmaniaga.jpg",
-            "/img/client/Gleneagles.jpg",
+            "/img/client/USM.png",
+            "/img/client/KPWKM.jpg",
+            "/img/client/DBP.png",
+            "/img/client/HEBHK.jpg",
+            "/img/client/HTJ.jpg",
+          ],
+        },
+        {
+          name: 8,
+          images: [
+            "/img/client/NMC.png",
+            "/img/client/HSNI.png",
+            "/img/client/MyCRON.png",
+            "/img/client/SAS.png",
+            "/img/client/KJM.jpg",
+          ],
+        },
+        {
+          name: 9,
+          images: [
+            "/img/client/WD.png",
+            "/img/client/PASCORP.jpg",
+            "/img/client/kerry.jpg",
+            "/img/client/FGV.png",
+            "/img/client/MSM.png",
           ],
         },
       ];
