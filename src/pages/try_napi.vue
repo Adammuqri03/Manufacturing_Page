@@ -274,7 +274,7 @@
               <q-card-section
                 class="q-py-xs text-bold text-center text-black-8"
               >
-                Facility Managements System
+                Facility Management System
               </q-card-section>
             </q-card>
             <q-card class="col-md-4" style="border-radius: 20px">
@@ -290,7 +290,7 @@
               <q-card-section
                 class="q-py-xs text-bold text-center text-black-8"
               >
-                Energy Awareness
+                Energy Awareness TrainingS
               </q-card-section>
             </q-card>
 
@@ -307,7 +307,7 @@
               <q-card-section
                 class="q-py-xs text-bold text-center text-black-8 text-h9"
               >
-                Energy management sytem and consultancy (/)
+                Sustainable Energy Management System (pin)
               </q-card-section>
             </q-card>
             <!-- <q-card
@@ -351,16 +351,19 @@
             class="text-center text-green-8 text-bold font40"
             style="letter-spacing: 2px"
           >
-            OUR CLIENTS
+            OUR CLIENTS gambar Formal footer lagi adu napiiii apa nii kan dah
+            take note asyik terlepas pandang jee T_T kesian la dekat encik ali &
+            faiz
           </p>
           <div class="q-px-md" style="background: url('img/bg/bg-1.jpeg')">
             <q-carousel
               animated
+              swipeable
               v-model="slide"
               navigation
               infinite
               arrows
-              :autoplay="autoplay"
+              :autoplay="2000"
               transition-prev="slide-right"
               transition-next="slide-left"
               @mouseenter="autoplay = false"

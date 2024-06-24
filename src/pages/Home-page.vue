@@ -343,7 +343,7 @@
         class="text-center text-bold text-hijau"
         style="font-size: 60px; text-shadow: 2px 2px 4px hijau"
       >
-        OUR CLIENT (fixed)
+        OUR CLIENT
       </p>
       <div class="q-px-md">
         <q-carousel
@@ -351,7 +351,7 @@
           v-model="slide"
           navigation
           infinite
-          :autoplay="2000"
+          :autoplay="5000"
           arrows
           transition-prev="slide-right"
           transition-next="slide-left"
@@ -363,6 +363,7 @@
             v-for="slideData in slides"
             :key="slideData.name"
             :name="slideData.name"
+            style="overflow: hidden"
           >
             <div
               class="row fit justify-center items-center q-gutter-lg no-wrap"
@@ -525,58 +526,56 @@ export default {
         {
           name: 1,
           images: [
+            "/img/client/KDN.png",
+            "/img/client/Bera.jpeg",
+            "/img/client/KDN_KL.jpeg",
+            "/img/client/KPJ Seremban.jpg",
             "/img/client/umsc logo.png",
-            "/img/client/NIH.png",
-            "/img/client/MDSB.jpg",
-            "/img/client/MDKS.jpg",
-            "/img/client/MDKL.jpg",
-            "/img/client/MDHL.jpg",
+            "/img/client/KPJ Puteri.jpg",
           ],
         },
         {
           name: 2,
           images: [
-            "/img/client/PDT Gombak.jpg",
-            "/img/client/MBPJ.jpg",
-            "/img/client/Demesne.jpg",
-            "/img/client/KPJ Kajang.jpg",
-            "/img/client/KPJ Penang.jpg",
-            "/img/client/KPJ Puteri.jpg",
-          ],
-        },
-        {
-          name: 3,
-          images: [
-            "/img/client/Pharmaniaga.jpg",
-            "/img/client/SimeDarby.jpg",
-            "/img/client/KTS.jpg",
-            "/img/client/KPJ Perdana.jpg",
-            "/img/client/Salam.jpg",
-            "/img/client/Petronas.jpg",
-          ],
-        },
-        {
-          name: 4,
-          images: [
-            "/img/client/Hospital Pusrawi.jpg",
-            "/img/client/KPJ Seremban.jpg",
-            "/img/client/ColumbiaAsia.jpg",
             "/img/client/Kayaku.jpg",
-            "/img/client/Medivest.jpg",
-            "/img/client/Terengganu.jpg",
-          ],
-        },
-        {
-          name: 5,
-          images: [
-            "/img/client/Gleneagles.jpg",
+            "/img/client/JKR.png",
             "/img/client/UITM.jpg",
-            "/img/client/Radicare.jpg",
-            "/img/client/KKM.jpg",
-            "/img/client/Sibu Water Board.jpg",
-            "/img/client/Jabatan Peguam Negara.jpg",
+            "/img/client/HRC.jpeg",
           ],
         },
+        // {
+        //   name: 3,
+        //   images: [
+        //     "/img/client/Pharmaniaga.jpg",
+        //     "/img/client/SimeDarby.jpg",
+        //     "/img/client/KTS.jpg",
+        //     "/img/client/KPJ Perdana.jpg",
+        //     "/img/client/Salam.jpg",
+        //     "/img/client/Petronas.jpg",
+        //   ],
+        // },
+        // {
+        //   name: 4,
+        //   images: [
+        //     "/img/client/Hospital Pusrawi.jpg",
+        //     "/img/client/KPJ Seremban.jpg",
+        //     "/img/client/ColumbiaAsia.jpg",
+        //     "/img/client/Kayaku.jpg",
+        //     "/img/client/Medivest.jpg",
+        //     "/img/client/Terengganu.jpg",
+        //   ],
+        // },
+        // {
+        //   name: 5,
+        //   images: [
+        //     "/img/client/Gleneagles.jpg",
+
+        //     "/img/client/Radicare.jpg",
+        //     "/img/client/KKM.jpg",
+        //     "/img/client/Sibu Water Board.jpg",
+        //     "/img/client/Jabatan Peguam Negara.jpg",
+        //   ],
+        // },
       ],
       cards: [
         {

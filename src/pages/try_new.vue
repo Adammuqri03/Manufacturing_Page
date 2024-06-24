@@ -266,7 +266,7 @@
           </template>
         </q-parallax>
       </q-selection>
-      <div class="q-gutter-xl">
+      <div class="q-gutter-xl bg-green">
         <div class="row">
           <div class="col-3">
             <q-list style="width: 700px; height: 500px">
@@ -430,6 +430,8 @@
     </q-page>
   </q-page-container>
 </template>
+
+(EQ EA ASAP)
 <script>
 import { ref } from "vue";
 

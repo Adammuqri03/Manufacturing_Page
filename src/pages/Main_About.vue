@@ -159,7 +159,7 @@
                 >
                   <header class="entry-header">
                     <h1 class="title-post entry-title text-black text-center">
-                      About Us
+                      About Us (fixed)
                     </h1>
                     <div class="entry-content">
                       <p></p>

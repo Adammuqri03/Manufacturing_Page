@@ -187,7 +187,7 @@
             class="text-center text-hijau text-bold font40"
             style="letter-spacing: 2px; text-shadow: 1px 1px 3px #000000"
           >
-            FEATURE
+            FEATURE (EMS, EMarS Analysis Report, Public Dashboard, )
           </p>
           <div
             class="row text-bold text-center justify-center q-gutter-xl"
@@ -223,7 +223,7 @@
     </q-page-container>
 
     <!-- why need this system -->
-    <q-section id="Info">
+    <q-section id="Why">
       <div class="q-pa-md q-mb-lg">
         <p
           class="font40 text-center q-pa-md text-hijau"
